@@ -1,19 +1,23 @@
 # Agent Skills
 
-我的 AI 编码助手技能集合。使用 [SKILL.md 开放标准](https://agents.md/)，跨平台适用。
+我的 AI 编码助手技能集合。使用 [SKILL.md 开放标准](https://agents.md/)。
 
 ## 支持的工具
 
-- [Claude Code](https://claude.ai/code) — `~/.claude/skills/`
-- [Codex CLI](https://github.com/openai/codex) — `~/.codex/skills/`
-- [OpenClaw](https://github.com/openclaw/openclaw) — `~/.openclaw/skills/`
+| 工具 | Skills 目录 | 链接方式 |
+|------|------------|---------|
+| [Claude Code](https://claude.ai/code) | `~/.claude/skills/` | symlink / junction |
+| [Codex CLI](https://github.com/openai/codex) | `~/.codex/skills/` | symlink / junction |
+| [OpenClaw](https://github.com/openclaw/openclaw) | `~/.openclaw/skills/` | symlink / junction |
+
+> **注意：** Skills 指令主要针对 Claude Code 测试。其他工具可加载 SKILL.md，但行为可能有差异。
 
 ## 安装
 
 ### Windows (PowerShell)
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/agent-skills.git
+git clone <your-repo-url>
 cd agent-skills
 .\install.ps1
 ```
@@ -21,13 +25,22 @@ cd agent-skills
 ### macOS / Linux
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/agent-skills.git
+git clone <your-repo-url>
 cd agent-skills
 chmod +x install.sh
 ./install.sh
 ```
 
-安装脚本自动检测已安装的工具，用 symlink/junction 链接。`git pull` 后技能自动更新，不需要重新安装。新增技能后重跑一次 `install.ps1` 即可。
+安装脚本自动检测已安装的工具，用 symlink/junction 链接。`git pull` 后技能自动更新。新增技能后重跑安装脚本即可。
+
+跨盘符时（如 repo 在 D: 而 .claude 在 C:），PowerShell 版会自动降级为 symlink 或 copy。
+
+### 卸载
+
+```powershell
+.\install.ps1 -Uninstall     # Windows
+./install.sh --uninstall      # macOS / Linux
+```
 
 ### 手动安装
 
@@ -39,12 +52,12 @@ chmod +x install.sh
 
 ### PERO 学习系统
 
-用 AI 辅助学习技术知识。不是让 AI 讲课，而是让 AI 当教练，帮你自己构建知识的逻辑链。
+用 AI 辅助深度学习技术知识。不是让 AI 讲课，而是让 AI 当教练，帮你构建可迁移的解释模型。
 
 | 技能 | 用途 |
 |------|------|
 | `/PEROlearn` | 教学模式：Priming → Encoding → Reference → Retrieval 四阶段引导学习 |
-| `/PEROfeynman` | 检验模式：扮演刁钻学生检验你是否真懂了 |
+| `/PEROfeynman` | 检验模式：扮演较真的学生检验你是否真懂了 |
 
 用法：`cd 到学习项目目录` → 启动工具 → `/PEROlearn`
 
@@ -52,7 +65,7 @@ chmod +x install.sh
 
 ## 添加新技能
 
-在 `skills/` 下创建新目录，放入 `SKILL.md`：
+在 `skills/` 下创建新目录，放入 `SKILL.md`，然后重跑安装脚本。
 
 ```
 skills/
@@ -60,22 +73,8 @@ skills/
 │   └── SKILL.md
 ├── PEROfeynman/
 │   └── SKILL.md
-└── your-new-skill/        ← 新建
+└── your-new-skill/
     └── SKILL.md
 ```
 
-SKILL.md 格式：
-
-```markdown
----
-name: your-skill-name
-description: >
-  一段描述，告诉 AI 什么时候该用这个技能。
----
-
-# 技能标题
-
-具体指令...
-```
-
-然后重跑 `install.ps1`（或 `install.sh`），新技能自动链接到所有工具。
+SKILL.md 格式参考 [agents.md 标准](https://agents.md/)。
