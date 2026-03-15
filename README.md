@@ -52,14 +52,27 @@ chmod +x install.sh
 
 ### PERO 学习系统
 
-用 AI 辅助深度学习技术知识。不是让 AI 讲课，而是让 AI 当教练，帮你构建可迁移的解释模型。
+用 AI 辅助深度学习。AI 不是讲师，是认知镜——让你的思维对自己可见，通过探测和挑战帮你构建可迁移的解释模型。
 
 | 技能 | 用途 |
 |------|------|
-| `/PEROlearn` | 教学模式：Priming → Encoding → Reference → Retrieval 四阶段引导学习 |
-| `/PEROfeynman` | 检验模式：扮演较真的学生检验你是否真懂了 |
+| `/PEROlearn` | 教学模式：Priming → Encoding → Reference → Retrieval 四阶段引导学习。支持陈述性/程序性知识自动判定，程序性知识含实践验证和内隐知识显性化 |
+| `/PEROfeynman` | 检验模式：扮演较真的学生检验你是否真懂了。程序性知识含实践挑战 |
 
 用法：`cd 到学习项目目录` → 启动工具 → `/PEROlearn`
+
+### 网页抓取
+
+用 AI 助手直接抓取网页、提取数据。两个技能覆盖免费和云端两种场景。
+
+| 技能 | 用途 |
+|------|------|
+| `/crawl4ai-scraper` | 本地免费爬虫：Crawl4AI，无需 API Key，支持单页/深度爬取、CSS/LLM 结构化提取 |
+| `/firecrawl-scraper` | 云端爬虫：Firecrawl CLI，开箱即用，内置代理和反爬，支持搜索/浏览器自动化 |
+
+选择指南：
+- 免费、本地、隐私优先 → `crawl4ai-scraper`
+- 快速、云端、不折腾 → `firecrawl-scraper`（免费 500 credits/月）
 
 ---
 
@@ -72,6 +85,10 @@ skills/
 ├── PEROlearn/
 │   └── SKILL.md
 ├── PEROfeynman/
+│   └── SKILL.md
+├── crawl4ai-scraper/
+│   └── SKILL.md
+├── firecrawl-scraper/
 │   └── SKILL.md
 └── your-new-skill/
     └── SKILL.md
