@@ -1,0 +1,81 @@
+<style>
+.d3-card {
+  background: var(--color-bg-secondary);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+}
+.d3-card h2 { font-size: 18px; font-weight: 500; margin-bottom: var(--spacing-md); }
+.d3-tooltip {
+  position: fixed; visibility: hidden; pointer-events: none; z-index: 1000;
+  background: var(--color-bg-secondary); border: 0.5px solid var(--color-border);
+  padding: 8px 12px; border-radius: 8px; font-size: 13px;
+  color: var(--color-text-primary);
+}
+</style>
+
+<div class="d3-card">
+  <h2>D3 chart title</h2>
+  <div id="d3-container" style="width: 100%;"></div>
+</div>
+<div class="d3-tooltip" id="tooltip"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" onload="initD3()"></script>
+<script>
+function initD3() {
+  var cs = getComputedStyle(document.documentElement);
+  var c = function(v) { return cs.getPropertyValue(v).trim(); };
+
+  var container = document.getElementById('d3-container');
+  var rect = container.getBoundingClientRect();
+  var width = rect.width;
+  var height = width * 0.5;
+  var margin = { top: 20, right: 20, bottom: 40, left: 50 };
+  var innerW = width - margin.left - margin.right;
+  var innerH = height - margin.top - margin.bottom;
+
+  var svg = d3.select('#d3-container').append('svg')
+    .attr('width', '100%').attr('height', height)
+    .attr('viewBox', '0 0 ' + width + ' ' + height);
+
+  var g = svg.append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+  var tooltip = d3.select('#tooltip');
+
+  var data = [
+    { label: 'A', value: 30 }, { label: 'B', value: 80 },
+    { label: 'C', value: 45 }, { label: 'D', value: 60 },
+    { label: 'E', value: 20 }, { label: 'F', value: 90 }
+  ];
+
+  var x = d3.scaleBand().domain(data.map(function(d) { return d.label; }))
+    .range([0, innerW]).padding(0.25);
+  var y = d3.scaleLinear().domain([0, d3.max(data, function(d) { return d.value; }) * 1.1])
+    .range([innerH, 0]);
+
+  g.append('g').attr('transform', 'translate(0,' + innerH + ')').call(d3.axisBottom(x))
+    .selectAll('text').style('fill', c('--color-text-secondary')).style('font-size', '12px');
+  g.append('g').call(d3.axisLeft(y).ticks(5))
+    .selectAll('text').style('fill', c('--color-text-secondary')).style('font-size', '12px');
+  g.selectAll('.domain, .tick line').attr('stroke', c('--color-border-light'));
+
+  g.selectAll('rect').data(data).join('rect')
+    .attr('x', function(d) { return x(d.label); })
+    .attr('width', x.bandwidth())
+    .attr('y', innerH).attr('height', 0)
+    .attr('fill', c('--color-teal')).attr('rx', 4)
+    .on('mouseover', function(event, d) {
+      d3.select(this).attr('opacity', 0.8);
+      tooltip.style('visibility', 'visible').html('<b>' + d.label + '</b>: ' + d.value);
+    })
+    .on('mousemove', function(event) {
+      tooltip.style('top', (event.clientY - 30) + 'px').style('left', (event.clientX + 10) + 'px');
+    })
+    .on('mouseout', function() {
+      d3.select(this).attr('opacity', 1); tooltip.style('visibility', 'hidden');
+    })
+    .transition().duration(600).ease(d3.easeCubicOut)
+    .attr('y', function(d) { return y(d.value); })
+    .attr('height', function(d) { return innerH - y(d.value); });
+}
+if (window.d3) initD3();
+</script>
