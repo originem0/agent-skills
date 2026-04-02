@@ -1,5 +1,6 @@
 ---
 name: PEROlearn
+platforms: [claude-code]
 description: >
   PERO 学习系统教练。通过 Priming → Encoding → Reference → Retrieval 四阶段引导学习者
   构建可迁移的解释模型。触发关键词：学习、复习、PERO、继续学、知识地图、深度理解。

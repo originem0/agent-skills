@@ -1,5 +1,6 @@
-# PERO Skills installer for Windows
+# Agent Skills installer for Windows
 # Supports: Claude Code, Codex CLI, OpenClaw
+# Respects `platforms` field in SKILL.md frontmatter for per-skill filtering.
 param(
     [switch]$Force,
     [switch]$Uninstall
@@ -44,10 +45,26 @@ function Uninstall-Skills {
     Write-OK "$ToolName skills uninstalled"
 }
 
+function Test-SkillSupportsPlatform {
+    param([string]$SkillDir, [string]$Platform)
+    $skillFile = Join-Path $SkillDir "SKILL.md"
+    if (-not (Test-Path $skillFile)) { return $true }
+    $inFrontmatter = $false
+    foreach ($line in Get-Content $skillFile) {
+        if ($line -eq '---' -and -not $inFrontmatter) { $inFrontmatter = $true; continue }
+        if ($line -eq '---' -and $inFrontmatter) { break }
+        if ($inFrontmatter -and $line -match '^platforms:') {
+            return $line -match $Platform
+        }
+    }
+    return $true  # no platforms field → all platforms
+}
+
 function Install-Skills {
     param(
         [string]$TargetDir,
-        [string]$ToolName
+        [string]$ToolName,
+        [string]$Platform
     )
 
     if (-not (Test-Path $TargetDir)) {
@@ -58,6 +75,11 @@ function Install-Skills {
         $skillName = $_.Name
         $source = $_.FullName
         $target = Join-Path $TargetDir $skillName
+
+        if (-not (Test-SkillSupportsPlatform $source $Platform)) {
+            Write-Host "  $skillName : not supported on $ToolName, skipping"
+            return
+        }
 
         # Remove existing junction/symlink
         if ((Test-Path $target) -and ((Get-Item $target).Attributes -band [IO.FileAttributes]::ReparsePoint)) {
@@ -113,7 +135,7 @@ if ((Get-Command claude -ErrorAction SilentlyContinue) -or (Test-Path $ClaudeDir
     if ($Uninstall) {
         Uninstall-Skills -TargetDir $ClaudeSkills -ToolName "Claude Code"
     } else {
-        Install-Skills -TargetDir $ClaudeSkills -ToolName "Claude Code"
+        Install-Skills -TargetDir $ClaudeSkills -ToolName "Claude Code" -Platform "claude-code"
 
         # Clean up old commands format (with confirmation)
         @("PEROlearn.md", "PEROfeynman.md") | ForEach-Object {
@@ -141,7 +163,7 @@ if ((Get-Command codex -ErrorAction SilentlyContinue) -or (Test-Path $CodexDir))
     if ($Uninstall) {
         Uninstall-Skills -TargetDir $CodexSkills -ToolName "Codex CLI"
     } else {
-        Install-Skills -TargetDir $CodexSkills -ToolName "Codex CLI"
+        Install-Skills -TargetDir $CodexSkills -ToolName "Codex CLI" -Platform "codex"
     }
 } else {
     Write-Skip "Codex CLI not found"
@@ -157,7 +179,7 @@ if ((Get-Command openclaw -ErrorAction SilentlyContinue) -or (Test-Path $OpenCla
     if ($Uninstall) {
         Uninstall-Skills -TargetDir $OpenClawSkills -ToolName "OpenClaw"
     } else {
-        Install-Skills -TargetDir $OpenClawSkills -ToolName "OpenClaw"
+        Install-Skills -TargetDir $OpenClawSkills -ToolName "OpenClaw" -Platform "openclaw"
     }
 } else {
     Write-Skip "OpenClaw not found"

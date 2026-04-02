@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# PERO Skills installer for macOS/Linux
+# Agent Skills installer for macOS/Linux
 # Supports: Claude Code, Codex CLI, OpenClaw
+# Respects `platforms` field in SKILL.md frontmatter for per-skill filtering.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -17,6 +18,31 @@ UNINSTALL=false
 if [[ "${1:-}" == "--uninstall" ]]; then
     UNINSTALL=true
 fi
+
+# Check if a skill supports the given platform.
+# Reads `platforms:` from SKILL.md frontmatter. No field = all platforms.
+skill_supports_platform() {
+    local skill_dir="$1"
+    local platform="$2"
+    local skill_file="$skill_dir/SKILL.md"
+
+    if [ ! -f "$skill_file" ]; then
+        return 0  # no SKILL.md → allow
+    fi
+
+    # Extract platforms line from YAML frontmatter (between --- delimiters)
+    local platforms_line
+    platforms_line=$(sed -n '/^---$/,/^---$/{ /^platforms:/p }' "$skill_file")
+
+    if [ -z "$platforms_line" ]; then
+        return 0  # no platforms field → all platforms
+    fi
+
+    if echo "$platforms_line" | grep -q "$platform"; then
+        return 0
+    fi
+    return 1
+}
 
 uninstall_skills() {
     local target_dir="$1"
@@ -44,10 +70,17 @@ uninstall_skills() {
 install_skills() {
     local target_dir="$1"
     local tool_name="$2"
+    local platform="$3"
 
     mkdir -p "$target_dir"
     for skill_dir in "$SKILLS_DIR"/*/; do
         skill_name="$(basename "$skill_dir")"
+
+        if ! skill_supports_platform "$skill_dir" "$platform"; then
+            echo "  $skill_name: not supported on $tool_name, skipping"
+            continue
+        fi
+
         target="$target_dir/$skill_name"
 
         if [ -L "$target" ]; then
@@ -85,7 +118,7 @@ if command -v claude &>/dev/null || [ -d "$HOME/.claude" ]; then
     if $UNINSTALL; then
         uninstall_skills "$CLAUDE_SKILLS" "Claude Code"
     else
-        install_skills "$CLAUDE_SKILLS" "Claude Code"
+        install_skills "$CLAUDE_SKILLS" "Claude Code" "claude-code"
 
         for old in "$HOME/.claude/commands/PEROlearn.md" "$HOME/.claude/commands/PEROfeynman.md"; do
             if [ -f "$old" ]; then
@@ -112,7 +145,7 @@ if command -v codex &>/dev/null || [ -d "$HOME/.codex" ]; then
     if $UNINSTALL; then
         uninstall_skills "$CODEX_SKILLS" "Codex CLI"
     else
-        install_skills "$CODEX_SKILLS" "Codex CLI"
+        install_skills "$CODEX_SKILLS" "Codex CLI" "codex"
     fi
 else
     warn "Codex CLI not found, skipping"
@@ -127,7 +160,7 @@ if command -v openclaw &>/dev/null || [ -d "$HOME/.openclaw" ]; then
     if $UNINSTALL; then
         uninstall_skills "$OPENCLAW_SKILLS" "OpenClaw"
     else
-        install_skills "$OPENCLAW_SKILLS" "OpenClaw"
+        install_skills "$OPENCLAW_SKILLS" "OpenClaw" "openclaw"
     fi
 else
     warn "OpenClaw not found, skipping"

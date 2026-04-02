@@ -1,5 +1,6 @@
 ---
 name: PEROfeynman
+platforms: [claude-code]
 description: >
   PERO 学习系统费曼检验官。扮演较真的学生，检验学习者是否形成了可迁移的解释模型。
   基于 CLAUDE.md 数据制定攻击计划。触发关键词：费曼检验、检验、测试理解。

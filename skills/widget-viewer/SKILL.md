@@ -1,5 +1,6 @@
 ---
 name: widget-viewer
+platforms: [claude-code]
 description: >
   Use when the user asks for charts, diagrams, visualizations, interactive explanations,
   data plots, UI mockups, or any visual content better shown graphically than as text.
