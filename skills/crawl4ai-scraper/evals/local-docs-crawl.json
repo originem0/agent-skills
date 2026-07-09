@@ -1,0 +1,8 @@
+{
+  "query": "不想花钱用云服务，帮我把 docs.example.com 整个文档站在本地抓下来喂给 LLM",
+  "expected_behavior": [
+    "推荐 crwl --deep-crawl 并用 --max-pages 控制规模",
+    "LLM 友好输出使用当前有效的格式值（markdown-fit，而非已改名的 fit_markdown）",
+    "提到完全本地运行、无需 API Key 的定位"
+  ]
+}

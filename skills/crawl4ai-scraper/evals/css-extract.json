@@ -1,0 +1,8 @@
+{
+  "query": "用 crawl4ai 从一个结构很规律的产品列表页提取名称和价格",
+  "expected_behavior": [
+    "优先推荐 CSS schema 提取而非 LLM 提取（免费且快）",
+    "给出的提取用法与当前文档一致（-e/-s 配置文件或 Python API JsonCssExtractionStrategy）",
+    "提示 LLM 提取需要配置 provider API Key 作为替代路径"
+  ]
+}

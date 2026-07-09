@@ -1,8 +1,7 @@
 """Crawl4AI: CSS selector extraction — no LLM needed, fastest method."""
 import asyncio
 import json
-from crawl4ai import AsyncWebCrawler
-from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
+from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, JsonCssExtractionStrategy
 
 schema = {
     "name": "Products",
@@ -16,12 +15,9 @@ schema = {
 
 
 async def main():
-    strategy = JsonCssExtractionStrategy(schema)
+    config = CrawlerRunConfig(extraction_strategy=JsonCssExtractionStrategy(schema))
     async with AsyncWebCrawler() as crawler:
-        result = await crawler.arun(
-            url="https://example.com/products",
-            extraction_strategy=strategy
-        )
+        result = await crawler.arun(url="https://example.com/products", config=config)
         data = json.loads(result.extracted_content)
         print(json.dumps(data, indent=2, ensure_ascii=False))
 

@@ -1,0 +1,8 @@
+{
+  "query": "crawl4ai 抓一个 JS 渲染很重的页面拿不到内容怎么办",
+  "expected_behavior": [
+    "给出当前有效的浏览器/爬虫配置手段（-b/-c 内联参数或 YAML，如 scan_full_page、delay_before_return_html）",
+    "提到无限滚动页面用 scan_full_page",
+    "不编造不存在的参数"
+  ]
+}
