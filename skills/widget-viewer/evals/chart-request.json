@@ -1,0 +1,8 @@
+{
+  "query": "画一个这个项目最近提交数量的柱状图",
+  "expected_behavior": [
+    "把 widget HTML 写到 .claude/widgets/<snake_case>.html 而非直接输出代码块",
+    "基于 assets/chartjs.html 模板改造（type:'bar'、borderRadius），不从零手写",
+    "颜色走 CSS 变量 getComputedStyle，不硬编码 hex；容器 width:100%"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "query": "给我画个安装脚本工作流程的示意图",
+  "expected_behavior": [
+    "选用 assets/svg-diagram.html 模板路径",
+    "SVG 用 viewBox + width=100%，不设固定像素宽",
+    "写入 .claude/widgets/ 触发 hook 渲染"
+  ]
+}

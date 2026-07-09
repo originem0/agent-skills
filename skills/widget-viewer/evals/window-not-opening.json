@@ -1,0 +1,8 @@
+{
+  "query": "让你画的图窗口没弹出来",
+  "expected_behavior": [
+    "指出依赖：claude-widget-viewer 在 PATH + settings.json 的 PostToolUse Write hook",
+    "指向 github.com/originem0/claude-widget-viewer 安装",
+    "不盲目重写同一文件重试"
+  ]
+}

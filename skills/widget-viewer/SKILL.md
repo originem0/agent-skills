@@ -6,6 +6,7 @@ description: >
   Triggers: "画图", "图表", "可视化", "展示", "visualize", "chart", "diagram", "plot",
   "show me", "draw", "interactive". Renders widget HTML in a native WebView2 window
   via claude-widget-viewer.exe.
+compatibility: Windows + WebView2; requires claude-widget-viewer on PATH and its PostToolUse Write hook
 metadata:
   platforms: claude-code
 ---
@@ -39,11 +40,11 @@ Read the template file, copy it, then modify `type`, `labels`, `datasets`, title
 
 | Need | Template file | Notes |
 |------|--------------|-------|
-| Line / bar / doughnut chart | `templates/chartjs.html` | Bar: `type:'bar'`, remove fill/tension, add `borderRadius:4`. Doughnut: `type:'doughnut'`, remove scales, multi-color `backgroundColor`. |
-| Flow / architecture diagram | `templates/svg-diagram.html` | SVG text classes: `.t` (14px), `.ts` (12px), `.th` (14px medium). Color classes: `.c-blue`, `.c-teal`, `.c-purple`, `.c-coral`, `.c-pink`, `.c-amber`, `.c-green`, `.c-red`, `.c-gray`. |
-| Complex interactive viz | `templates/d3.html` | D3 v7. Tooltip uses `position: fixed` to avoid clipping. |
+| Line / bar / doughnut chart | `assets/chartjs.html` | Bar: `type:'bar'`, remove fill/tension, add `borderRadius:4`. Doughnut: `type:'doughnut'`, remove scales, multi-color `backgroundColor`. |
+| Flow / architecture diagram | `assets/svg-diagram.html` | SVG text classes: `.t` (14px), `.ts` (12px), `.th` (14px medium). Color classes: `.c-blue`, `.c-teal`, `.c-purple`, `.c-coral`, `.c-pink`, `.c-amber`, `.c-green`, `.c-red`, `.c-gray`. |
+| Complex interactive viz | `assets/d3.html` | D3 v7. Tooltip uses `position: fixed` to avoid clipping. |
 
-For CSS variables and design rules, see `reference/css-variables.md`.
+For CSS variables and design rules, see `references/css-variables.md`.
 
 ## Interaction Stub
 
