@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Agent Skills installer for macOS/Linux
 # Supports: Claude Code, Codex CLI, OpenClaw
-# Respects `platforms` field in SKILL.md frontmatter for per-skill filtering.
+# Respects the `metadata.platforms` field in SKILL.md frontmatter
+# (docs/skill-authoring.md) for per-skill filtering.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -20,10 +21,15 @@ if [[ "${1:-}" == "--uninstall" ]]; then
 fi
 
 # Check if a skill supports the given platform.
-# Reads `metadata.platforms` (space-separated string) from SKILL.md frontmatter;
-# per docs/skill-authoring.md §1 the key is an indented `platforms:` line and
-# may only appear under `metadata:`. No field = all platforms.
-# Top-level `platforms:` is the retired format and is deliberately ignored.
+# Reads `metadata.platforms` (space-separated string) from SKILL.md frontmatter.
+# Per docs/skill-authoring.md §1 the key lives under `metadata:`, so the scan is
+# anchored to that block: only an indented `platforms:` line after a top-level
+# `metadata:` line (and before the next top-level key / frontmatter end) counts.
+# Anchoring matters because folded `description: >` blocks produce identically
+# indented lines — a description mentioning "platforms: ..." must not shadow the
+# real config. No field = all platforms. Top-level `platforms:` is the retired
+# format and is deliberately ignored. An empty value denies all platforms
+# (misconfiguration → conservative).
 skill_supports_platform() {
     local skill_dir="$1"
     local platform="$2"
@@ -34,15 +40,22 @@ skill_supports_platform() {
     fi
 
     local platforms_line
-    platforms_line=$(sed -n '/^---$/,/^---$/{ /^[[:space:]]\{1,\}platforms:/p }' "$skill_file" | head -n 1)
+    platforms_line=$(awk '
+        /^---$/ { fm++; if (fm == 2) exit; next }
+        fm != 1 { next }
+        /^metadata:[[:space:]]*$/ { in_meta = 1; next }
+        /^[^[:space:]]/ { in_meta = 0 }
+        in_meta && /^[[:space:]]+platforms:/ { print; exit }
+    ' "$skill_file")
 
     if [ -z "$platforms_line" ]; then
-        return 0  # no platforms field → all platforms
+        return 0  # no metadata.platforms field → all platforms
     fi
 
-    # Parse the value and compare exactly — substring matching would break with
-    # prefix-overlapping platform names (e.g. "code" vs "claude-code")
-    if echo "$platforms_line" | sed 's/^[[:space:]]*platforms:[[:space:]]*//' | tr -d '"' | tr ' ' '\n' | grep -qx "$platform"; then
+    # Parse the value and compare exactly (-x whole line, -F literal) —
+    # substring matching would break with prefix-overlapping platform names
+    # (e.g. "code" vs "claude-code")
+    if echo "$platforms_line" | sed 's/^[[:space:]]*platforms:[[:space:]]*//' | tr -d '"' | tr ' ' '\n' | grep -qxF "$platform"; then
         return 0
     fi
     return 1

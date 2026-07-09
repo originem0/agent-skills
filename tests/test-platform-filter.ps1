@@ -24,6 +24,8 @@ $multi   = New-Fixture "multi"   @('name: b', 'metadata:', '  platforms: claude-
 $quoted  = New-Fixture "quoted"  @('name: c', 'metadata:', '  platforms: "codex"')
 $nofield = New-Fixture "nofield" @('name: d')
 $legacy  = New-Fixture "legacy"  @('name: e', 'platforms: [claude-code]')
+$shadow  = New-Fixture "shadow"  @('name: f', 'description: >', '  platforms: claude-code codex', 'metadata:', '  platforms: codex')
+$emptyval = New-Fixture "emptyval" @('name: g', 'metadata:', '  platforms:')
 
 $cases = @(
     @("单平台命中",                 $single,  "claude-code", $true),
@@ -33,6 +35,8 @@ $cases = @(
     @("带引号的值命中",             $quoted,  "codex",       $true),
     @("无字段=全平台",              $nofield, "openclaw",    $true),
     @("废弃的顶层格式被忽略=全平台", $legacy,  "codex",       $true),
+    @("description 内的 platforms 行不生效", $shadow, "claude-code", $false),
+    @("metadata 下空值=拒绝全部",   $emptyval, "claude-code", $false),
     @("PEROlearn 装 claude-code",   (Join-Path $RepoRoot "skills/PEROlearn"),        "claude-code", $true),
     @("PEROlearn 不装 codex",       (Join-Path $RepoRoot "skills/PEROlearn"),        "codex",       $false),
     @("crawl4ai 全平台",            (Join-Path $RepoRoot "skills/crawl4ai-scraper"), "codex",       $true)

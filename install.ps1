@@ -1,6 +1,7 @@
 # Agent Skills installer for Windows
 # Supports: Claude Code, Codex CLI, OpenClaw
-# Respects `platforms` field in SKILL.md frontmatter for per-skill filtering.
+# Respects the `metadata.platforms` field in SKILL.md frontmatter
+# (docs/skill-authoring.md) for per-skill filtering.
 param(
     [switch]$Force,
     [switch]$Uninstall
@@ -55,25 +56,39 @@ function Uninstall-Skills {
 }
 
 function Test-SkillSupportsPlatform {
-    # Reads `metadata.platforms` (space-separated string) from SKILL.md frontmatter;
-    # per docs/skill-authoring.md §1 the key is an indented `platforms:` line and
-    # may only appear under `metadata:`. No field = all platforms.
-    # Top-level `platforms:` is the retired format and is deliberately ignored.
+    # Reads `metadata.platforms` (space-separated string) from SKILL.md frontmatter.
+    # Per docs/skill-authoring.md §1 the key lives under `metadata:`, so the scan
+    # is anchored to that block: only an indented `platforms:` line after a
+    # top-level `metadata:` line (and before the next top-level key) counts.
+    # Anchoring matters because folded `description: >` blocks produce identically
+    # indented lines — a description mentioning "platforms: ..." must not shadow
+    # the real config. No field = all platforms. Top-level `platforms:` is the
+    # retired format and is deliberately ignored. An empty value denies all
+    # platforms (misconfiguration → conservative, matches install.sh).
     param([string]$SkillDir, [string]$Platform)
     $skillFile = Join-Path $SkillDir "SKILL.md"
     if (-not (Test-Path $skillFile)) { return $true }
     $inFrontmatter = $false
-    foreach ($line in Get-Content $skillFile) {
+    $inMetadata = $false
+    # -Encoding UTF8 is required: SKILL.md is BOM-less UTF-8, and PS 5.1's
+    # default ANSI decoding (GBK on zh systems) can swallow newlines after
+    # Chinese text — an invalid lead-byte + LF pair collapses into one
+    # replacement char, merging `metadata:` into the previous line.
+    foreach ($line in Get-Content $skillFile -Encoding UTF8) {
         if ($line -eq '---' -and -not $inFrontmatter) { $inFrontmatter = $true; continue }
         if ($line -eq '---' -and $inFrontmatter) { break }
-        if ($inFrontmatter -and $line -match '^\s+platforms:\s*(.+)$') {
+        if (-not $inFrontmatter) { continue }
+        if ($line -match '^metadata:\s*$') { $inMetadata = $true; continue }
+        if ($line -match '^\S') { $inMetadata = $false; continue }
+        if ($inMetadata -and $line -match '^\s+platforms:(.*)$') {
             # Exact list compare — substring matching would break with
-            # prefix-overlapping platform names (e.g. "code" vs "claude-code")
-            $list = ($Matches[1] -replace '"', '') -split '\s+' | Where-Object { $_ }
-            return $list -contains $Platform
+            # prefix-overlapping platform names (e.g. "code" vs "claude-code").
+            # An empty/whitespace-only value yields an empty list → deny all.
+            $list = @(($Matches[1] -replace '"', '') -split '\s+' | Where-Object { $_ })
+            return [bool]($list -contains $Platform)
         }
     }
-    return $true  # no platforms field → all platforms
+    return $true  # no metadata.platforms field → all platforms
 }
 
 function Install-Skills {

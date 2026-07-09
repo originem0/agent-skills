@@ -103,7 +103,7 @@ skills/
     └── SKILL.md         # 必需，其余可选
 ```
 
-frontmatter 中可选的 `platforms` 字段控制技能安装到哪些工具，省略则安装到全部：
+frontmatter 中可选的 `metadata.platforms` 字段控制技能安装到哪些工具，省略则安装到全部：
 
 ```yaml
 ---

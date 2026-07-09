@@ -30,6 +30,8 @@ multi=$(make_fixture multi 'name: b' 'metadata:' '  platforms: claude-code codex
 quoted=$(make_fixture quoted 'name: c' 'metadata:' '  platforms: "codex"')
 nofield=$(make_fixture nofield 'name: d')
 legacy=$(make_fixture legacy 'name: e' 'platforms: [claude-code]')
+shadow=$(make_fixture shadow 'name: f' 'description: >' '  platforms: claude-code codex' 'metadata:' '  platforms: codex')
+emptyval=$(make_fixture emptyval 'name: g' 'metadata:' '  platforms:')
 
 check "单平台命中"                 y "$single" claude-code
 check "单平台拒绝其他"             n "$single" codex
@@ -38,6 +40,8 @@ check "多平台命中第二项"           y "$multi" codex
 check "带引号的值命中"             y "$quoted" codex
 check "无字段=全平台"              y "$nofield" openclaw
 check "废弃的顶层格式被忽略=全平台" y "$legacy" codex
+check "description 内的 platforms 行不生效" n "$shadow" claude-code
+check "metadata 下空值=拒绝全部"   n "$emptyval" claude-code
 
 # 仓库内真实 skill（迁移后应通过）
 check "PEROlearn 装 claude-code"   y skills/PEROlearn claude-code
