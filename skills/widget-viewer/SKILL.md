@@ -45,6 +45,10 @@ Read the template file, copy it, then modify `type`, `labels`, `datasets`, title
 
 For CSS variables and design rules, see `reference/css-variables.md`.
 
+## Interaction Stub
+
+`window.sendPrompt(text)` exists but only logs to console. Do not build flows that depend on it.
+
 ## When to Use vs Not
 
 **Use:** data visualization, flow diagrams, interactive sliders/controls, chart comparisons, architecture diagrams, math visualizations, UI prototypes

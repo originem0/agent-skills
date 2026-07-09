@@ -18,6 +18,7 @@
 - Font-weight 400 and 500 only. h1=22px, h2=18px, h3=16px, body=16px, line-height 1.7
 - Sentence case always, never Title Case or ALL CAPS
 - Category colors: purple, teal, coral, pink. Semantic reserved: blue=info, green=success, amber=warning, red=error
+- Max 2-3 color ramps per widget
 - Tooltips: use `position: fixed` + `z-index: 1000` to avoid clipping
 - All content vertical stack, container auto-sizes to content height
 
