@@ -48,6 +48,10 @@ function Uninstall-Skills {
 }
 
 function Test-SkillSupportsPlatform {
+    # Reads `metadata.platforms` (space-separated string) from SKILL.md frontmatter;
+    # per docs/skill-authoring.md §1 the key is an indented `platforms:` line and
+    # may only appear under `metadata:`. No field = all platforms.
+    # Top-level `platforms:` is the retired format and is deliberately ignored.
     param([string]$SkillDir, [string]$Platform)
     $skillFile = Join-Path $SkillDir "SKILL.md"
     if (-not (Test-Path $skillFile)) { return $true }
@@ -55,10 +59,10 @@ function Test-SkillSupportsPlatform {
     foreach ($line in Get-Content $skillFile) {
         if ($line -eq '---' -and -not $inFrontmatter) { $inFrontmatter = $true; continue }
         if ($line -eq '---' -and $inFrontmatter) { break }
-        if ($inFrontmatter -and $line -match '^platforms:') {
-            # Parse the list and compare exactly — substring/regex matching would
-            # break with prefix-overlapping platform names (e.g. "code" vs "claude-code")
-            $list = ($line -replace '^platforms:\s*', '' -replace '[\[\]]', '') -split '[,\s]+' | Where-Object { $_ }
+        if ($inFrontmatter -and $line -match '^\s+platforms:\s*(.+)$') {
+            # Exact list compare — substring matching would break with
+            # prefix-overlapping platform names (e.g. "code" vs "claude-code")
+            $list = ($Matches[1] -replace '"', '') -split '\s+' | Where-Object { $_ }
             return $list -contains $Platform
         }
     }
