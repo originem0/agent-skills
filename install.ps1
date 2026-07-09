@@ -21,6 +21,8 @@ function Test-SameDrive {
 }
 
 function Uninstall-Skills {
+    # No platform filtering here on purpose: remove any link we own, so links
+    # left behind by an older `platforms` config also get cleaned up.
     param(
         [string]$TargetDir,
         [string]$ToolName
@@ -54,7 +56,10 @@ function Test-SkillSupportsPlatform {
         if ($line -eq '---' -and -not $inFrontmatter) { $inFrontmatter = $true; continue }
         if ($line -eq '---' -and $inFrontmatter) { break }
         if ($inFrontmatter -and $line -match '^platforms:') {
-            return $line -match $Platform
+            # Parse the list and compare exactly — substring/regex matching would
+            # break with prefix-overlapping platform names (e.g. "code" vs "claude-code")
+            $list = ($line -replace '^platforms:\s*', '' -replace '[\[\]]', '') -split '[,\s]+' | Where-Object { $_ }
+            return $list -contains $Platform
         }
     }
     return $true  # no platforms field → all platforms
@@ -119,7 +124,7 @@ function Install-Skills {
 }
 
 Write-Host ""
-Write-Host "=== PERO Skills Installer ==="
+Write-Host "=== Agent Skills Installer ==="
 Write-Host ""
 
 if ($Uninstall) {
@@ -189,12 +194,11 @@ Write-Host ""
 if ($Uninstall) {
     Write-OK "Uninstall complete"
 } else {
-    Write-OK "Done. Skills available: /PEROlearn, /PEROfeynman"
+    $skillList = (Get-ChildItem -Path $SkillsDir -Directory | ForEach-Object { "/$($_.Name)" }) -join ", "
+    Write-OK "Done. Skills in this repo: $skillList"
     Write-Host ""
-    Write-Host "Usage:"
-    Write-Host "  1. cd to your learning project directory"
-    Write-Host "  2. Run /PEROlearn to start or continue learning"
-    Write-Host "  3. Run /PEROfeynman to test your understanding"
+    Write-Host "Per-tool availability is platform-filtered (see output above)."
+    Write-Host "Usage of each skill: see README.md"
     Write-Host ""
     Write-Host "To uninstall: .\install.ps1 -Uninstall"
 }

@@ -13,6 +13,15 @@ description: >
 
 Write widget HTML to `.claude/widgets/<snake_case_name>.html` — a hook auto-launches a native WebView2 window. Raw fragment only: no `<!DOCTYPE>`, `<html>`, `<head>`, `<body>`. Structure: `<style>` → content → `<script>`.
 
+## Requirements
+
+Rendering depends on [claude-widget-viewer](https://github.com/originem0/claude-widget-viewer) (Windows + WebView2), installed separately from this skill:
+
+1. `claude-widget-viewer` executable on PATH.
+2. A `PostToolUse` hook on the Write tool in `~/.claude/settings.json` that runs `claude-widget-viewer hook` (that project's installer sets this up).
+
+If either is missing, widget files are still written but no window opens — tell the user to install claude-widget-viewer instead of retrying.
+
 ## Mandatory Rules
 
 - NEVER use fixed pixel widths on containers. All containers: `width: 100%`.

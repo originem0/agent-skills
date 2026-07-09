@@ -1,6 +1,6 @@
 # Agent Skills
 
-我的 AI 编码助手技能集合。使用 [SKILL.md 开放标准](https://agents.md/)。
+我的 AI 编码助手技能集合。使用 [Agent Skills 开放标准](https://agentskills.io/)（SKILL.md 格式）。
 
 ## 支持的工具
 
@@ -74,24 +74,43 @@ chmod +x install.sh
 - 免费、本地、隐私优先 → `crawl4ai-scraper`
 - 快速、云端、不折腾 → `firecrawl-scraper`（免费 500 credits/月）
 
+### 生成式 UI
+
+| 技能 | 用途 |
+|------|------|
+| `/widget-viewer` | 图表/流程图/交互可视化写成 HTML widget，由 hook 拉起原生 WebView2 窗口渲染，支持热更新 |
+
+依赖外部工具 [claude-widget-viewer](https://github.com/originem0/claude-widget-viewer)（需单独安装，含可执行文件和 PostToolUse hook 配置）。仅支持 Claude Code + Windows。
+
 ---
 
 ## 添加新技能
 
-在 `skills/` 下创建新目录，放入 `SKILL.md`，然后重跑安装脚本。
+在 `skills/` 下创建新目录，放入 `SKILL.md`，然后重跑安装脚本。技能可以携带子资源（模板、示例、脚本），按需加载：
 
 ```
 skills/
-├── PEROlearn/
-│   └── SKILL.md
-├── PEROfeynman/
-│   └── SKILL.md
+├── PEROlearn/           # claude-code only
+├── PEROfeynman/         # claude-code only
 ├── crawl4ai-scraper/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   ├── gotchas.md
+│   ├── examples/
+│   └── scripts/
 ├── firecrawl-scraper/
-│   └── SKILL.md
+├── widget-viewer/       # claude-code only
 └── your-new-skill/
-    └── SKILL.md
+    └── SKILL.md         # 必需，其余可选
 ```
 
-SKILL.md 格式参考 [agents.md 标准](https://agents.md/)。
+frontmatter 中可选的 `platforms` 字段控制技能安装到哪些工具，省略则安装到全部：
+
+```yaml
+---
+name: my-skill
+platforms: [claude-code]   # 可选值：claude-code / codex / openclaw
+description: ...
+---
+```
+
+SKILL.md 格式参考 [Agent Skills 规范](https://agentskills.io/specification)。

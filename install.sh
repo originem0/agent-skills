@@ -38,12 +38,16 @@ skill_supports_platform() {
         return 0  # no platforms field → all platforms
     fi
 
-    if echo "$platforms_line" | grep -q "$platform"; then
+    # Parse the list and compare exactly — substring matching would break with
+    # prefix-overlapping platform names (e.g. "code" vs "claude-code")
+    if echo "$platforms_line" | sed 's/^platforms:[[:space:]]*//' | tr ',[]' '   ' | tr ' ' '\n' | grep -qx "$platform"; then
         return 0
     fi
     return 1
 }
 
+# No platform filtering here on purpose: remove any link we own, so links
+# left behind by an older `platforms` config also get cleaned up.
 uninstall_skills() {
     local target_dir="$1"
     local tool_name="$2"
@@ -103,7 +107,7 @@ install_skills() {
 }
 
 echo ""
-echo "=== PERO Skills Installer ==="
+echo "=== Agent Skills Installer ==="
 echo ""
 
 if $UNINSTALL; then
@@ -170,12 +174,11 @@ echo ""
 if $UNINSTALL; then
     info "Uninstall complete"
 else
-    info "Done. Skills available: /PEROlearn, /PEROfeynman"
+    skill_list=$(for d in "$SKILLS_DIR"/*/; do printf '/%s ' "$(basename "$d")"; done)
+    info "Done. Skills in this repo: $skill_list"
     echo ""
-    echo "Usage:"
-    echo "  1. cd to your learning project directory"
-    echo "  2. Run /PEROlearn to start or continue learning"
-    echo "  3. Run /PEROfeynman to test your understanding"
+    echo "Per-tool availability is platform-filtered (see output above)."
+    echo "Usage of each skill: see README.md"
     echo ""
     echo "To uninstall: ./install.sh --uninstall"
 fi
