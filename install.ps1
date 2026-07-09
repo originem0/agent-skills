@@ -19,6 +19,11 @@ function Remove-Link {
     # from `Remove-Item <reparse point> -Force`, so use Directory.Delete instead
     # (non-recursive: deletes only the reparse point itself).
     param([string]$Path)
+    # Self-defense: refuse anything that isn't a reparse point, so a caller bug
+    # can never turn this into deletion of a real directory.
+    if (-not ((Get-Item $Path -Force).Attributes -band [IO.FileAttributes]::ReparsePoint)) {
+        throw "Remove-Link: not a junction/symlink: $Path"
+    }
     [System.IO.Directory]::Delete($Path)
 }
 
@@ -113,8 +118,11 @@ function Install-Skills {
         # try one first. (The previous same-drive check was wrong: it routed
         # cross-drive installs to symlinks, which require Developer Mode/admin.)
         # Symlink remains a fallback for non-local sources (e.g. network share),
-        # where junctions can't point.
-        cmd /c mklink /J "$target" "$source" 2>$null | Out-Null
+        # where junctions can't point. The stderr redirect must live inside cmd:
+        # a PowerShell-side `2>$null` on a native command under EAP=Stop turns
+        # stderr into a terminating NativeCommandError, making this fallback
+        # chain unreachable.
+        cmd /c "mklink /J ""$target"" ""$source"" 2>nul" | Out-Null
         if (-not (Test-Path $target)) {
             try {
                 New-Item -ItemType SymbolicLink -Path $target -Target $source | Out-Null
