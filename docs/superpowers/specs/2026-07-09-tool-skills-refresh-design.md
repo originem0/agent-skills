@@ -1,7 +1,7 @@
 # 工具类 Skill 更新（子项目 2）设计文档
 
 日期：2026-07-09
-状态：待审阅
+状态：已批准（2026-07-09 范围变更：**firecrawl-scraper 整体跳过**——用户不做 firecrawl 认证，该 skill 本轮不重构，其已知漂移（browse→interact 等）记录在案待后续处理。子项目 2 范围收窄为 crawl4ai-scraper + widget-viewer。crawl4ai 的 ground truth 由 firecrawl 抓取降级为 WebSearch。）
 前置：子项目 1（skill 编写规范，已合并 f476fe4）。本 spec 的验收标准即 `docs/skill-authoring.md`。
 
 ## 目标

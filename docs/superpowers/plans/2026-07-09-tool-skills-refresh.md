@@ -8,6 +8,8 @@
 
 **Tech Stack:** Markdown、firecrawl CLI（npm）、git-bash。无新依赖。
 
+> **⚠️ 范围变更（2026-07-09，用户决定）：Task 1（firecrawl-scraper）整体取消**——不做 firecrawl 认证，该 skill 本轮不动。Task 2 的 ground truth 从 firecrawl 抓取的文档工件降级为 WebSearch 结果（本计划各处提到的 `.git/sdd/crawl4ai-*-docs.md` 工件不再存在，Task 2 Step 3 规则 1 中"两个文档工件"一律替换为"WebSearch 结果（在报告中附来源 URL）"）。Task 4 的 README 校对不再涉及 firecrawl 描述改动。credits 预算条款作废。firecrawl-scraper 的已知漂移（browse→interact、--wait→--wait-for、--extract→-Q、glob→paths、本地 1.14.8 落后 1.19.24）记录于 progress ledger，待后续单独处理。
+
 ## Global Constraints
 
 - **credits 硬预算 ≤10**，分配：`scrape docs.crawl4ai.com/core/cli/`（1）+ `scrape docs.crawl4ai.com/core/deep-crawling/`（1）+ `map docs.crawl4ai.com`（1）+ `search`（limit 3，≤3）+ `-Q` 页面问答（1）≈ 7，留 3 余量。任一命令失败最多重试 1 次；预算耗尽立即停止真实验证并如实记录。
