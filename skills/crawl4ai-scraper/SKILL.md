@@ -59,6 +59,7 @@ crwl https://example.com/products -e extract_css.yml -s css_schema.json -o json
 
 `-s` 指向字段 schema（`baseSelector` + `fields`），`-e` 指向提取策略配置。
 运行 `crwl --example` 可查看这两个文件的完整样例。
+XPath 选择器用 Python API 的 `JsonXPathExtractionStrategy`（schema 结构与 CSS 版一致）。
 
 页面不规律时兜底用 LLM 提取（需 API Key）：
 

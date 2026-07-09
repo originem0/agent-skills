@@ -10,7 +10,7 @@
 | 运行方式 | 本地运行 | 云 API |
 | API Key | 核心功能不需要（LLM 提取/问答除外） | 需要 |
 | 速度 | 取决于本机和网络 | 云端集群，通常更快 |
-| 反爬处理 | v0.8.5+ 内置自动反爬回退（见下） | 内置代理池和反爬绕过 |
+| 反爬处理 | v0.8.5+ 内置封锁检测与回退框架，代理需自备（见下） | 内置代理池和反爬绕过 |
 | 结构化提取 | CSS/XPath（免费）+ LLM 双模式 | LLM extract |
 | 适合场景 | 免费使用、隐私敏感、自定义需求高 | 快速接入、大规模、不想管基础设施 |
 
@@ -36,8 +36,8 @@
   `JsonCssExtractionStrategy`）；`crwl --example` 可看配置文件样例
 - LLM 提取/问答（`-j`/`-q`）首次运行会交互式配置 provider 和 API Token，
   存入 `~/.crawl4ai/global.yml`；本地 ollama 无需 token
-- v0.8.5+ 反爬自动升级：被封锁时自动回退到隐身浏览器/代理逐级升级，多数情况无需手动配置
-  （详见 docs.crawl4ai.com/advanced/anti-bot-and-fallback/）
+- v0.8.5+ 内置封锁检测与逐级回退（重试 → 代理轮换 → 自定义 fallback；代理需自备，
+  建议配合 enable_stealth/magic）（详见 docs.crawl4ai.com/advanced/anti-bot-and-fallback/）
 - 需要登录态的站点用 `crwl profiles` 交互式创建 profile（浏览器里登录后按 `q` 保存，
   存于 `~/.crawl4ai/profiles/`）
 - 深爬用 `--max-pages` 控制规模；CLI 没有 `--include-pattern`/`--exclude-pattern`，
