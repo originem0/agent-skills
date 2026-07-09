@@ -13,11 +13,13 @@ function Write-OK($msg)   { Write-Host "[OK]   $msg" -ForegroundColor Green }
 function Write-Skip($msg)  { Write-Host "[SKIP] $msg" -ForegroundColor Yellow }
 function Write-Err($msg)   { Write-Host "[ERR]  $msg" -ForegroundColor Red }
 
-function Test-SameDrive {
-    param([string]$Path1, [string]$Path2)
-    $root1 = [System.IO.Path]::GetPathRoot($Path1)
-    $root2 = [System.IO.Path]::GetPathRoot($Path2)
-    return $root1 -eq $root2
+function Remove-Link {
+    # Removes a junction/symlink without touching its target's contents.
+    # Windows PowerShell 5.1 on current Win11 builds throws NullReferenceException
+    # from `Remove-Item <reparse point> -Force`, so use Directory.Delete instead
+    # (non-recursive: deletes only the reparse point itself).
+    param([string]$Path)
+    [System.IO.Directory]::Delete($Path)
 }
 
 function Uninstall-Skills {
@@ -38,7 +40,7 @@ function Uninstall-Skills {
         $target = Join-Path $TargetDir $skillName
 
         if ((Test-Path $target) -and ((Get-Item $target).Attributes -band [IO.FileAttributes]::ReparsePoint)) {
-            Remove-Item $target -Force
+            Remove-Link $target
             Write-Host "  Removed: $skillName"
         } elseif (Test-Path $target) {
             Write-Host "  $skillName : not a junction, skipping (remove manually if needed)"
@@ -92,7 +94,7 @@ function Install-Skills {
 
         # Remove existing junction/symlink
         if ((Test-Path $target) -and ((Get-Item $target).Attributes -band [IO.FileAttributes]::ReparsePoint)) {
-            Remove-Item $target -Force
+            Remove-Link $target
             Write-Host "  $skillName : updating link"
         }
 
@@ -107,16 +109,17 @@ function Install-Skills {
             }
         }
 
-        # Choose link type: junction for same drive, symlink for cross-drive
-        if (Test-SameDrive $source $TargetDir) {
-            cmd /c mklink /J "$target" "$source" | Out-Null
-        } else {
-            # Junction doesn't work across drives; use directory symlink
-            # Requires Developer Mode or elevated privileges
+        # Junctions work across local volumes and need no privilege, so always
+        # try one first. (The previous same-drive check was wrong: it routed
+        # cross-drive installs to symlinks, which require Developer Mode/admin.)
+        # Symlink remains a fallback for non-local sources (e.g. network share),
+        # where junctions can't point.
+        cmd /c mklink /J "$target" "$source" 2>$null | Out-Null
+        if (-not (Test-Path $target)) {
             try {
                 New-Item -ItemType SymbolicLink -Path $target -Target $source | Out-Null
             } catch {
-                Write-Err "$skillName : cross-drive symlink failed. Enable Developer Mode or run as admin."
+                Write-Err "$skillName : link creation failed. Enable Developer Mode or run as admin."
                 Write-Host "  Falling back to copy (won't auto-update with git pull)..."
                 Copy-Item -Path $source -Destination $target -Recurse
                 return
