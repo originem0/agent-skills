@@ -108,9 +108,12 @@ frontmatter 中可选的 `platforms` 字段控制技能安装到哪些工具，�
 ```yaml
 ---
 name: my-skill
-platforms: [claude-code]   # 可选值：claude-code / codex / openclaw
 description: ...
+metadata:
+  platforms: claude-code   # 空格分隔多个；可选值：claude-code / codex / openclaw
 ---
 ```
+
+完整规范见 [docs/skill-authoring.md](docs/skill-authoring.md)。
 
 SKILL.md 格式参考 [Agent Skills 规范](https://agentskills.io/specification)。

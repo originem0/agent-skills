@@ -20,7 +20,10 @@ if [[ "${1:-}" == "--uninstall" ]]; then
 fi
 
 # Check if a skill supports the given platform.
-# Reads `platforms:` from SKILL.md frontmatter. No field = all platforms.
+# Reads `metadata.platforms` (space-separated string) from SKILL.md frontmatter;
+# per docs/skill-authoring.md §1 the key is an indented `platforms:` line and
+# may only appear under `metadata:`. No field = all platforms.
+# Top-level `platforms:` is the retired format and is deliberately ignored.
 skill_supports_platform() {
     local skill_dir="$1"
     local platform="$2"
@@ -30,17 +33,16 @@ skill_supports_platform() {
         return 0  # no SKILL.md → allow
     fi
 
-    # Extract platforms line from YAML frontmatter (between --- delimiters)
     local platforms_line
-    platforms_line=$(sed -n '/^---$/,/^---$/{ /^platforms:/p }' "$skill_file")
+    platforms_line=$(sed -n '/^---$/,/^---$/{ /^[[:space:]]\{1,\}platforms:/p }' "$skill_file" | head -n 1)
 
     if [ -z "$platforms_line" ]; then
         return 0  # no platforms field → all platforms
     fi
 
-    # Parse the list and compare exactly — substring matching would break with
+    # Parse the value and compare exactly — substring matching would break with
     # prefix-overlapping platform names (e.g. "code" vs "claude-code")
-    if echo "$platforms_line" | sed 's/^platforms:[[:space:]]*//' | tr ',[]' '   ' | tr ' ' '\n' | grep -qx "$platform"; then
+    if echo "$platforms_line" | sed 's/^[[:space:]]*platforms:[[:space:]]*//' | tr -d '"' | tr ' ' '\n' | grep -qx "$platform"; then
         return 0
     fi
     return 1
