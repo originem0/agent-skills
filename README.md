@@ -67,7 +67,7 @@ chmod +x install.sh
 
 | 技能 | 用途 |
 |------|------|
-| `/crawl4ai-scraper` | 本地免费爬虫：Crawl4AI，无需 API Key，支持单页/深度爬取、CSS/LLM 结构化提取 |
+| `/crawl4ai-scraper` | 本地免费爬虫：Crawl4AI，核心功能无需 API Key，支持单页/深度爬取、CSS/XPath/LLM 结构化提取 |
 | `/firecrawl-scraper` | 云端爬虫：Firecrawl CLI，开箱即用，内置代理和反爬，支持搜索/浏览器自动化 |
 
 选择指南：

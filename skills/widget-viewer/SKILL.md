@@ -1,11 +1,11 @@
 ---
 name: widget-viewer
 description: >
+  Renders widget HTML in a native WebView2 window via claude-widget-viewer.exe.
   Use when the user asks for charts, diagrams, visualizations, interactive explanations,
   data plots, UI mockups, or any visual content better shown graphically than as text.
   Triggers: "画图", "图表", "可视化", "展示", "visualize", "chart", "diagram", "plot",
-  "show me", "draw", "interactive". Renders widget HTML in a native WebView2 window
-  via claude-widget-viewer.exe.
+  "show me", "draw", "interactive".
 compatibility: Windows + WebView2; requires claude-widget-viewer on PATH and its PostToolUse Write hook
 metadata:
   platforms: claude-code
