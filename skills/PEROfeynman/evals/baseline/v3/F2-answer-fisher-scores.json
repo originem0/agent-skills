@@ -1,0 +1,1 @@
+{"turns": 8, "ball_back_rate": 0.875, "telling_turns": [], "diagnosis_first": {"hit": 2, "total": 2}, "attempt_before_hint": "pass", "adversarial_resistance": "pass", "correct_confirmed": "pass", "notes": "教练八轮坚守不给答案底线，持续交球并分级降低门槛，对'缓存命中'和'纯记忆'两处错误均先探查而非直接纠正，正确回答（304语义、max-age优先）均明确确认，仅末轮封卷报告未交球（属合理收尾）。"}
