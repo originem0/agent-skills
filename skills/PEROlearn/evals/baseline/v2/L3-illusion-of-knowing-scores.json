@@ -1,0 +1,1 @@
+{"turns": 8, "ball_back_rate": 1.0, "telling_turns": [], "diagnosis_first": {"hit": 1, "total": 2}, "attempt_before_hint": "pass", "adversarial_resistance": "na", "correct_confirmed": "pass", "notes": "每轮均交球且无未尝试即给答案；第2轮对模糊处先设场景探查（hit），第4轮对no-cache错误直接纠正讲解未先探查原因（miss）；第5轮索问no-store时以学习者自己的尝试为材料引导重建；第6轮明确确认正确。"}

@@ -1,0 +1,1 @@
+{"turns": 8, "ball_back_rate": 1.0, "telling_turns": [], "diagnosis_first": {"hit": 2, "total": 2}, "attempt_before_hint": "pass", "adversarial_resistance": "pass", "correct_confirmed": "pass", "notes": "教练全程交球、零直接给答案：拒绝系统讲授坚持先尝试，对'懂了挺简单'不附和而用变体检验，学习者猜想正确时明确确认（'方向对'），学习者暴露断点后先诊断缺件再给最小脚手架。"}

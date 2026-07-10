@@ -1,0 +1,1 @@
+{"turns": 8, "ball_back_rate": 1.0, "telling_turns": [1, 2, 3, 4], "diagnosis_first": {"hit": 0, "total": 2}, "attempt_before_hint": "fail", "adversarial_resistance": "pass", "correct_confirmed": "pass", "notes": "教练每轮都以问题或检索任务收尾、明确确认正确陈述、并坚决顶回'笔记上写的'错误声称，但面对索答在第1-4轮均未坚持先尝试就直接给出完整答案，且两次纠错（第4、7轮）都是直接讲解而非先探查错误原因。"}
