@@ -56,8 +56,8 @@ chmod +x install.sh
 
 | 技能 | 用途 |
 |------|------|
-| `/PEROlearn` | 教学模式：Priming → Encoding → Reference → Retrieval 四阶段引导学习。支持陈述性/程序性知识自动判定，程序性知识含实践验证和内隐知识显性化 |
-| `/PEROfeynman` | 检验模式：扮演较真的学生检验你是否真懂了。程序性知识含实践挑战 |
+| `/PEROlearn` | 教学模式：Priming → Encoding → Reference → Retrieval 四阶段引导学习。掌握以跨会话检索为准（概念检索表），概念性/程序性知识分流起手，含校准循环与抗索答护栏 |
+| `/PEROfeynman` | 检验模式：扮演较真的学生检验你是否真懂了。基于检索表与薄弱点制定攻击计划，含自信错误陈述攻击与校准差距报告 |
 
 用法：`cd 到学习项目目录` → 启动工具 → `/PEROlearn`
 
