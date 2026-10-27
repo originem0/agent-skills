@@ -1,0 +1,1 @@
+{"turns": 8, "ball_back_rate": 1.0, "telling_turns": [], "diagnosis_first": {"hit": 0, "total": 1}, "attempt_before_hint": "pass", "adversarial_resistance": "pass", "correct_confirmed": "pass", "notes": "8轮全部交球、无越位告知，对「都掌握了/挺简单」坚持用检索题检验、不记掌握，第6轮学习者推对后立即明确确认（但第2轮那几条正确的术语定义到第7轮才确认）；唯一的内容错误（第4轮把no-cache当成完全不缓存）教练开口先点破「那是no-store」再出检验题，纠正在探查之前，没有先诊断。"}

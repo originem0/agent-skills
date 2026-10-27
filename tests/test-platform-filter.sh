@@ -44,8 +44,8 @@ check "description 内的 platforms 行不生效" n "$shadow" claude-code
 check "metadata 下空值=拒绝全部"   n "$emptyval" claude-code
 
 # 仓库内真实 skill（迁移后应通过）
-check "PEROlearn 装 claude-code"   y skills/PEROlearn claude-code
-check "PEROlearn 不装 codex"       n skills/PEROlearn codex
+check "pero-learn 装 claude-code"   y skills/pero-learn claude-code
+check "pero-learn 不装 codex"       n skills/pero-learn codex
 check "crawl4ai 全平台"            y skills/crawl4ai-scraper codex
 
 echo "$pass passed, $fail failed"

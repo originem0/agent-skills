@@ -37,8 +37,8 @@ $cases = @(
     @("废弃的顶层格式被忽略=全平台", $legacy,  "codex",       $true),
     @("description 内的 platforms 行不生效", $shadow, "claude-code", $false),
     @("metadata 下空值=拒绝全部",   $emptyval, "claude-code", $false),
-    @("PEROlearn 装 claude-code",   (Join-Path $RepoRoot "skills/PEROlearn"),        "claude-code", $true),
-    @("PEROlearn 不装 codex",       (Join-Path $RepoRoot "skills/PEROlearn"),        "codex",       $false),
+    @("pero-learn 装 claude-code",   (Join-Path $RepoRoot "skills/pero-learn"),        "claude-code", $true),
+    @("pero-learn 不装 codex",       (Join-Path $RepoRoot "skills/pero-learn"),        "codex",       $false),
     @("crawl4ai 全平台",            (Join-Path $RepoRoot "skills/crawl4ai-scraper"), "codex",       $true)
 )
 $failCount = 0
