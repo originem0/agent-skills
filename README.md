@@ -31,7 +31,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-安装脚本自动检测已安装的工具，用 symlink/junction 链接。`git pull` 后技能自动更新。新增技能后重跑安装脚本即可。
+安装脚本自动检测已安装的工具，用 symlink/junction 链接。`git pull` 后技能自动更新。新增、删除或改名技能后重跑安装脚本即可——指向本仓库但目标已不存在的残留链接会被自动清理（不碰其他来源的链接）。
 
 跨盘符时（如 repo 在 D: 而 .claude 在 C:），PowerShell 版会自动降级为 symlink 或 copy。
 
@@ -67,7 +67,7 @@ chmod +x install.sh
 |------|------|
 | `/crawl4ai-scraper` | 本地免费爬虫：Crawl4AI，核心功能无需 API Key，支持单页/深度爬取、CSS/XPath/LLM 结构化提取 |
 
-云端抓取不在本仓库维护：Firecrawl 官方提供 skill，用 `firecrawl setup core -g` 安装（只装 skills；裸 `firecrawl setup` 的 defaults 会禁用 Claude Code 原生 WebFetch/WebSearch）。
+云端抓取（Firecrawl）用官方 skill，见下方「不在本仓库维护的 skill」。
 
 ### 英语词族
 
@@ -82,7 +82,7 @@ chmod +x install.sh
 上游工具自带 skill 时由上游安装，本仓库不保留副本（见 `docs/skill-authoring.md` §4）：
 
 - **widget-viewer**（生成式 UI，WebView2 渲染 HTML widget）：随 [claude-widget-viewer](https://github.com/originem0/claude-widget-viewer) 的 `install.ps1` 安装。
-- **Firecrawl**：`firecrawl setup core -g` 后只保留 `firecrawl-scrape`、`firecrawl-search`、`firecrawl-map`。
+- **Firecrawl**：`firecrawl setup core -g` 安装（只装 skills；裸 `firecrawl setup` 的 defaults 会禁用 Claude Code 原生 WebFetch/WebSearch）。本机只保留 `firecrawl-scrape`、`firecrawl-search`、`firecrawl-map`，其余用 `npx skills remove -g -y <name>` 删除——它们被链接进 ~20 个 agent 目录并记入 `~/.agents/.skill-lock.json`，不要手删。
 
 ---
 
