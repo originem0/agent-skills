@@ -74,8 +74,10 @@ chmod +x install.sh
 | 技能 | 用途 |
 |------|------|
 | `/word-family` | 给一个单词/词根/日常场景，查实词源（etymology）后生成一页「日常锚点 → 母画面 → 换方向铺开词族」的线稿网页课，含自测模式与迁移题。详见 `skills/word-family/使用说明.md` |
+| `/word-family-video` | 把一课词族课做成 5 分钟以内的讲解视频：线稿逐笔画出、元素随解说出场、版式轮换、免费 TTS（edge-tts）配音与内嵌字幕，超时按重要性自动删减。详见 `skills/word-family-video/使用说明.md` |
 
-依赖 Python 3.10+、Chrome/Edge（截图自检）；词源优先经 firecrawl 抓 etymonline（需登录），否则退回 Wiktionary。
+word-family 依赖 Python 3.10+、Chrome/Edge；Python 版 Playwright（自动版面检查，直接用本机浏览器）；词源优先经 firecrawl 抓 etymonline（需登录），否则退回 Wiktionary；开场配图来自 Wikimedia Commons（自动署名）。
+word-family-video 另需 edge-tts、numpy、ffmpeg；可选 Pillow、faster-whisper（读音检查）。
 
 ### 不在本仓库维护的 skill
 

@@ -1,0 +1,12 @@
+{
+  "query": "/word-family-video pend 那个视频里 pending 听着像「偏顶」，修一下",
+  "files": [
+    "projects/pend/narration.json"
+  ],
+  "expected_behavior": [
+    "运行 check 定位 pending 所在的句子，而不是凭猜测改",
+    "在 narration.json 的 say_as 里加替换（只改配音，字幕仍显示 pending），不改动解说原文",
+    "重新 render 后再跑 check，确认该词不再被报出；仍被报出时说明可能是 Whisper 误听",
+    "不修改 assets/frame.html 和 word-family 的课程 JSON"
+  ]
+}

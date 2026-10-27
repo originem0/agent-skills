@@ -1,0 +1,9 @@
+{
+  "query": "来一课 nice 这个词所在的词族",
+  "files": [],
+  "expected_behavior": [
+    "先用 scripts/etym.py 查 nice 的词源，而不是凭记忆下结论",
+    "如实说明 nice 词义早已漂移（拉丁 nescius「无知的」），拆不出透明的母画面，不适合用词族法",
+    "提供替代：换一个相关词根（如 sci-「知」），或只讲 nice 的词义演变史，由用户选择"
+  ]
+}

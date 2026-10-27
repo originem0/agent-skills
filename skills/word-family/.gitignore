@@ -1,0 +1,8 @@
+# 运行产物，不进仓库：
+# cache/ 是 etymonline 抓取原文与 TTS 音频（版权内容 + 体积大），videos/ 是视频产物，
+# lessons/*.html 可由 `python scripts/build.py --all` 从 JSON 重建，_snap/ 是自检截图。
+cache/
+videos/
+lessons/_snap/
+lessons/*.html
+__pycache__/

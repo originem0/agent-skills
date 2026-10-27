@@ -1,0 +1,10 @@
+{
+  "query": "/word-family 最近新闻里老说 tariff，这个词有没有一家子可以学？",
+  "files": [],
+  "expected_behavior": [
+    "先用 etym.py 查 tariff 的词源；若它拆不出透明的词族，如实说明并建议换一个相关词根，而不是硬拆",
+    "若做时事开场：用网页搜索找到真实报道，opening.type 为 news，opening.source 含 title/url/date",
+    "不编造新闻标题、日期或数据；搜不到时换用其他开场方式并说明",
+    "build.py 无 [错误]"
+  ]
+}

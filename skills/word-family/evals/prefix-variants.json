@@ -1,0 +1,11 @@
+{
+  "query": "/word-family 我老是认不出 illegal、impossible、irregular 其实是一家",
+  "files": [],
+  "expected_behavior": [
+    "确定锚点是否定前缀 in-，而不是分别讲 legal / possible / regular",
+    "用 scripts/etym.py 查证 il- / im- / ir- 是 in- 的同化形式，并区分表示「进入」的另一个 in-",
+    "lessons/in.json（或同义文件名）的 root.variants 列出 il- / im- / ir-，每项带出现条件和例词",
+    "主词至少覆盖两个变体，相关词素用 {\"m\":…, \"of\": \"in-\"} 标注，caveat 用一句话解释同化（为了顺口，向后一个辅音靠拢）",
+    "build.py 运行后没有关于变体的 [提醒]，或在交付时说明误报理由"
+  ]
+}

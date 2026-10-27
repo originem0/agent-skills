@@ -1,0 +1,9 @@
+{
+  "query": "/word-family 我今天读到 distract 这个词，想学它那一家",
+  "files": ["lessons/tract.json"],
+  "expected_behavior": [
+    "从 distract 找出词根 tract，并检查 lessons/ 下已有 tract 课程",
+    "先问用户是覆盖 tract 课还是另做一课，未得到答复前不覆盖 lessons/tract.json",
+    "若用户选择另做，distract 必须出现在主词里，词源经 scripts/etym.py 核实"
+  ]
+}

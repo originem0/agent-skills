@@ -1,0 +1,9 @@
+{
+  "query": "/word-family 帮我把 ab-、de-、apo-、for- 这几个前缀做成一课",
+  "files": [],
+  "expected_behavior": [
+    "不把四个互不同源的前缀合成一页课",
+    "说明它们没有共同的母画面，给出「拆成几课依次生成」或「挑一个」的选择，并等用户决定",
+    "在用户选定前不写 lessons/*.json、不运行 build.py"
+  ]
+}

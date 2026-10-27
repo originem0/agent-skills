@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>词族课</title>
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #fff; --ink: #1e242b; --muted: #6b717a; --line: #e4dfd5;
+    --pre: #b84a14; --pre-bg: #fdf0e6; --root: #176b4d; --root-bg: #e7f3ee;
+    --suf: #5e6670; --suf-bg: #eef0f2; --accent: #2b5c8f; --stage: #faf8f4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); line-height: 1.75; padding: 32px 18px 80px;
+    font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  .serif { font-family: Georgia, "Times New Roman", serif; }
+  .p { color: var(--pre); } .r { color: var(--root); } .s { color: var(--suf); }
+
+  header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+  header h1 { font-size: 1.45rem; }
+  header a { color: var(--muted); font-size: .85rem; text-decoration: none; }
+  #quiz { margin-left: auto; border: 1px solid var(--line); background: var(--card); color: var(--muted);
+    font-size: .85rem; font-weight: 600; padding: 6px 14px; border-radius: 8px; cursor: pointer; }
+  body.quiz #quiz { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  .panel, .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(30, 36, 43, .05); }
+  .opening { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; padding: 26px 30px; align-items: center; }
+  .opening .big { font-size: 1.5rem; font-weight: 700; }
+  .opening .say { margin: 12px 0; padding-left: 14px; border-left: 4px solid var(--accent); font-weight: 600; }
+  .opening .muted { color: var(--muted); }
+  .opening .src { font-size: .82rem; color: var(--muted); margin-top: 10px; }
+  .opening .src a, .photo small a { color: inherit; }
+  .photo img { display: block; width: 100%; max-height: 340px; object-fit: cover; border-radius: 6px; }
+  .photo small { display: block; font-size: .72rem; margin-top: 2px; }
+  .anchor { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; padding: 22px 30px; align-items: center; }
+  .anchor .rootbig { display: inline-block; font-family: Georgia, serif; font-weight: 700; font-size: 2rem;
+    color: var(--root); background: var(--root-bg); padding: 2px 18px; border-radius: 10px; }
+  .anchor .rootbig small { font-family: inherit; font-size: 1rem; margin-left: 10px; }
+  .anchor .variants { font-family: Georgia, serif; color: var(--pre); font-weight: 700; }
+  .anchor .variants b { font-family: -apple-system, "Microsoft YaHei", sans-serif; color: var(--muted); font-weight: 600;
+    font-size: .85rem; margin-right: 10px; }
+  .chip .of { display: block; font-style: normal; font-size: .7rem; opacity: .8; }
+  .anchor p { margin-top: 10px; }
+  @media (max-width: 760px) { .opening, .anchor, .card { grid-template-columns: 1fr !important; } }
+
+  section { margin: 38px 0; }
+  h2 { font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: baseline; gap: 10px; }
+  h2::before { content: ""; width: 5px; height: 20px; background: var(--accent); border-radius: 3px; align-self: center; }
+  h2 small { font-weight: 400; color: var(--muted); font-size: .88rem; }
+
+  /* 时间线：一根竖线把所有卡片串成一条叙事 */
+  .seq { position: relative; padding-left: 70px; }
+  .seq::before { content: ""; position: absolute; left: 30px; top: 10px; bottom: 10px; width: 2px; background: var(--line); }
+  .step { position: relative; margin-bottom: 22px; }
+  .node { position: absolute; left: -70px; top: 22px; width: 62px; text-align: center; }
+  .node b { display: inline-block; font-family: Georgia, serif; font-size: .95rem; color: var(--pre);
+    background: var(--pre-bg); border: 1px solid #f0d6c4; border-radius: 999px; padding: 2px 9px; }
+  .link { color: var(--muted); font-style: italic; margin: 0 0 8px 4px; }
+  .card { display: grid; grid-template-columns: 1.05fr 1fr; gap: 22px; padding: 22px; }
+  .card h3 { font-size: 1.75rem; line-height: 1.2; }
+  .card .col { display: flex; flex-direction: column; gap: 9px; }
+  .card.finale { border-color: #c9d9cf; background: #fbfdfb; }
+
+  .morph { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .chip { display: inline-flex; flex-direction: column; padding: 4px 12px; border-radius: 8px; background: var(--pre-bg); color: var(--pre); }
+  .chip.r { background: var(--root-bg); color: var(--root); }
+  .chip.s { background: var(--suf-bg); color: var(--suf); }
+  .chip b { font-family: Georgia, serif; font-size: 1rem; }
+  .chip small { font-size: .76rem; }
+  .plus { color: var(--muted); font-weight: 700; }
+
+  .stage { background: var(--stage); border: 1px solid #ebe6dc; border-radius: 10px; padding: 8px 10px 6px; align-self: start; }
+  .stage svg { display: block; width: 100%; height: auto; }
+  .stage figcaption { font-size: .8rem; color: var(--muted); text-align: center; }
+
+  .literal { color: var(--accent); font-weight: 700; }
+  .meaning { font-weight: 700; font-size: 1.05rem; }
+  .senses { margin-left: 1.2em; font-size: .9rem; }
+  .ex { font-size: .9rem; background: #f6f4ef; border-radius: 8px; padding: 8px 12px; }
+  .ex i { font-family: Georgia, serif; }
+  .caveat { font-size: .86rem; background: #fff8e6; border-left: 3px solid #e6c565; padding: 6px 10px; border-radius: 4px; }
+  .fact { font-size: .78rem; color: var(--muted); }
+
+  body.quiz .reveal { filter: blur(6px); cursor: pointer; user-select: none; }
+  body.quiz .reveal.shown { filter: none; }
+
+  .map { padding: 16px; }
+  .map svg { display: block; width: 100%; height: auto; }
+  .box { padding: 14px 24px; }
+  .box p + p { margin-top: 8px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 18px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin-top: 8px; color: #3a4049; }
+  footer { color: var(--muted); font-size: .8rem; margin-top: 40px; }
+  .err { color: #c0392b; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+
+<script>
+/* 课程数据由 scripts/build.py 注入，格式见 references/lesson_schema.md */
+const LESSON = /*__LESSON_JSON__*/null;
+
+/*__KIT_JS__*/
+
+/* ===================== 页面模板 ===================== */
+// normPart / chips / colorWord / variantLine 在 kit.js 里（网页版、视频版共用）
+
+const step = (w, finale) => `<div class="step">
+  <div class="node"><b>${esc(w.node || "")}</b></div>
+  ${w.link ? `<p class="link">${esc(w.link)}</p>` : ""}
+  <article class="card ${finale ? "finale" : ""}" id="w-${esc(w.w)}">
+    <div class="col">
+      <h3 class="serif">${colorWord(w.split)}</h3>
+      ${chips(w.parts)}
+      <p class="literal">字面画面：${esc(w.literal)}</p>
+      <div class="reveal">
+        <p class="meaning">${esc(w.meaning)}</p>
+        <p>${esc(w.bridge)}</p>
+        ${w.senses ? `<ul class="senses">${w.senses.map(s => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
+      </div>
+      ${w.ex ? `<p class="ex"><i>${esc(w.ex[0])}</i><br>${esc(w.ex[1])}</p>` : ""}
+      ${w.caveat ? `<p class="caveat">${esc(w.caveat)}</p>` : ""}
+      <p class="fact">词源｜${esc(w.fact)}</p>
+    </div>
+    ${scene(w.scene, w.caption)}
+  </article></div>`;
+
+function render(L) {
+  if (!L) { document.getElementById("app").innerHTML = '<p class="err">没有课程数据：请用 scripts/build.py 生成页面。</p>'; return; }
+  document.title = L.title;
+  const o = L.opening, an = L.anchor;
+  document.getElementById("app").innerHTML = `
+  <header><h1>${esc(L.title)}</h1><a href="index.html">← 全部课程</a><button id="quiz">自测模式：关</button></header>
+  <div class="panel opening">
+    <div><div class="big">${esc(o.big)}</div><p class="say">${esc(o.say)}</p>${o.muted ? `<p class="muted">${esc(o.muted)}</p>` : ""}
+      ${o.source ? `<p class="src">来源：<a href="${esc(o.source.url)}" target="_blank">${esc(o.source.title)}</a>，${esc(o.source.date)}</p>` : ""}</div>
+    ${o.photo ? `<figure class="stage photo"><img src="${esc(o.photo.file)}" alt=""><figcaption>${esc(o.caption || "")}
+      <small><a href="${esc(o.photo.source || "#")}" target="_blank">${esc(o.photo.credit)}</a></small></figcaption></figure>` : scene(o.scene, o.caption)}
+  </div>
+  <div class="panel anchor">
+    <div><span class="rootbig">${esc(L.root.m)}<small>${esc(L.root.cn)}</small></span>
+      ${L.root.variants && L.root.variants.length ? `<p class="variants"><b>变体</b>${esc(variantLine(L.root.variants))}</p>` : ""}
+      <p><b>${esc(an.text)}</b></p>${an.more ? `<p>${esc(an.more)}</p>` : ""}</div>
+    ${scene(an.scene, an.caption)}
+  </div>
+  <section><h2>${esc(L.seqTitle || "同一个画面，换个方向就是一个新词")}</h2>
+    <div class="seq">${L.words.map(w => step(w)).join("")}${L.finale ? step(L.finale, true) : ""}</div>
+  </section>
+  <section><h2>一个点，一个面<small>${esc(L.root.m)} 一家</small></h2><div class="panel map">${familyMap(L)}</div></section>
+  ${L.traps && L.traps.length ? `<section><h2>形近陷阱</h2><div class="panel box">${L.traps.map(t => `<p>${t}</p>`).join("")}</div></section>` : ""}
+  ${L.transfer && L.transfer.length ? `<section><h2>迁移题<small>同一个画面，你来推方向</small></h2>
+    ${L.transfer.map(([q, a], i) => `<details><summary>${i + 1}. <span class="serif">${esc(q)}</span></summary><p>${esc(a)}</p></details>`).join("")}
+  </section>` : ""}
+  <footer>${esc(L.source || "")}</footer>`;
+
+  document.querySelectorAll(".reveal").forEach(r => r.addEventListener("click", () => r.classList.toggle("shown")));
+  const btn = document.getElementById("quiz");
+  btn.addEventListener("click", () => {
+    const on = document.body.classList.toggle("quiz");
+    btn.textContent = `自测模式：${on ? "开" : "关"}`;
+    document.querySelectorAll(".reveal.shown").forEach(r => r.classList.remove("shown"));
+  });
+}
+
+render(LESSON);
+</script>
+</body>
+</html>

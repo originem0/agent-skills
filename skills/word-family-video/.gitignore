@@ -1,0 +1,6 @@
+# 运行产物，不进仓库：配音缓存、每个项目的中间文件和成片。projects/<课>/narration.json 要进仓库。
+cache/
+projects/*/build/
+projects/*/stills/
+projects/*/*.mp4
+__pycache__/

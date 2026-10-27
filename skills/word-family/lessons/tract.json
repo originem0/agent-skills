@@ -1,0 +1,578 @@
+{
+ "title": "从拖拉机开始：tract「拖、拉」一家",
+ "root": {
+  "m": "tract",
+  "cn": "拖、拉"
+ },
+ "opening": {
+  "type": "name",
+  "big": "tractor ＝ 拖拉机",
+  "say": "拖拉机为什么叫「拖拉」机？因为英文就是这么造的：tract 是拖、拉，-or 是「干这件事的东西」。",
+  "muted": "就这一个 tract，拖出了一整个家族：吸引、分心、提取、合同、减法、撤回……还有一个你多半天天见、却想不到的交通工具。",
+  "scene": [
+   {
+    "k": "tractor",
+    "x": 186
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      206,
+      30
+     ],
+     [
+      252,
+      30
+     ]
+    ],
+    "dash": 1
+   }
+  ],
+  "caption": "拖拉机：拖着车斗走的机器",
+  "photo": {
+   "file": "media/tract/opening.jpg",
+   "credit": "照片：Minardi，Public domain，Wikimedia Commons",
+   "source": "https://commons.wikimedia.org/wiki/File:McCormick_MTX_125_with_silager_and_trailer.jpg"
+  }
+ },
+ "anchor": {
+  "text": "记住这个画面：一个人，拉着一根绳子。",
+  "more": "接下来每个词，都是这个人在拉，只是换了方向——往自己这边拉、往两边拉、往外拉、往一起拉、从底下拉、往回拉。",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 92,
+    "pose": "pull",
+    "rope": [
+     178,
+     82
+    ]
+   },
+   {
+    "k": "crate",
+    "x": 196
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      186,
+      48
+     ],
+     [
+      134,
+      48
+     ]
+    ],
+    "dash": 1
+   }
+  ],
+  "caption": "tract 的母画面：拉"
+ },
+ "words": [
+  {
+   "w": "attract",
+   "split": [
+    "at",
+    "tract"
+   ],
+   "node": "at-",
+   "parts": [
+    {
+     "m": "at-",
+     "cn": "朝向",
+     "of": "ad-"
+    },
+    [
+     "tract",
+     "拉"
+    ]
+   ],
+   "link": "先往自己这边拉。",
+   "literal": "把东西往自己这边拉",
+   "caption": "把别人的心思和目光，往自己这边拉",
+   "bridge": "把别人的目光、心思往自己这边拉——这不就是吸引吗？",
+   "meaning": "v. 吸引",
+   "senses": [
+    "attractive adj. 有吸引力的",
+    "attraction n. 吸引力；景点——把游客拉过去的地方（tourist attraction）"
+   ],
+   "ex": [
+    "The museum attracts thousands of visitors every day.",
+    "这座博物馆每天吸引成千上万的游客。"
+   ],
+   "caveat": "ad- 碰到 t 就同化成 at-，所以 attract 有两个 t。",
+   "fact": "拉丁语 attrahere = ad「朝向」+ trahere「拉」；「吸引目光」的比喻义始于 1690 年代",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 66,
+     "pose": "pull",
+     "rope": [
+      190,
+      72
+     ]
+    },
+    {
+     "k": "heart",
+     "x": 206,
+     "y": 70
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       190,
+       44
+      ],
+      [
+       118,
+       44
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "distract",
+   "split": [
+    "dis",
+    "tract"
+   ],
+   "node": "dis-",
+   "parts": [
+    [
+     "dis-",
+     "分开、往不同方向"
+    ],
+    [
+     "tract",
+     "拉"
+    ]
+   ],
+   "link": "如果不是往一个方向拉，而是两股力往两边拉呢？",
+   "literal": "把注意力往不同方向拉开",
+   "caption": "注意力被左右两边同时拉扯",
+   "bridge": "你在看书，手机一响把你往左拉，窗外一吵把你往右拉——注意力被拉散了，这不就是分心吗？",
+   "meaning": "v. 使分心",
+   "senses": [
+    "distracted adj. 心不在焉的",
+    "distraction n. 让人分心的事"
+   ],
+   "ex": [
+    "Don't distract the driver.",
+    "别让司机分心。"
+   ],
+   "fact": "拉丁语 distrahere「往不同方向拉」= dis「分开」+ trahere",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 44,
+     "pose": "pull",
+     "rope": [
+      124,
+      66
+     ]
+    },
+    {
+     "k": "fig",
+     "x": 236,
+     "pose": "pull",
+     "flip": 1,
+     "rope": [
+      156,
+      66
+     ]
+    },
+    {
+     "k": "tag",
+     "x": 140,
+     "y": 66,
+     "text": "注意力",
+     "tone": "root"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       118,
+       40
+      ],
+      [
+       84,
+       40
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       162,
+       40
+      ],
+      [
+       196,
+       40
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "extract",
+   "split": [
+    "ex",
+    "tract"
+   ],
+   "node": "ex-",
+   "parts": [
+    [
+     "ex-",
+     "向外"
+    ],
+    [
+     "tract",
+     "拉"
+    ]
+   ],
+   "link": "换个方向：往外拉。",
+   "literal": "从里面往外拉出来",
+   "caption": "拔萝卜：把它从土里拉出来",
+   "bridge": "拔萝卜，就是把它从土里往外拉——这不就是拔出、提取吗？",
+   "meaning": "v. 拔出；提取；摘录　n. 提取物；摘录",
+   "senses": [
+    "extract a tooth 拔牙",
+    "vanilla extract 香草精：从香草里提出来的东西",
+    "n. 摘录：从长文里拉出来的一段"
+   ],
+   "ex": [
+    "The dentist extracted two of my teeth.",
+    "牙医给我拔了两颗牙。"
+   ],
+   "fact": "拉丁语 extrahere「拉出」= ex「向外」+ trahere",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 76,
+     "pose": "pull",
+     "rope": [
+      176,
+      78
+     ]
+    },
+    {
+     "k": "carrot",
+     "x": 190
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       214,
+       100
+      ],
+      [
+       214,
+       62
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "contract",
+   "split": [
+    "con",
+    "tract"
+   ],
+   "node": "con-",
+   "parts": [
+    [
+     "con-",
+     "一起"
+    ],
+    [
+     "tract",
+     "拉"
+    ]
+   ],
+   "link": "往一起拉。",
+   "literal": "把几样东西拉到一起",
+   "caption": "左：拉紧抽绳，袋口收拢。右：把两方拉到一起，谈成一份约定。",
+   "bridge": "往一起拉，东西就变小——这是收缩；把两个人拉到一起谈妥条件，这不就是合同吗？看似无关的两个意思，是同一个「拉到一起」。",
+   "meaning": "v. 收缩；订立合同；染上（疾病）　n. 合同",
+   "senses": [
+    "Metal contracts as it cools. 金属遇冷收缩",
+    "sign a contract 签合同",
+    "contract a disease 染上疾病：把病「拉」到自己身上（1590 年代起）"
+   ],
+   "ex": [
+    "Your muscles contract when you lift something heavy.",
+    "提重物时，肌肉会收缩。"
+   ],
+   "fact": "拉丁语 contrahere「把几样东西拉到一起；缩短」，比喻「达成交易」= com「一起」+ trahere",
+   "scene": [
+    {
+     "k": "bag",
+     "x": 58
+    },
+    {
+     "k": "line",
+     "x1": 118,
+     "y1": 14,
+     "x2": 118,
+     "y2": 112,
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 150,
+     "pose": "give"
+    },
+    {
+     "k": "fig",
+     "x": 252,
+     "pose": "give",
+     "flip": 1
+    },
+    {
+     "k": "paper",
+     "x": 201,
+     "y": 62,
+     "label": "合同"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       160,
+       30
+      ],
+      [
+       186,
+       30
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       242,
+       30
+      ],
+      [
+       216,
+       30
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "subtract",
+   "split": [
+    "sub",
+    "tract"
+   ],
+   "node": "sub-",
+   "parts": [
+    [
+     "sub-",
+     "从下面"
+    ],
+    [
+     "tract",
+     "拉"
+    ]
+   ],
+   "link": "从底下拉走一块。",
+   "literal": "从下面拉走",
+   "caption": "一摞积木，从最底下抽走一块",
+   "bridge": "一摞积木，从最底下抽走一块，总数就少了一块——这不就是减去吗？",
+   "meaning": "v. 减去；扣除",
+   "senses": [
+    "subtraction n. 减法"
+   ],
+   "ex": [
+    "If you subtract 3 from 10, you get 7.",
+    "10 减 3 得 7。"
+   ],
+   "fact": "拉丁语 subtrahere「拿走、抽走」= sub「从下面」+ trahere；数学义始于 1550 年代",
+   "scene": [
+    {
+     "k": "blocks",
+     "x": 96,
+     "pulled": 18
+    },
+    {
+     "k": "fig",
+     "x": 226,
+     "pose": "pull",
+     "flip": 1,
+     "rope": [
+      140,
+      96
+     ]
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       132,
+       70
+      ],
+      [
+       170,
+       70
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "retract",
+   "split": [
+    "re",
+    "tract"
+   ],
+   "node": "re-",
+   "parts": [
+    [
+     "re-",
+     "往回"
+    ],
+    [
+     "tract",
+     "拉"
+    ]
+   ],
+   "link": "最后，把拉出去的东西，再拉回来。",
+   "literal": "往回拉",
+   "caption": "说出去的话，又被拉了回来",
+   "bridge": "话已经说出去了，又把它拉回来——这不就是收回、撤回吗？",
+   "meaning": "v. 缩回；收回（说过的话）；撤回",
+   "senses": [
+    "retract a statement 撤回声明",
+    "retractable adj. 可伸缩的：retractable pen 按动笔，可伸缩的卷尺也是"
+   ],
+   "ex": [
+    "He later retracted his comments.",
+    "他后来收回了自己的话。"
+   ],
+   "fact": "拉丁语 retrahere「往回拉」；「收回言论」义始于 1540 年代",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 70,
+     "pose": "pull",
+     "rope": [
+      168,
+      60
+     ]
+    },
+    {
+     "k": "bubble",
+     "x": 206,
+     "y": 60,
+     "text": "刚才那句话"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       200,
+       34
+      ],
+      [
+       140,
+       34
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  }
+ ],
+ "finale": {
+  "w": "train",
+  "split": [
+   "",
+   "train"
+  ],
+  "node": "↩",
+  "parts": [
+   [
+    "train",
+    "被拖在后面的东西"
+   ]
+  ],
+  "link": "回到开头：拖拉机拖着一个车斗。要是拖着的是长长一串呢？",
+  "literal": "被拖在后面的一长串",
+  "caption": "车头拖着一长串车厢",
+  "bridge": "train 最早指拖在身后的长裙摆，后来指一长串随从、一长串车厢——被车头拖着走的那一串，这不就是火车吗？",
+  "meaning": "n. 火车；（裙子的）拖尾；一连串",
+  "senses": [
+   "train of thought 思路：一长串被拖着走的念头"
+  ],
+  "ex": [
+   "I lost my train of thought.",
+   "我思路断了。"
+  ],
+  "fact": "古法语 train「拖、拽；拖痕」← 拉丁语 trahere；「火车」义始于 1820 年",
+  "scene": [
+   {
+    "k": "train",
+    "x": 30
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      214,
+      32
+     ],
+     [
+      258,
+      32
+     ]
+    ],
+    "dash": 1
+   }
+  ]
+ },
+ "daily": [
+  "tractor 拖拉机",
+  "train 火车",
+  "abstract 抽象（abs- 离开）",
+  "trace 痕迹（拖出的线）"
+ ],
+ "traps": [
+  "<b class='serif'>track</b>（足迹、轨道）长得像，意思也沾边，但<b>不是这一家</b>：词源存疑，一般认为来自日耳曼语，和 trek 同源。",
+  "<b class='serif'>trace</b>（痕迹、追踪）倒是真亲戚：来自拉丁语 tractus「拖出来的线」。"
+ ],
+ "transfer": [
+  [
+   "protract = pro-（向前）+ tract",
+   "往前拉长时间：拖延、延长。protracted negotiations 旷日持久的谈判。顺带一提：portray（描绘）和它是同一个拉丁动词，经过法语变了形——往前拉出线条，就是描绘。"
+  ],
+  [
+   "detract = de-（往下）+ tract",
+   "往下拉：贬低、减损。This doesn't detract from her achievement. 这无损于她的成就。"
+  ],
+  [
+   "traction = tract + -ion",
+   "拉的动作和力：牵引力、轮胎的抓地力。比喻义：the idea is gaining traction，这个想法正在获得支持（越来越拉得动人）。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取），2026-10-28"
+}
