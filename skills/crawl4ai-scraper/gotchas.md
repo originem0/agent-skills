@@ -1,6 +1,6 @@
 # Gotchas & Tips
 
-> 本 skill 命令核对于 2026-07 官方文档（v0.9.x），未本机实测。如实际执行报错，以 `crwl --help` 为准并反馈更新。
+> 本 skill 命令核对于 2026-07 官方文档（v0.9.x），2026-10 对照 CHANGELOG 复核至 v0.9.5（无 CLI flag 改名/移除），未本机实测。如实际执行报错，以 `crwl --help` 为准并反馈更新。
 
 ## Crawl4AI vs Firecrawl
 
@@ -21,7 +21,8 @@
 - `-b`（浏览器）：`headless`、`viewport_width`、`user_agent_mode=random`
 - `-c`（爬虫）：`scan_full_page`（无限滚动页自动滚到底）、`delay_before_return_html`、
   `wait_until`（如 `networkidle`）、`page_timeout`、`css_selector`（只取某区域）、
-  `remove_overlay_elements`（去弹窗遮罩）、`scroll_delay`、`cache_mode`、`magic`
+  `remove_overlay_elements`（去弹窗遮罩）、`scroll_delay`、`cache_mode`（v0.9.5 前 CLI 忽略此键、
+  总是绕过缓存）、`magic`
 
 例：`crwl <url> -c "css_selector=#main,scan_full_page=true,delay_before_return_html=2"`
 
@@ -40,6 +41,7 @@
   建议配合 enable_stealth/magic）（详见 docs.crawl4ai.com/advanced/anti-bot-and-fallback/）
 - 需要登录态的站点用 `crwl profiles` 交互式创建 profile（浏览器里登录后按 `q` 保存，
   存于 `~/.crawl4ai/profiles/`）
+- `-o json` 必须配提取策略（`-e/-s` 或 `-j`）；单独用 v0.9.5+ 会直接报错，旧版会在抓完后崩溃
 - 深爬用 `--max-pages` 控制规模；CLI 没有 `--include-pattern`/`--exclude-pattern`，
   按 URL 模式过滤要走 Python API：`crawl4ai.deep_crawling.filters` 的
   `FilterChain` + `URLPatternFilter`（`reverse=True` 做排除）

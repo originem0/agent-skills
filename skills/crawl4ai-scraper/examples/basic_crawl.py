@@ -2,14 +2,15 @@
 import asyncio
 from crawl4ai import AsyncWebCrawler, CrawlerRunConfig
 from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
-from crawl4ai.content_filter_strategy import PruningContentFilter
+# v0.9.4+ 默认 pruning 实现，参数与输出同旧版 PruningContentFilter（后者直接使用会报 DeprecationWarning）
+from crawl4ai import PruningContentFilterLXML
 
 
 async def main():
     # fit_markdown 只在配置了 content filter 时生成，否则为 None
     config = CrawlerRunConfig(
         markdown_generator=DefaultMarkdownGenerator(
-            content_filter=PruningContentFilter(threshold=0.4, threshold_type="fixed")
+            content_filter=PruningContentFilterLXML(threshold=0.4, threshold_type="fixed")
         )
     )
     async with AsyncWebCrawler() as crawler:
