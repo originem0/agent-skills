@@ -56,31 +56,33 @@ chmod +x install.sh
 
 | 技能 | 用途 |
 |------|------|
-| `/PEROlearn` | 教学模式：Priming → Encoding → Reference → Retrieval 四阶段引导学习。掌握以跨会话检索为准（概念检索表），概念性/程序性知识分流起手，含校准循环与抗索答护栏 |
-| `/PEROfeynman` | 检验模式：扮演较真的学生检验你是否真懂了。基于检索表与薄弱点制定攻击计划，含自信错误陈述攻击与校准差距报告 |
+| `/pero-learn` | 教学模式：Priming → Encoding → Reference → Retrieval 四阶段引导学习。掌握以跨会话检索为准（概念检索表），概念性/程序性知识分流起手，含校准循环与抗索答护栏 |
+| `/pero-feynman` | 检验模式：扮演较真的学生检验你是否真懂了。基于检索表与薄弱点制定攻击计划，含自信错误陈述攻击与校准差距报告 |
 
-用法：`cd 到学习项目目录` → 启动工具 → `/PEROlearn`
+用法：`cd 到学习项目目录` → 启动工具 → `/pero-learn`
 
 ### 网页抓取
-
-用 AI 助手直接抓取网页、提取数据。两个技能覆盖免费和云端两种场景。
 
 | 技能 | 用途 |
 |------|------|
 | `/crawl4ai-scraper` | 本地免费爬虫：Crawl4AI，核心功能无需 API Key，支持单页/深度爬取、CSS/XPath/LLM 结构化提取 |
-| `/firecrawl-scraper` | 云端爬虫：Firecrawl CLI，开箱即用，内置代理和反爬，支持搜索/浏览器自动化 |
 
-选择指南：
-- 免费、本地、隐私优先 → `crawl4ai-scraper`
-- 快速、云端、不折腾 → `firecrawl-scraper`（免费 500 credits/月）
+云端抓取不在本仓库维护：Firecrawl 官方提供 skill，用 `firecrawl setup core -g` 安装（只装 skills；裸 `firecrawl setup` 的 defaults 会禁用 Claude Code 原生 WebFetch/WebSearch）。
 
-### 生成式 UI
+### 英语词族
 
 | 技能 | 用途 |
 |------|------|
-| `/widget-viewer` | 图表/流程图/交互可视化写成 HTML widget，由 hook 拉起原生 WebView2 窗口渲染，支持热更新 |
+| `/word-family` | 给一个单词/词根/日常场景，查实词源（etymology）后生成一页「日常锚点 → 母画面 → 换方向铺开词族」的线稿网页课，含自测模式与迁移题。详见 `skills/word-family/使用说明.md` |
 
-依赖外部工具 [claude-widget-viewer](https://github.com/originem0/claude-widget-viewer)（需单独安装，含可执行文件和 PostToolUse hook 配置）。仅支持 Claude Code + Windows。
+依赖 Python 3.10+、Chrome/Edge（截图自检）；词源优先经 firecrawl 抓 etymonline（需登录），否则退回 Wiktionary。
+
+### 不在本仓库维护的 skill
+
+上游工具自带 skill 时由上游安装，本仓库不保留副本（见 `docs/skill-authoring.md` §4）：
+
+- **widget-viewer**（生成式 UI，WebView2 渲染 HTML widget）：随 [claude-widget-viewer](https://github.com/originem0/claude-widget-viewer) 的 `install.ps1` 安装。
+- **Firecrawl**：`firecrawl setup core -g` 后只保留 `firecrawl-scrape`、`firecrawl-search`、`firecrawl-map`。
 
 ---
 
@@ -90,15 +92,15 @@ chmod +x install.sh
 
 ```
 skills/
-├── PEROlearn/           # claude-code only
-├── PEROfeynman/         # claude-code only
+├── pero-learn/          # claude-code only
+├── pero-feynman/        # claude-code only
 ├── crawl4ai-scraper/
 │   ├── SKILL.md
 │   ├── gotchas.md
 │   ├── examples/
 │   └── scripts/
-├── firecrawl-scraper/
-├── widget-viewer/       # claude-code only
+├── word-family/         # claude-code only
+├── word-family-video/   # claude-code only
 └── your-new-skill/
     └── SKILL.md         # 必需，其余可选
 ```
