@@ -37,7 +37,8 @@ $(cat "$OUT")
     echo "  turn $turn done" >&2
     msg=""
 }
-while IFS= read -r line; do
+while IFS= read -r line || [ -n "$line" ]; do
+    line="${line%$'\r'}"  # autocrlf 检出的剧本带 CRLF，不去掉则 "---" 永远匹配不上
     if [ "$line" = "---" ]; then flush_turn; else msg="${msg}${line}
 "; fi
 done < "$SCRIPT_FILE"

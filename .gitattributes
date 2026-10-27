@@ -1,0 +1,4 @@
+# shell 脚本与对话剧本必须是 LF：bash 在 CRLF 下 shebang 失效、`[ "$line" = "---" ]` 永远不等
+*.sh                    text eol=lf
+**/evals/scripts/*.md   text eol=lf
+tests/pero-eval/*.md    text eol=lf
