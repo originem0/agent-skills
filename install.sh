@@ -61,6 +61,25 @@ skill_supports_platform() {
     return 1
 }
 
+# Prune symlinks into this repo's skills/ whose target no longer exists (skill
+# deleted or renamed in the repo). Links pointing anywhere else are never
+# touched: other installers (e.g. `firecrawl setup`) put their own links here.
+prune_stale_links() {
+    local target_dir="$1" link dest
+    [ -d "$target_dir" ] || return 0
+    for link in "$target_dir"/*; do
+        [ -L "$link" ] || continue
+        dest="$(readlink "$link")"
+        case "$dest" in
+            "$SKILLS_DIR"/*)
+                if [ ! -e "$link" ]; then
+                    rm "$link"
+                    echo "  $(basename "$link"): removed stale link (skill no longer in repo)"
+                fi ;;
+        esac
+    done
+}
+
 # No platform filtering here on purpose: remove any link we own, so links
 # left behind by an older `platforms` config also get cleaned up.
 uninstall_skills() {
@@ -71,6 +90,7 @@ uninstall_skills() {
         warn "$tool_name skills directory not found"
         return
     fi
+    prune_stale_links "$target_dir"
 
     for skill_dir in "$SKILLS_DIR"/*/; do
         skill_name="$(basename "$skill_dir")"
@@ -92,6 +112,7 @@ install_skills() {
     local platform="$3"
 
     mkdir -p "$target_dir"
+    prune_stale_links "$target_dir"
     for skill_dir in "$SKILLS_DIR"/*/; do
         skill_name="$(basename "$skill_dir")"
 

@@ -28,6 +28,27 @@ function Remove-Link {
     [System.IO.Directory]::Delete($Path)
 }
 
+function Remove-StaleLinks {
+    # Prune links into this repo's skills/ whose target no longer exists (skill
+    # deleted or renamed in the repo); otherwise they linger as dangling entries
+    # in the tool's skills dir. Links pointing anywhere else are never touched:
+    # other installers (e.g. `firecrawl setup`) put their own links here too.
+    param([string]$TargetDir)
+    if (-not (Test-Path $TargetDir)) { return }
+    # Trailing separator matters: without it "...\skills-other\x" would match "...\skills".
+    $root = [IO.Path]::GetFullPath($SkillsDir).TrimEnd('\') + '\'
+    Get-ChildItem -LiteralPath $TargetDir -Force |
+        Where-Object { $_.Attributes -band [IO.FileAttributes]::ReparsePoint } |
+        ForEach-Object {
+            $dest = @($_.Target)[0]   # PS 5.1 returns String[] for junctions
+            if ($dest -and $dest.StartsWith($root, [StringComparison]::OrdinalIgnoreCase) -and
+                -not (Test-Path -LiteralPath $dest)) {
+                Remove-Link $_.FullName
+                Write-Host "  $($_.Name) : removed stale link (skill no longer in repo)"
+            }
+        }
+}
+
 function Uninstall-Skills {
     # No platform filtering here on purpose: remove any link we own, so links
     # left behind by an older `platforms` config also get cleaned up.
@@ -40,6 +61,8 @@ function Uninstall-Skills {
         Write-Skip "$ToolName skills directory not found"
         return
     }
+
+    Remove-StaleLinks $TargetDir
 
     Get-ChildItem -Path $SkillsDir -Directory | ForEach-Object {
         $skillName = $_.Name
@@ -101,6 +124,8 @@ function Install-Skills {
     if (-not (Test-Path $TargetDir)) {
         New-Item -ItemType Directory -Path $TargetDir -Force | Out-Null
     }
+
+    Remove-StaleLinks $TargetDir
 
     Get-ChildItem -Path $SkillsDir -Directory | ForEach-Object {
         $skillName = $_.Name

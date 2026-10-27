@@ -10,6 +10,10 @@ if ($src -notmatch '(?s)(function Remove-Link \{.*?\n\})') {
     Write-Host "EXTRACT FAIL: Remove-Link not found in install.ps1"; exit 1
 }
 Invoke-Expression $Matches[1]
+if ($src -notmatch '(?s)(function Remove-StaleLinks \{.*?\n\})') {
+    Write-Host "EXTRACT FAIL: Remove-StaleLinks not found in install.ps1"; exit 1
+}
+Invoke-Expression $Matches[1]
 
 # 提取安装器真实的 mklink 调用行（而非在测试里复制一份），
 # 保证用例 5-7 验证的就是 install.ps1 实际发货的写法。
@@ -79,6 +83,26 @@ New-Item -ItemType Directory -Path $realDir | Out-Null
 $refused = $false
 try { Remove-Link $realDir } catch { $refused = $true }
 Assert "Remove-Link 拒绝真实目录" ($refused -and (Test-Path $realDir))
+
+# 8-12. Remove-StaleLinks：只清理「指向本仓库 skills/ 且目标已不存在」的链接。
+#       仓库里删掉或改名的 skill 会留下悬空 junction；但别的安装器（firecrawl setup 等）
+#       也往同一目录放链接，绝不能误删。$SkillsDir 指向 fixture 里的假仓库。
+$SkillsDir = Join-Path $fixtures "repo\skills"
+$tool = Join-Path $fixtures "toolskills"
+New-Item -ItemType Directory -Path "$SkillsDir\alive", "$SkillsDir\gone", "$fixtures\repo\skills-other\x", "$fixtures\elsewhere\y", "$tool\realdir" | Out-Null
+foreach ($pair in @(@("alive", "$SkillsDir\alive"), @("gone", "$SkillsDir\gone"),
+                     @("prefix", "$fixtures\repo\skills-other\x"), @("foreign", "$fixtures\elsewhere\y"))) {
+    cmd /c "mklink /J ""$tool\$($pair[0])"" ""$($pair[1])"" >nul"
+}
+Remove-Item "$SkillsDir\gone", "$fixtures\repo\skills-other\x", "$fixtures\elsewhere\y" -Recurse -Force
+Remove-StaleLinks $tool | Out-Null
+$names = (Get-ChildItem -LiteralPath $tool -Force).Name
+Assert "悬空且指向仓库 skills/ 的链接被清理" (-not ($names -contains "gone"))
+Assert "有效的仓库链接保留" (Test-Path "$tool\alive")
+Assert "前缀相同的兄弟目录（skills-other）不误判" ($names -contains "prefix")
+Assert "指向仓库外的悬空链接不碰" ($names -contains "foreign")
+Assert "真实目录不碰" (Test-Path "$tool\realdir")
+Get-ChildItem -LiteralPath $tool -Force | Where-Object { $_.Attributes -band [IO.FileAttributes]::ReparsePoint } | ForEach-Object { Remove-Link $_.FullName }
 
 Remove-Link $link
 Remove-Item $fixtures -Recurse -Force
