@@ -81,5 +81,5 @@ python -I "$SKILL/scripts/video.py" check <词根>
 ## 不要做的事
 
 - 不要改 `assets/frame.html` 和 word-family 的零件库来「修」某一课的画面——改课程 JSON。
-- 不要为了塞进 5 分钟而加快语速；删内容。
+- 不要为了塞进 5 分钟而把语速调到默认（+20%）以上；删内容。
 - 不要在解说词里念括号、符号、词性缩写（v.、adj.）。

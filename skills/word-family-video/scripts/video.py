@@ -31,7 +31,8 @@ FRAME = HERE / "assets" / "frame.html"
 
 VOICE = "zh-CN-YunjianNeural"   # 用户试听六个音色后选定；晓晓会把英文读走样，云扬读英文更差。换音色用 --voice
 SR, FPS = 48000, 30
-PRE, LEAD, GAP_LINE, GAP_UNIT, TAIL = 0.35, 0.6, 0.25, 0.55, 1.5   # 秒：单元开头留给画面先出场 / 片头 / 句间 / 单元间 / 片尾
+RATE = "+20%"                 # 用户反馈原速偏慢、1.2 倍才合适：配音直接按 1.2 倍语速合成（比整片变速自然）
+PRE, LEAD, GAP_LINE, GAP_UNIT, TAIL = 0.35, 0.6, 0.2, 0.45, 1.5   # 秒：单元开头留给画面先出场 / 片头 / 句间 / 单元间 / 片尾（停顿随语速同比缩短）
 TARGET, HARD_MAX = 290, 300   # 目标 ≤ 4:50，硬上限 5:00
 MIN_WORDS = 4                 # 删词最多删到只剩 4 个主词
 LAYOUTS = ["lay-a", "lay-b", "lay-c"]   # 图右文左 / 图左文右 / 大字主角，按词轮换
@@ -542,7 +543,7 @@ def main():
     ap.add_argument("cmd", choices=["init", "plan", "stills", "render", "check"])
     ap.add_argument("lesson", help="词根名（如 tract）或课程 JSON 路径")
     ap.add_argument("--voice", default=VOICE)
-    ap.add_argument("--rate", default="+0%", help="语速，如 +5%%")
+    ap.add_argument("--rate", default=RATE, help="语速，默认 +20%%（约 1.2 倍）；原速写 +0%%")
     ap.add_argument("--force", action="store_true", help="超过 5 分钟也渲染")
     ap.add_argument("--asr", default="large-v3-turbo", help="读音检查用的 Whisper 模型（首次使用自动下载约 1.6GB）")
     a = ap.parse_args()

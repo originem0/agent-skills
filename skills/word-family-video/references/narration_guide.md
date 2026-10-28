@@ -53,7 +53,7 @@
 
 ## 四、读音
 
-- 配音默认用微软 edge-tts 的「云健」（zh-CN-YunjianNeural，用户试听选定），可用 `--voice` 换。edge-tts 不支持自定义 SSML，没法逐词标音素，读音只能靠改写文字修正。
+- 配音默认用微软 edge-tts 的「云健」（zh-CN-YunjianNeural，用户试听选定），可用 `--voice` 换；语速默认 +20%（约 1.2 倍，原速偏慢），可用 `--rate` 调，原速写 `--rate +0%`。edge-tts 不支持自定义 SSML，没法逐词标音素，读音只能靠改写文字修正。
 - **两三个字母的前缀（at、ad、dis、sub）谁都读不准、也听不准**：任何 TTS 都没法判断该读成字母还是音节。想让它清楚，就在解说词里直接写成要念的样子，或在 `say_as` 里替换。
 - `check` 命令（需要 `pip install faster-whisper`；默认 large-v3-turbo 模型，首次自动下载约 1.6 GB）把每句配音转写回文字：
   - 第一遍不给提示，按拼写相似度和发音骨架（去元音、同音字母归并，append 与 "up and" 算对上）比对；
