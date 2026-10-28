@@ -53,10 +53,13 @@
 
 ## 四、读音
 
-- 配音用微软 edge-tts 的「云希」，中英混读最准，但偶尔会把英文词读走样。
-- `check` 命令会用 Whisper 把配音转写回文字，列出可能读错的英文词（需要 `pip install faster-whisper`）。
-- 确认读错的，在 `say_as` 里加替换：`"retractable": "re-tractable"`、`"or": "O R"`。只影响配音，字幕不变。
-- Whisper 本身也会听错（例如把 attract 听成 a tract），所以 `check` 的结果要自己判断：拼写只差空格或一两个字母的，多半是 Whisper 的问题。
+- 配音默认用微软 edge-tts 的「云健」（zh-CN-YunjianNeural，用户试听选定），可用 `--voice` 换。edge-tts 不支持自定义 SSML，没法逐词标音素，读音只能靠改写文字修正。
+- **两三个字母的前缀（at、ad、dis、sub）谁都读不准、也听不准**：任何 TTS 都没法判断该读成字母还是音节。想让它清楚，就在解说词里直接写成要念的样子，或在 `say_as` 里替换。
+- `check` 命令（需要 `pip install faster-whisper`；默认 large-v3-turbo 模型，首次自动下载约 1.6 GB）把每句配音转写回文字：
+  - 第一遍不给提示，按拼写相似度和发音骨架（去元音、同音字母归并，append 与 "up and" 算对上）比对；
+  - 没对上的词第二遍作为热词再听；两遍都没对上 → **可能读错**；只有第二遍才对上 → **读得可能不够清楚**（提示会让识别偏向预期词，所以不算通过）；
+  - 4 个字母以内的词不查。
+- 确认读错的，在 `say_as` 里加替换：`"retractable": "re-tractable"`、`"or": "O R"`。只影响配音，字幕不变。改完重新 `render` 再 `check`。
 
 ## 五、开场怎么讲（内容第一）
 

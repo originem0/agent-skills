@@ -29,7 +29,7 @@ CACHE = HERE / "cache" / "tts"
 PROJECTS = HERE / "projects"
 FRAME = HERE / "assets" / "frame.html"
 
-VOICE = "zh-CN-YunxiNeural"   # 实测中英混读最准：tractor / distract / subtract 都能被语音识别还原；晓晓会把英文读走样
+VOICE = "zh-CN-YunjianNeural"   # 用户试听六个音色后选定；晓晓会把英文读走样，云扬读英文更差。换音色用 --voice
 SR, FPS = 48000, 30
 PRE, LEAD, GAP_LINE, GAP_UNIT, TAIL = 0.35, 0.6, 0.25, 0.55, 1.5   # 秒：单元开头留给画面先出场 / 片头 / 句间 / 单元间 / 片尾
 TARGET, HARD_MAX = 290, 300   # 目标 ≤ 4:50，硬上限 5:00
@@ -465,8 +465,38 @@ def cmd_render(stem, L, a):
     return 0
 
 
+def phon(s: str) -> str:
+    """粗略的发音骨架：同音字母归并、去掉元音和重复字母。append 和 Whisper 听成的 "up and" 骨架都是 pnd。"""
+    s = s.lower()
+    for a, b in (("ph", "f"), ("ck", "k"), ("qu", "kw"), ("x", "ks"), ("c", "k"), ("q", "k"), ("z", "s"), ("v", "f")):
+        s = s.replace(a, b)
+    s = re.sub(r"[aeiouyhw]", "", s)
+    return re.sub(r"(.)\1+", r"\1", s)
+
+
+def best_ratio(tok, text):
+    """在 text 里找和 tok 最像的一段（长度 ±2），返回最高相似度。"""
+    best = 0.0
+    for n in range(max(1, len(tok) - 2), len(tok) + 3):
+        for i in range(0, max(1, len(text) - n + 1)):
+            best = max(best, difflib.SequenceMatcher(None, tok, text[i:i + n]).ratio())
+    return best
+
+
+def heard_ok(tok, heard):
+    """拼写相似度 ≥ 0.7，或发音骨架相似度 ≥ 0.8，就算听到了。
+    只比拼写会把读对的 append（听成 up and）判错；误报太多会把人带去修本来没错的地方。"""
+    letters = re.sub(r"[^a-z]", "", heard.lower())
+    if best_ratio(tok.lower(), letters) >= 0.7:
+        return True
+    pt = phon(tok)
+    return len(pt) >= 2 and best_ratio(pt, phon(letters)) >= 0.8
+
+
 def cmd_check(stem, L, a):
-    """把每句含英文的配音转写回文字，对比解说词里的英文词，找出可能读错的。"""
+    """把每句含英文的配音转写回文字，找可能读错的英文词。
+    第一遍不给提示；没对上的词第二遍作为热词再听一次。两遍都没对上 → 可能读错；
+    只有第二遍才对上 → 读得可能不够清楚（提示会让识别偏向预期词，所以单独列出，不算通过）。"""
     try:
         from faster_whisper import WhisperModel
     except ImportError:
@@ -474,34 +504,35 @@ def cmd_check(stem, L, a):
         return 0
     N, warns = load_narration(stem, L)
     clips = synth_all(all_lines(N), N["say_as"], a.voice, a.rate)
-    model = WhisperModel("small", device="cpu", compute_type="int8")
+    try:
+        model = WhisperModel(a.asr, device="cpu", compute_type="int8")
+    except Exception as e:
+        print(f"加载 {a.asr} 失败（{e}），改用 small，误报会多一些")
+        model = WhisperModel("small", device="cpu", compute_type="int8")
     stop = {"the", "and", "you", "for", "with", "this", "that", "from", "are", "was"}
-    bad = 0
-
-    def heard_ok(tok, letters):
-        # 在转写里找和这个词最像的一段（长度 ±2），整体相似度 ≥ 0.7 就算读对。
-        # 只看连续相同字母会把读对的 append 听成 "up and" 也判错，误报太多会把人带去修本来没错的地方。
-        best = 0.0
-        for n in range(max(1, len(tok) - 2), len(tok) + 3):
-            for i in range(0, max(1, len(letters) - n + 1)):
-                best = max(best, difflib.SequenceMatcher(None, tok, letters[i:i + n]).ratio())
-        return best >= 0.7
-
+    bad, weak = [], []
     for s in all_lines(N):
         # 3 个字母以内的（dis、sub、ad 这类前缀）Whisper 在中文语境里本来就听不准，不查
         toks = [t for t in re.findall(r"[A-Za-z]{4,}", s) if t.lower() not in stop]
         if not toks:
             continue
         # Whisper 要求 16 kHz 单声道；用 48 kHz 喂进去会听成慢放录音，满篇幻觉
-        segs, _ = model.transcribe(decode(clips[s], 16000).astype(np.float32) / 32768, language="zh",
-                                   initial_prompt="以下是中英混合的英语词汇讲解。")
-        heard = "".join(x.text for x in segs)
-        letters = re.sub(r"[^a-z]", "", heard.lower())
-        for t in toks:
-            if not heard_ok(t.lower(), letters):
-                bad += 1
-                print(f"  - 可能读错 {t}：听到「{heard.strip()}」")
-    print("没有发现读错的英文词" if not bad else f"\n共 {bad} 处。确认读错的，在 narration.json 的 say_as 里加替换，例如 \"retractable\": \"re-tractable\"")
+        audio = decode(clips[s], 16000).astype(np.float32) / 32768
+        heard = "".join(x.text for x in model.transcribe(audio, language="zh")[0])
+        miss = [t for t in toks if not heard_ok(t, heard)]
+        if not miss:
+            continue
+        heard2 = "".join(x.text for x in model.transcribe(audio, language="zh", hotwords=" ".join(miss))[0])
+        for t in miss:
+            (weak if heard_ok(t, heard2) else bad).append((t, s, heard.strip()))
+    for t, s, h in bad:
+        print(f"  - 可能读错 {t}：听到「{h}」")
+    if weak:
+        print("  读得可能不够清楚（第一遍没听出，提示后才认出）：" + "、".join(sorted({t for t, _, _ in weak})))
+    if not bad and not weak:
+        print("没有发现读错的英文词")
+    elif bad:
+        print(f"\n共 {len(bad)} 处可能读错。确认读错的，在 narration.json 的 say_as 里加替换，例如 \"retractable\": \"re-tractable\"")
     return 0
 
 
@@ -513,6 +544,7 @@ def main():
     ap.add_argument("--voice", default=VOICE)
     ap.add_argument("--rate", default="+0%", help="语速，如 +5%%")
     ap.add_argument("--force", action="store_true", help="超过 5 分钟也渲染")
+    ap.add_argument("--asr", default="large-v3-turbo", help="读音检查用的 Whisper 模型（首次使用自动下载约 1.6GB）")
     a = ap.parse_args()
     stem, L = load_lesson(a.lesson)
     if a.cmd == "init":

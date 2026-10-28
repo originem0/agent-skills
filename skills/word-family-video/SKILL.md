@@ -5,7 +5,7 @@ description: >
   元素按解说依次出场、版式轮换、免费 TTS 配音、字幕内嵌，超时自动按重要性删减。
   Use when 用户想把某一课词根词缀做成视频、讲解视频、短视频。
   触发词：词根视频, 词族视频, 讲解视频, 生成视频, word family video。
-compatibility: Python 3.10+ with numpy; edge-tts (free, needs network); ffmpeg; Python Playwright using local Chrome/Edge. Optional Pillow, faster-whisper. Requires the word-family skill.
+compatibility: Python 3.10+ with numpy; edge-tts (free, needs network); ffmpeg; Python Playwright using local Chrome/Edge. Optional Pillow, faster-whisper (large-v3-turbo, ~1.6 GB download on first check). Requires the word-family skill.
 metadata:
   platforms: claude-code
 ---
@@ -72,7 +72,7 @@ python -I "$SKILL/scripts/video.py" render <词根>
 python -I "$SKILL/scripts/video.py" check <词根>
 ```
 
-列出可能读错的英文词（只查 4 个字母以上的词，按整体相似度判断，短前缀在中文语境里 Whisper 本身听不准，不查）。报出来的仍可能是 Whisper 听错。你听不到声音，所以：转写和原词明显不是同一个词的（如 pending 被听成「偏顶」），在 narration.json 的 `say_as` 里加替换后重新 `render` 再 `check`；拿不准的，交付时把这些词和所在句子列给用户，请用户试听确认。
+列出可能读错的英文词：两遍识别（第二遍把没对上的词作为热词）都没对上的报「可能读错」，只有第二遍才对上的报「读得可能不够清楚」。短于 4 个字母的词不查。报出来的仍可能是 Whisper 听错。你听不到声音，所以：转写和原词明显不是同一个词的（如 pending 被听成「偏顶」），在 narration.json 的 `say_as` 里加替换后重新 `render` 再 `check`；拿不准的，交付时把这些词和所在句子列给用户，请用户试听确认。
 
 ### 7. 交付
 
