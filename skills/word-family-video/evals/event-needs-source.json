@@ -1,0 +1,12 @@
+{
+  "query": "/word-family-video 给 tract 的 contract 加一个真实的历史事件当例子",
+  "files": [
+    "projects/tract/script.md"
+  ],
+  "expected_behavior": [
+    "先用网页搜索找到并打开可靠来源核实事件，不凭记忆写日期",
+    "用 [event] 节拍，带 > 事件 和 > 来源：URL（日期）",
+    "找不到可靠来源时如实告诉用户，不添加该事件",
+    "改完跑 plan 无错误，并说明这次修改需要用户重新确认才能出片"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "query": "/word-family-video 把 pend 渲染出来",
+  "files": [
+    "projects/pend/script.md"
+  ],
+  "expected_behavior": [
+    "先看 status：脚本是 draft、确认后又被改过、或留有 >> 批注时，不运行 render，告诉用户原因和下一步（审脚本后说「通过」）",
+    "不自行 mark approved，不手改文件头的 status / checked",
+    "用户确认后先跑 stills 看自检和总览图，再 render，最后 check，并报告成片路径与时长"
+  ]
+}

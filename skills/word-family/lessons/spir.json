@@ -1,0 +1,808 @@
+{
+ "title": "从 spirit 的三张脸开始：spir「呼吸」一家",
+ "root": {
+  "m": "spir",
+  "cn": "呼吸、吹气",
+  "variants": [
+   {
+    "m": "pire",
+    "note": "跟在 ex- 后面，s 并进了 x",
+    "ex": "expire"
+   }
+  ]
+ },
+ "seqTitle": "同一口气，换个方向就是一个新词",
+ "opening": {
+  "type": "polysemy",
+  "big": "spirit ＝ 精神 · 烈酒 · 幽灵",
+  "say": "团队精神叫 team spirit，酒吧门头写着 SPIRITS，鬼故事里飘着的也叫 spirit。精神、烈酒、幽灵，凭什么共用一个词？",
+  "muted": "答案只有一口气那么长。这口气往里吹、往外呼、几个人凑在一起、朝着高处喘……吹出了一整个家族。最后再回来看那三张脸。",
+  "scene": [
+   {
+    "k": "line",
+    "x1": 102,
+    "y1": 14,
+    "x2": 102,
+    "y2": 112,
+    "dash": 1
+   },
+   {
+    "k": "line",
+    "x1": 186,
+    "y1": 14,
+    "x2": 186,
+    "y2": 112,
+    "dash": 1
+   },
+   {
+    "k": "tag",
+    "x": 58,
+    "y": 15,
+    "text": "精神",
+    "tone": "root"
+   },
+   {
+    "k": "fig",
+    "x": 58,
+    "pose": "carry"
+   },
+   {
+    "k": "tag",
+    "x": 144,
+    "y": 15,
+    "text": "烈酒",
+    "tone": "root"
+   },
+   {
+    "k": "glass",
+    "x": 144,
+    "y": 104
+   },
+   {
+    "k": "path",
+    "d": "M140,64 q-4,-5 0,-10 t0,-10",
+    "c": "#2b5c8f"
+   },
+   {
+    "k": "path",
+    "d": "M148,64 q4,-5 0,-10 t0,-10",
+    "c": "#2b5c8f",
+    "op": 0.6
+   },
+   {
+    "k": "tag",
+    "x": 226,
+    "y": 15,
+    "text": "幽灵",
+    "tone": "root"
+   },
+   {
+    "k": "fig",
+    "x": 226,
+    "y": 96,
+    "op": 0.3,
+    "s": 0.9
+   }
+  ],
+  "caption": "罗马街头一扇窗，门楣上写着 SPIRITS，里面是一排排酒瓶",
+  "photo": {
+   "file": "media/spir/opening.jpg",
+   "credit": "照片：Dietmar Rabich，CC BY-SA 4.0，Wikimedia Commons（裁切）",
+   "source": "https://commons.wikimedia.org/wiki/File:Rome_(Italy),_Window_--_2013_--_18.jpg"
+  }
+ },
+ "anchor": {
+  "text": "记住这个画面：一个人，呼出一口气。",
+  "more": "接下来每个词，都是这一口气，只是换了方向——往里吹、往外呼、一呼一吸反复不停、几个人凑在一起、朝着高处喘、从皮肤里透出去。",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 96
+   },
+   {
+    "k": "path",
+    "d": "M110,42 q5,-4 10,0 t10,0 t10,0 t10,0",
+    "c": "#2b5c8f"
+   },
+   {
+    "k": "path",
+    "d": "M110,50 q5,-4 10,0 t10,0 t10,0",
+    "c": "#2b5c8f",
+    "op": 0.6
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      156,
+      46
+     ],
+     [
+      206,
+      46
+     ]
+    ],
+    "dash": 1
+   }
+  ],
+  "caption": "spir 的母画面：呼出一口气"
+ },
+ "words": [
+  {
+   "w": "inspire",
+   "split": [
+    "in",
+    "spire"
+   ],
+   "node": "in-",
+   "parts": [
+    [
+     "in-",
+     "朝里、进去"
+    ],
+    [
+     "spire",
+     "吹气、呼吸"
+    ]
+   ],
+   "link": "先往里：把一口气吹进去。",
+   "literal": "往里吹进一口气",
+   "caption": "一个人朝另一个人吹进一口气，对方心里一亮",
+   "bridge": "往一个人心里吹进一口气，他就活泛起来：有了劲头，冒出了主意。激励、鼓舞、给人灵感，都是这一吹。灵感 inspiration，就是被吹进来的那口气。",
+   "meaning": "v. 激励，鼓舞；激发（灵感、情绪）",
+   "senses": [
+    "inspiration n. 灵感；鼓舞人心的人或事",
+    "inspiring adj. 鼓舞人心的",
+    "be inspired by… 受……启发"
+   ],
+   "ex": [
+    "Her story inspired me to start running.",
+    "她的故事激励我开始跑步。"
+   ],
+   "caveat": "这里的 in- 是「往里」，不是 incorrect 里表示「不」的那个 in-。",
+   "fact": "古法语 enspirer ← 拉丁语 inspirare「吹进、向……吹气」，比喻「激发、点燃」= in-「往里」+ spirare「呼吸」；英语 14 世纪中期；拉丁语《圣经》用它对译希腊语 pnein「吹」",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 72
+    },
+    {
+     "k": "path",
+     "d": "M86,42 q5,-4 10,0 t10,0 t10,0 t10,0 t10,0",
+     "c": "#2b5c8f"
+    },
+    {
+     "k": "path",
+     "d": "M86,50 q5,-4 10,0 t10,0 t10,0 t10,0",
+     "c": "#2b5c8f",
+     "op": 0.6
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       140,
+       46
+      ],
+      [
+       182,
+       46
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 204,
+     "flip": 1
+    },
+    {
+     "k": "thought",
+     "x": 240,
+     "y": 18,
+     "text": "！",
+     "from": [
+      212,
+      34
+     ]
+    }
+   ]
+  },
+  {
+   "w": "expire",
+   "split": [
+    "ex",
+    "pire"
+   ],
+   "node": "ex-",
+   "parts": [
+    [
+     "ex-",
+     "往外"
+    ],
+    {
+     "m": "pire",
+     "cn": "呼吸",
+     "kind": "r",
+     "of": "spire"
+    }
+   ],
+   "link": "反过来，一口气往外呼出去——要是最后一口呢？",
+   "literal": "呼出最后一口气",
+   "caption": "左：人呼出最后一口气；右：包装上印的 EXP 日期",
+   "bridge": "把最后一口气呼出去，人就断了气。英语里 expire 最早就是「死」。后来法律、合同、证件也会「断气」：到期、失效。包装上印的 EXP，说的就是哪天到期。",
+   "meaning": "v. 到期，失效；（书面）断气，去世",
+   "senses": [
+    "expiry / expiration n. 到期；expiry date 有效期、保质期",
+    "My passport expires next month. 我的护照下个月到期",
+    "expire 也能指字面的「呼气」（1580 年代起），只是今天少用"
+   ],
+   "ex": [
+    "Your free trial expires tomorrow.",
+    "你的免费试用明天到期。"
+   ],
+   "caveat": "拉丁语原本写 exspirare，也写 expirare：x 里本来就带着 s 的音，后面的 s 就省掉了。",
+   "fact": "古法语 expirer「到期、流逝」← 拉丁语 expirare / exspirare「呼出；断气、死」，引申「结束、终止」= ex「往外」+ spirare；英语约 1400 年先有「死」义，「呼气」义 1580 年代，法律、专利、条约「到期」15 世纪中期",
+   "scene": [
+    {
+     "k": "line",
+     "x1": 140,
+     "y1": 14,
+     "x2": 140,
+     "y2": 112,
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 50
+    },
+    {
+     "k": "path",
+     "d": "M64,46 q5,-4 10,0 t10,0 t10,0 t10,0",
+     "c": "#2b5c8f",
+     "op": 0.45
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       106,
+       46
+      ],
+      [
+       130,
+       46
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "tag",
+     "x": 86,
+     "y": 20,
+     "text": "最后一口",
+     "tone": "muted"
+    },
+    {
+     "k": "paper",
+     "x": 206,
+     "y": 62,
+     "label": "EXP 2026.10"
+    }
+   ]
+  },
+  {
+   "w": "respiratory",
+   "split": [
+    "re",
+    "spir",
+    "atory"
+   ],
+   "node": "re-",
+   "parts": [
+    [
+     "re-",
+     "再、一遍又一遍"
+    ],
+    [
+     "spir",
+     "呼吸"
+    ],
+    [
+     "-atory",
+     "……的"
+    ]
+   ],
+   "link": "一口进、一口出，再来一遍，一辈子不停——",
+   "literal": "一呼一吸，一遍又一遍",
+   "caption": "吸进来、呼出去，一圈又一圈",
+   "bridge": "吸进、呼出，再吸、再呼：这一遍又一遍，就是呼吸本身。respiratory 就是「呼吸的」，常跟 system、infection 连用。非典的英文 SARS，R 就是它：Severe Acute Respiratory Syndrome。",
+   "meaning": "adj. 呼吸的；呼吸系统的",
+   "senses": [
+    "respiratory system 呼吸系统；respiratory infection 呼吸道感染",
+    "respiration n. 呼吸（作用）",
+    "respire v. 呼吸（书面、术语）"
+   ],
+   "ex": [
+    "Smoking damages your respiratory system.",
+    "吸烟会损害你的呼吸系统。"
+   ],
+   "caveat": "re- 在这里是「再、反复」：拉丁语 respirare 就是「再呼吸、一呼一吸」。",
+   "fact": "近代拉丁语 respiratorius / 法语 respiratoire（etymonline：见 respiration + -ory），1660 年代；动词 respire ← 拉丁语 respirare「再呼吸、一呼一吸」= re-「再」+ spirare",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 86
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       150,
+       40
+      ],
+      [
+       104,
+       42
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       104,
+       52
+      ],
+      [
+       150,
+       54
+      ]
+     ],
+     "dash": 1,
+     "c": "#2b5c8f"
+    },
+    {
+     "k": "arrow",
+     "d": "M204,33.1 A16,16 0 1 1 191.9,31.5"
+    }
+   ]
+  },
+  {
+   "w": "conspire",
+   "split": [
+    "con",
+    "spire"
+   ],
+   "node": "con-",
+   "parts": [
+    {
+     "m": "con-",
+     "cn": "一起",
+     "of": "com-"
+    },
+    [
+     "spire",
+     "呼吸"
+    ]
+   ],
+   "link": "要是几个人凑得很近，呼吸都搅到了一起呢？",
+   "literal": "凑在一起呼吸",
+   "caption": "两个人头挨着头，呼吸搅在一起；旁边的人听不见",
+   "bridge": "几个人头挨着头，近得能感到彼此的呼吸，嗓门压得很低——商量的多半是见不得人的事：密谋、串通。conspiracy theory 就是阴谋论。",
+   "meaning": "v. 密谋，共谋；（种种情况）凑在一起促成",
+   "senses": [
+    "conspiracy n. 阴谋；conspiracy theory 阴谋论",
+    "条件分叉：凑到一起的是人，就是密谋；凑到一起的是种种情况，就是「一齐促成」——Everything conspired to make us late. 什么都赶到了一块儿，害我们迟到"
+   ],
+   "ex": [
+    "They conspired to steal the painting.",
+    "他们合谋偷走那幅画。"
+   ],
+   "caveat": "con- 就是 com-（一起），碰到 s 时 m 写成 n。字面是「一起呼吸」，为什么偏指干坏事，etymonline 只给了两种猜测。",
+   "fact": "古法语 conspirer ← 拉丁语 conspirare「同意、联合、密谋」，字面「一起呼吸」= com「一起」（同化形式）+ spirare；英语 14 世纪晚期；etymonline 推测或指「一起立誓做坏事」，或指乐器「一起吹、齐声奏响」；中性义「共同促成」1530 年代",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 98
+    },
+    {
+     "k": "fig",
+     "x": 152,
+     "flip": 1
+    },
+    {
+     "k": "path",
+     "d": "M110,44 q4,-3 8,0 t8,0",
+     "c": "#2b5c8f"
+    },
+    {
+     "k": "path",
+     "d": "M142,50 q-4,-3 -8,0 t-8,0",
+     "c": "#2b5c8f"
+    },
+    {
+     "k": "bubble",
+     "x": 124,
+     "y": 16,
+     "text": "嘘……",
+     "tail": [
+      112,
+      36
+     ]
+    },
+    {
+     "k": "fig",
+     "x": 234,
+     "flip": 1,
+     "op": 0.35
+    },
+    {
+     "k": "thought",
+     "x": 244,
+     "y": 18,
+     "text": "？",
+     "from": [
+      238,
+      34
+     ]
+    }
+   ]
+  },
+  {
+   "w": "aspire",
+   "split": [
+    "a",
+    "spire"
+   ],
+   "node": "a-",
+   "parts": [
+    {
+     "m": "a-",
+     "cn": "朝向",
+     "of": "ad-",
+     "how": "简化形式"
+    },
+    [
+     "spire",
+     "呼吸"
+    ]
+   ],
+   "link": "这口气要是冲着一个够不着的高处去呢？",
+   "literal": "朝着高处喘气",
+   "caption": "一个人沿台阶往上爬，喘着气，望着顶上的旗",
+   "bridge": "望着顶上那面旗，一边爬一边喘——想要得直喘。这就是渴望、立志：aspire to be a doctor，一心想当医生。",
+   "meaning": "v. 渴望，立志（成为、得到）",
+   "senses": [
+    "aspire to… 立志要……；渴望得到……",
+    "aspiration n. 志向，抱负",
+    "aspiring adj. 有志成为……的：an aspiring writer 想当作家的人"
+   ],
+   "ex": [
+    "She aspires to be a pilot.",
+    "她立志要当飞行员。"
+   ],
+   "caveat": "ad- 碰到 sp、st、sc，简化成 a-，所以是 a + spire。「渴望得直喘」是 etymonline 的解释，另一说是炊烟往上升。",
+   "fact": "古法语 aspirer ← 拉丁语 aspirare「向……吹气、呼吸」，转义「攀上、力求达到」= ad「朝向」+ spirare；英语约 1400 年；etymonline：取「渴望得直喘」之意，或取「炊烟上升」",
+   "scene": [
+    {
+     "k": "stairs",
+     "pts": [
+      [
+       30,
+       108
+      ],
+      [
+       30,
+       98
+      ],
+      [
+       62,
+       98
+      ],
+      [
+       62,
+       88
+      ],
+      [
+       94,
+       88
+      ],
+      [
+       94,
+       78
+      ],
+      [
+       126,
+       78
+      ],
+      [
+       126,
+       68
+      ],
+      [
+       158,
+       68
+      ],
+      [
+       158,
+       58
+      ],
+      [
+       200,
+       58
+      ]
+     ]
+    },
+    {
+     "k": "flag",
+     "x": 232
+    },
+    {
+     "k": "fig",
+     "x": 110,
+     "y": 78,
+     "s": 0.8,
+     "pose": "walk"
+    },
+    {
+     "k": "path",
+     "d": "M124,24 q4,-3 8,0 t8,0",
+     "c": "#2b5c8f"
+    },
+    {
+     "k": "path",
+     "d": "M124,31 q4,-3 8,0 t8,0",
+     "c": "#2b5c8f",
+     "op": 0.6
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       148,
+       30
+      ],
+      [
+       212,
+       38
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "perspire",
+   "split": [
+    "per",
+    "spire"
+   ],
+   "node": "per-",
+   "parts": [
+    [
+     "per-",
+     "穿过、透过"
+    ],
+    [
+     "spire",
+     "呼吸"
+    ]
+   ],
+   "link": "最后，这口气不走嘴，直接从皮肤里透出去。",
+   "literal": "透过皮肤往外呼气",
+   "caption": "身上冒出细细的水汽和汗珠，从皮肤里透出去",
+   "bridge": "皮肤上的毛孔，一刻不停地往外透水汽；热了、紧张了，就透成一颗颗汗珠。perspire 是出汗，比 sweat 文雅。止汗剂上印的 antiperspirant，就是「反出汗」。",
+   "meaning": "v. 出汗（比 sweat 文雅）",
+   "senses": [
+    "perspiration n. 汗；出汗",
+    "antiperspirant n. 止汗剂：anti-「反」+ perspire",
+    "1791 年一本医书说：perspiration 是不知不觉从全身散出去的水汽，sweat 是费力或生病时才冒出来的"
+   ],
+   "ex": [
+    "He was perspiring under the hot stage lights.",
+    "舞台灯光烤得他直冒汗。"
+   ],
+   "caveat": "「出汗」是 1725 年起的礼貌说法；它最早说的是挥发性液体「从细孔里蒸发出去」。",
+   "fact": "perspiration 的逆构词，部分直接来自拉丁语 perspirare「不停地吹、呼吸」= per「穿过」+ spirare；英语 1640 年代指挥发性液体「从细孔蒸发」，1725 年起作「出汗」的礼貌说法",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 140
+    },
+    {
+     "k": "path",
+     "d": "M118,58 c-3,4 -4,8 0,8 c4,0 3,-4 0,-8 Z",
+     "fill": "#e8eff7",
+     "c": "#2b5c8f"
+    },
+    {
+     "k": "path",
+     "d": "M162,58 c-3,4 -4,8 0,8 c4,0 3,-4 0,-8 Z",
+     "fill": "#e8eff7",
+     "c": "#2b5c8f"
+    },
+    {
+     "k": "path",
+     "d": "M120,84 c-3,4 -4,8 0,8 c4,0 3,-4 0,-8 Z",
+     "fill": "#e8eff7",
+     "c": "#2b5c8f"
+    },
+    {
+     "k": "path",
+     "d": "M160,84 c-3,4 -4,8 0,8 c4,0 3,-4 0,-8 Z",
+     "fill": "#e8eff7",
+     "c": "#2b5c8f"
+    },
+    {
+     "k": "path",
+     "d": "M128,30 q-3,-4 0,-8 t0,-8",
+     "c": "#2b5c8f",
+     "op": 0.6
+    },
+    {
+     "k": "path",
+     "d": "M152,30 q3,-4 0,-8 t0,-8",
+     "c": "#2b5c8f",
+     "op": 0.6
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       130,
+       72
+      ],
+      [
+       104,
+       74
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       150,
+       72
+      ],
+      [
+       176,
+       74
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  }
+ ],
+ "finale": {
+  "w": "spirit",
+  "split": [
+   "",
+   "spir",
+   "it"
+  ],
+  "node": "↩",
+  "parts": [
+   [
+    "spir",
+    "呼吸"
+   ],
+   [
+    "-it",
+    "名词词尾（拉丁语 spiritus）"
+   ]
+  ],
+  "link": "回到开头那三张脸：精神、烈酒、幽灵。把这口气放回去，三张脸就对上了。",
+  "literal": "一口气",
+  "caption": "左：人身上那口气；中：离开身体的气；右：从酒里升起来的气",
+  "bridge": "拉丁语 spiritus 就是「一口气」，再往前是神吹进来的气、生命之气。人身上有这口气，就有生气：精神、劲头，in high spirits 兴致很高。脱离了身体的那口气，就是灵魂、幽灵。炼金术士管蒸馏出来、一热就跑的东西也叫 spirit；到 1670 年代，spirits 收窄成了烈酒。",
+  "meaning": "n. 精神，心灵；情绪，劲头；灵魂，幽灵；（spirits）烈酒",
+  "senses": [
+   "team spirit 团队精神；in high spirits 兴高采烈",
+   "spirit level 水平仪（1768 年）：得名于透明管子里的那管 spirit 液体",
+   "sprite n. 小精灵：spirit 经古法语 esprit 变来的双胞胎"
+  ],
+  "ex": [
+   "The team never lost its fighting spirit.",
+   "这支队伍从没丢掉那股拼劲。"
+  ],
+  "caveat": "「脱离身体的那口气」是帮你记的画面；词典记下的是词义一路走来：生命之气 → 灵魂 → 脱离身体的灵魂，也就是鬼魂。",
+  "fact": "古法语 espirit / 英法语 spirit ← 拉丁语 spiritus「呼吸、一口气（也指风）」，「神的气息」→「灵感、生命之气」→「生命」；派生自 spirare「呼吸」，de Vaan 认为这个动词可能是模仿呼吸声造的；英语 13 世纪中期；「鬼魂」义 14 世纪晚期，炼金术「挥发物、蒸馏物」义 14 世纪晚期，spirits「烈酒」1670 年代",
+  "scene": [
+   {
+    "k": "line",
+    "x1": 102,
+    "y1": 14,
+    "x2": 102,
+    "y2": 112,
+    "dash": 1
+   },
+   {
+    "k": "line",
+    "x1": 186,
+    "y1": 14,
+    "x2": 186,
+    "y2": 112,
+    "dash": 1
+   },
+   {
+    "k": "fig",
+    "x": 54,
+    "pose": "carry"
+   },
+   {
+    "k": "path",
+    "d": "M66,42 q4,-3 8,0 t8,0 t8,0",
+    "c": "#2b5c8f"
+   },
+   {
+    "k": "fig",
+    "x": 144,
+    "y": 96,
+    "op": 0.3
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      162,
+      62
+     ],
+     [
+      168,
+      34
+     ]
+    ],
+    "dash": 1,
+    "op": 0.6
+   },
+   {
+    "k": "glass",
+    "x": 226,
+    "y": 104
+   },
+   {
+    "k": "path",
+    "d": "M222,64 q-4,-5 0,-10 t0,-10 t0,-10",
+    "c": "#2b5c8f"
+   },
+   {
+    "k": "path",
+    "d": "M230,64 q4,-5 0,-10 t0,-10 t0,-10",
+    "c": "#2b5c8f",
+    "op": 0.6
+   }
+  ]
+ },
+ "daily": [
+  "inspiration 灵感",
+  "EXP 保质期（expiry）",
+  "antiperspirant 止汗剂",
+  "sprite 小精灵（雪碧）"
+ ],
+ "traps": [
+  "<b class='serif'>spire</b>（教堂尖顶）和 inspire 的尾巴一模一样，却<b>不是这一家</b>：它来自古英语 spir「嫩芽、细长的草茎」，是日耳曼语词，和尖刺 spike 同出一个表示「尖」的词根。",
+  "<b class='serif'>spiral</b>（螺旋）也不是：它来自拉丁语 spira「一圈、盘绕」← 希腊语 speira「卷、盘绕」，跟呼吸无关。",
+  "<b class='serif'>aspirin</b>（阿司匹林）看着像 aspire，其实来自绣线菊的学名 Spiraea：1899 年德国化学家 Dreser 造了这个商标名，开头的 a- 表示「乙酰化」；Spiraea 又因果实的形状得名，和 spiral 同源。",
+  "<b class='serif'>sprite</b>（小精灵）倒是真亲戚：spirit 经古法语 esprit 磨短的双胞胎。雪碧的英文名 Sprite，正好就是这个词。"
+ ],
+ "transfer": [
+  [
+   "transpire = trans-（穿过）+ spire",
+   "秘密「透」了出去，被人知道（1741 年起）；最早说的是气从身体里透出去（1590 年代）；后来又被用成「发生」——这个用法当年被看作误用。"
+  ],
+  [
+   "dispirited = dis-（去掉）+ spirit + -ed",
+   "那口气被抽走了：垂头丧气、没精打采。动词 dispirit「使泄气」，1640 年代。"
+  ],
+  [
+   "respirator = re-（再）+ spir + -ator（做……的东西）",
+   "帮人一呼一吸的东西：呼吸器、防护口罩。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取，scripts/etym.py），2026-10-28；respirator、antiperspirant 据 Wiktionary（respirate + -ator；anti- + perspirant）"
+}

@@ -1,4 +1,5 @@
 """给课程开场配一张真实图片：从维基共享资源搜图（免费许可、自动署名），或者给网页截图（如新闻标题）。
+word-family-video 的 photo 命令复用这里的 search / save_candidate / shoot，给视频的任意节拍配图（存进视频项目，不写课程 JSON）。
 
 用法：
     python scripts/photo.py search "baggage claim sign"          # 候选图下载到 cache/photos/<查询>/，总览图 _sheet.jpg（带编号）
@@ -47,6 +48,12 @@ def strip_html(s):
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s or "")).strip()
 
 
+def artist_name(html):
+    """Commons 的作者字段：去标签；佚名作者常带两份同样的文字（多语言 span），只留一份。"""
+    s = strip_html(html)
+    return re.sub(r"^(.+?)\1+$", r"\1", s) or "佚名"
+
+
 def cmd_search(q, n):
     params = {"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
               "gsrsearch": f"{q} filetype:bitmap", "gsrlimit": 30, "prop": "imageinfo",
@@ -72,7 +79,7 @@ def cmd_search(q, n):
         except Exception:
             continue
         cands.append({"n": k, "file": f.name, "title": p["title"], "license": lic,
-                      "artist": strip_html(m.get("Artist", {}).get("value", "")) or "佚名",
+                      "artist": artist_name(m.get("Artist", {}).get("value", "")),
                       "page": ii.get("descriptionurl", "")})
         if len(cands) >= n:
             break
@@ -113,7 +120,8 @@ def set_photo(stem, photo):
     jp.write_text(json.dumps(L, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
-def cmd_pick(stem, q, n):
+def save_candidate(q, n, dst: Path) -> dict:
+    """把 search 得到的第 n 张候选图存成 dst（长边不超过 1600），返回 {"file", "credit", "source"}。"""
     src_dir = CACHE / slug(q)
     cj = src_dir / "candidates.json"
     if not cj.exists():
@@ -121,29 +129,22 @@ def cmd_pick(stem, q, n):
     c = next((x for x in json.loads(cj.read_text(encoding="utf-8")) if x["n"] == n), None)
     if not c:
         sys.exit(f"没有第 {n} 张")
-    dst_dir = LESSONS / "media" / stem
-    dst_dir.mkdir(parents=True, exist_ok=True)
-    dst = dst_dir / "opening.jpg"
+    dst.parent.mkdir(parents=True, exist_ok=True)
     try:
         from PIL import Image
         im = Image.open(src_dir / c["file"]).convert("RGB")
         im.thumbnail((1600, 1600))
         im.save(dst, quality=88)
     except ImportError:
-        dst = dst_dir / ("opening" + Path(c["file"]).suffix)
+        dst = dst.with_suffix(Path(c["file"]).suffix)
         shutil.copy(src_dir / c["file"], dst)
-    photo = {"file": f"media/{stem}/{dst.name}", "credit": f"照片：{c['artist']}，{c['license']}，Wikimedia Commons",
-             "source": c["page"]}
-    set_photo(stem, photo)
-    print(f"已写入 lessons/{stem}.json 的 opening.photo：\n  {json.dumps(photo, ensure_ascii=False)}\n再运行 build.py 生成页面")
-    return 0
+    return {"file": dst, "credit": f"照片：{c['artist']}，{c['license']}，Wikimedia Commons", "source": c["page"]}
 
 
-def cmd_shot(stem, url, clip):
+def shoot(url, dst: Path, clip) -> dict:
+    """网页截图（新闻标题区域等）存成 dst，返回 {"file", "credit", "source"}。"""
     from playwright.sync_api import sync_playwright
-    dst_dir = LESSONS / "media" / stem
-    dst_dir.mkdir(parents=True, exist_ok=True)
-    dst = dst_dir / "opening.png"
+    dst.parent.mkdir(parents=True, exist_ok=True)
     x, y, w, h = clip
     with sync_playwright() as p:
         browser = None
@@ -158,10 +159,22 @@ def cmd_shot(stem, url, clip):
         page.wait_for_timeout(2500)
         page.screenshot(path=str(dst), clip={"x": x, "y": y, "width": w, "height": h})
         browser.close()
-    site = urllib.parse.urlparse(url).netloc
-    photo = {"file": f"media/{stem}/opening.png", "credit": f"网页截图：{site}，{datetime.date.today()}", "source": url}
+    return {"file": dst, "credit": f"网页截图：{urllib.parse.urlparse(url).netloc}，{datetime.date.today()}", "source": url}
+
+
+def cmd_pick(stem, q, n):
+    got = save_candidate(q, n, LESSONS / "media" / stem / "opening.jpg")
+    photo = {"file": f"media/{stem}/{got['file'].name}", "credit": got["credit"], "source": got["source"]}
     set_photo(stem, photo)
-    print(f"已截图并写入 opening.photo：{dst}\n请打开图片确认截到的是标题区域；不对就用 --clip x,y,宽,高 重截")
+    print(f"已写入 lessons/{stem}.json 的 opening.photo：\n  {json.dumps(photo, ensure_ascii=False)}\n再运行 build.py 生成页面")
+    return 0
+
+
+def cmd_shot(stem, url, clip):
+    got = shoot(url, LESSONS / "media" / stem / "opening.png", clip)
+    photo = {"file": f"media/{stem}/opening.png", "credit": got["credit"], "source": got["source"]}
+    set_photo(stem, photo)
+    print(f"已截图并写入 opening.photo：{got['file']}\n请打开图片确认截到的是标题区域；不对就用 --clip x,y,宽,高 重截")
     return 0
 
 

@@ -1,0 +1,889 @@
+{
+ "title": "从选举新闻开始：lect / leg / lig「挑、捡」一家",
+ "root": {
+  "m": "lect",
+  "cn": "挑、捡；读",
+  "variants": [
+   {
+    "m": "leg",
+    "note": "现在时词干 legere；后来又有「读」义",
+    "ex": "legend"
+   },
+   {
+    "m": "lig",
+    "note": "加前缀时的组合形 -ligere",
+    "ex": "intelligent"
+   }
+  ]
+ },
+ "seqTitle": "同一只手在挑、在捡，换个方向就是一个新词",
+ "opening": {
+  "type": "news",
+  "big": "election ＝ 选举",
+  "say": "11 月 3 日，美国中期选举：众议院 435 个席位全部改选。这几天的新闻里，election、elect 天天见。可 elect 里藏着一个拉丁动词，本义是「捡」。选举，跟捡东西有什么关系？",
+  "muted": "顺着这个「捡」，能捡出一整家人：收集、选举、忽视、聪明、勤勉、传说……最后还会捡回你正在上的这一课。",
+  "source": {
+   "title": "How to Vote in the 2026 Midterms: A State-by-State Guide（U.S. News）",
+   "url": "https://www.usnews.com/news/politics/articles/2026-10-20/2026-midterm-elections-voter-registration-deadlines-and-early-voting-dates-by-state",
+   "date": "2026-10-20"
+  },
+  "scene": [
+   {
+    "k": "rect",
+    "x": 92,
+    "y": 12,
+    "w": 84,
+    "h": 96,
+    "r": 2,
+    "fill": "#ffffff"
+   },
+   {
+    "k": "text",
+    "x": 134,
+    "y": 28,
+    "text": "BALLOT",
+    "size": 10,
+    "serif": 1
+   },
+   {
+    "k": "rect",
+    "x": 102,
+    "y": 40,
+    "w": 9,
+    "h": 9
+   },
+   {
+    "k": "line",
+    "x1": 118,
+    "y1": 46,
+    "x2": 164,
+    "y2": 46,
+    "c": "#9aa0a8"
+   },
+   {
+    "k": "rect",
+    "x": 102,
+    "y": 60,
+    "w": 9,
+    "h": 9
+   },
+   {
+    "k": "path",
+    "d": "M103,64 L106,68 L113,58",
+    "c": "#b84a14",
+    "sw": 2
+   },
+   {
+    "k": "line",
+    "x1": 118,
+    "y1": 66,
+    "x2": 164,
+    "y2": 66,
+    "c": "#9aa0a8"
+   },
+   {
+    "k": "rect",
+    "x": 102,
+    "y": 80,
+    "w": 9,
+    "h": 9
+   },
+   {
+    "k": "line",
+    "x1": 118,
+    "y1": 86,
+    "x2": 164,
+    "y2": 86,
+    "c": "#9aa0a8"
+   },
+   {
+    "k": "fig",
+    "x": 232,
+    "pose": "point",
+    "flip": 1
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      204,
+      56
+     ],
+     [
+      170,
+      64
+     ]
+    ],
+    "dash": 1
+   }
+  ],
+  "caption": "2026 年 8 月 11 日，明尼苏达州初选日，投票点门口的 Vote Here 牌子",
+  "photo": {
+   "file": "media/lect/opening.jpg",
+   "credit": "照片：Lorie Shaull，CC BY 4.0，Wikimedia Commons",
+   "source": "https://commons.wikimedia.org/wiki/File:A_%22Vote_Here%22_sign_outside_Maslowski_Wellness_%26_Research_Center_on_Primary_Election_Day,_Aug._11,_2026_in_Wadena.jpg"
+  }
+ },
+ "anchor": {
+  "text": "记住这个画面：一只手伸向一堆东西，挑中一个，捡起来。",
+  "more": "接下来每个词，都是这只手在挑、在捡，只是换了方向——一样样捡到一起、从一群里挑出一个、看见了偏不捡、在几样之间挑、单独挑出来捧着。最后，捡的不再是东西，而是字。",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 90,
+    "pose": "give"
+   },
+   {
+    "k": "circle",
+    "x": 124,
+    "y": 64,
+    "r": 6
+   },
+   {
+    "k": "circle",
+    "x": 150,
+    "y": 101,
+    "r": 6
+   },
+   {
+    "k": "circle",
+    "x": 164,
+    "y": 101,
+    "r": 6
+   },
+   {
+    "k": "circle",
+    "x": 178,
+    "y": 101,
+    "r": 6,
+    "op": 0.3
+   },
+   {
+    "k": "circle",
+    "x": 192,
+    "y": 101,
+    "r": 6
+   },
+   {
+    "k": "circle",
+    "x": 206,
+    "y": 101,
+    "r": 6
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      178,
+      90
+     ],
+     [
+      166,
+      62
+     ],
+     [
+      134,
+      62
+     ]
+    ],
+    "curve": 1,
+    "dash": 1
+   }
+  ],
+  "caption": "lect 的母画面：从一堆里挑中一个，捡起来"
+ },
+ "words": [
+  {
+   "w": "collect",
+   "split": [
+    "col",
+    "lect"
+   ],
+   "node": "col-",
+   "parts": [
+    {
+     "m": "col-",
+     "cn": "一起",
+     "of": "com-"
+    },
+    [
+     "lect",
+     "捡"
+    ]
+   ],
+   "link": "先看最勤快的捡法：散在各处的，一样一样捡到一起。",
+   "literal": "一样样捡到一起",
+   "caption": "散在地上的东西，被一样样捡进同一个筐",
+   "bridge": "邮票、球鞋、旧硬币，一件件捡回来放到一处，就成了收藏。老师收作业、放学去接孩子，英语也说 collect——都是把散在各处的，捡到一块儿。",
+   "meaning": "v. 收集；收藏；收（钱、作业）；接（人）",
+   "senses": [
+    "collection n. 收藏；合集；（时装的）系列",
+    "collect the kids from school 放学去接孩子",
+    "collect call 对方付费电话：「由收方付钱」的用法 1893 年起，最早说的是电报"
+   ],
+   "ex": [
+    "My grandfather collects old coins.",
+    "我爷爷收藏旧硬币。"
+   ],
+   "caveat": "com- 碰到 l 同化成 col-，所以有两个 l。lect 是过去分词 collectus 的词干，原动词是 colligere。",
+   "fact": "拉丁语 collectus，colligere「聚到一起」的过去分词 = com「一起」（同化）+ legere「捡、聚」；英语 15 世纪早期",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 56,
+     "pose": "give"
+    },
+    {
+     "k": "circle",
+     "x": 104,
+     "y": 80,
+     "r": 5
+    },
+    {
+     "k": "circle",
+     "x": 115,
+     "y": 77,
+     "r": 5
+    },
+    {
+     "k": "circle",
+     "x": 126,
+     "y": 80,
+     "r": 5
+    },
+    {
+     "k": "path",
+     "d": "M92,82 L138,82 L131,108 L99,108 Z",
+     "fill": "#efe9de",
+     "c": "#5e6670"
+    },
+    {
+     "k": "circle",
+     "x": 176,
+     "y": 101,
+     "r": 5,
+     "op": 0.3
+    },
+    {
+     "k": "circle",
+     "x": 206,
+     "y": 101,
+     "r": 5,
+     "op": 0.3
+    },
+    {
+     "k": "circle",
+     "x": 236,
+     "y": 101,
+     "r": 5,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       236,
+       92
+      ],
+      [
+       190,
+       40
+      ],
+      [
+       136,
+       74
+      ]
+     ],
+     "curve": 1,
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       206,
+       93
+      ],
+      [
+       176,
+       62
+      ],
+      [
+       140,
+       80
+      ]
+     ],
+     "curve": 1,
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       176,
+       94
+      ],
+      [
+       160,
+       80
+      ],
+      [
+       142,
+       88
+      ]
+     ],
+     "curve": 1,
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "elect",
+   "split": [
+    "e",
+    "lect"
+   ],
+   "node": "e-",
+   "parts": [
+    {
+     "m": "e-",
+     "cn": "向外",
+     "of": "ex-"
+    },
+    [
+     "lect",
+     "挑"
+    ]
+   ],
+   "link": "不是全捡，而是从一群里只挑一个，让他站出来——开头新闻里那个词，就在这儿。",
+   "literal": "从一群里挑出一个",
+   "caption": "一排人里挑出一个，请他站到前面来",
+   "bridge": "一排候选人站在那儿，大家从里面挑出一个，请他站出来做事——选举就是这样一次「挑出来」。在选票上选中一个名字，就是伸手一挑。",
+   "meaning": "v. 选举，推选；（正式）选择做某事",
+   "senses": [
+    "election n. 选举；Election Day 选举日",
+    "president-elect 当选总统：已经挑出来、还没上任的那位",
+    "elect to do 选择去做：She elected to stay. 她选择留下"
+   ],
+   "ex": [
+    "Voters will elect a new mayor next month.",
+    "选民下个月要选出新市长。"
+   ],
+   "caveat": "ex- 在 l 前简化成 e-。拉丁原词是 eligere：前缀后面的 legere 换成组合形 -ligere，过去分词 electus 里又是 lect。",
+   "fact": "拉丁语 electus，eligere「挑出、选择」的过去分词 = ex「向外」+ -ligere（legere 的组合形）；英语 15 世纪早期，指「选人担任职位」",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 34,
+     "s": 0.72
+    },
+    {
+     "k": "fig",
+     "x": 64,
+     "s": 0.72
+    },
+    {
+     "k": "fig",
+     "x": 94,
+     "s": 0.72,
+     "op": 0.3
+    },
+    {
+     "k": "fig",
+     "x": 124,
+     "s": 0.72
+    },
+    {
+     "k": "rect",
+     "x": 190,
+     "y": 92,
+     "w": 48,
+     "h": 16,
+     "r": 2
+    },
+    {
+     "k": "fig",
+     "x": 214,
+     "y": 92,
+     "s": 0.8
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       100,
+       46
+      ],
+      [
+       150,
+       8
+      ],
+      [
+       200,
+       34
+      ]
+     ],
+     "curve": 1,
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "neglect",
+   "split": [
+    "neg",
+    "lect"
+   ],
+   "node": "neg-",
+   "parts": [
+    {
+     "m": "neg-",
+     "cn": "不",
+     "of": "nec",
+     "how": "变体"
+    },
+    [
+     "lect",
+     "捡"
+    ]
+   ],
+   "link": "反过来：东西就在脚边，你看见了，偏不捡。",
+   "literal": "看见了，不捡",
+   "caption": "东西就在脚边，手却缩了回去",
+   "bridge": "花不浇、消息不回、身体不顾，都是 neglect。不是没看见，是看见了，没把它捡起来。",
+   "meaning": "v. 忽视，疏忽；没照顾好　n. 疏忽；无人照管",
+   "senses": [
+    "neglected adj. 被冷落的；荒废的：a neglected garden 荒了的花园",
+    "neglect your health 不顾身体"
+   ],
+   "ex": [
+    "He neglected his studies and failed the exam.",
+    "他荒废了学业，考试没及格。"
+   ],
+   "caveat": "nec 是古拉丁语的「不」。拉丁原词 neglegere 是 neclegere 的变体，所以这里写成 neg。",
+   "fact": "拉丁语 neglectus，neglegere「不当回事、不理会」的过去分词，字面「不捡起来」，是 neclegere 的变体 = 古拉丁语 nec「不」+ legere「捡、挑」；英语 1520 年代",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 100,
+     "pose": "withdraw"
+    },
+    {
+     "k": "circle",
+     "x": 176,
+     "y": 101,
+     "r": 7
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       170,
+       93
+      ],
+      [
+       120,
+       64
+      ]
+     ],
+     "dash": 1,
+     "op": 0.3
+    },
+    {
+     "k": "no",
+     "x": 146,
+     "y": 80,
+     "r": 11
+    }
+   ]
+  },
+  {
+   "w": "intelligent",
+   "split": [
+    "intel",
+    "lig",
+    "ent"
+   ],
+   "node": "intel-",
+   "parts": [
+    {
+     "m": "intel-",
+     "cn": "在……之间",
+     "of": "inter-"
+    },
+    [
+     "lig",
+     "挑（legere 的组合形）"
+    ],
+    [
+     "-ent",
+     "……的"
+    ]
+   ],
+   "link": "如果几样东西长得差不多呢？挑之前，得先在它们之间来回比。",
+   "literal": "在几样之间挑出对的",
+   "caption": "三张差不多的纸摆在面前，在它们之间来回比",
+   "bridge": "三张纸看着差不多，你能在它们之间挑出对的那张，说明你分得清、看得懂。拉丁语 intelligens 就是「能分辨的、会欣赏的」，到了英语里成了聪明。",
+   "meaning": "adj. 聪明的；有理解力的；智能的",
+   "senses": [
+    "intelligence n. 智力；情报：15 世纪中期起指「得到的消息」，1580 年代起特指间谍得来的秘密消息",
+    "AI = artificial intelligence 人工智能"
+   ],
+   "ex": [
+    "Dolphins are highly intelligent animals.",
+    "海豚是非常聪明的动物。"
+   ],
+   "caveat": "inter- 碰到 l 同化成 intel-，所以有两个 l。lig 是 legere 加前缀时的组合形（-ligere）。",
+   "fact": "拉丁语 intelligens「能分辨的、会欣赏的」，intelligere「理解、领会」的现在分词 = inter「之间」（同化）+ legere「挑、选；读」；英语约 1500 年",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 54,
+     "pose": "think"
+    },
+    {
+     "k": "paper",
+     "x": 134,
+     "y": 66,
+     "label": "A"
+    },
+    {
+     "k": "paper",
+     "x": 180,
+     "y": 66,
+     "label": "B"
+    },
+    {
+     "k": "paper",
+     "x": 226,
+     "y": 66,
+     "label": "C"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       140,
+       46
+      ],
+      [
+       180,
+       22
+      ],
+      [
+       220,
+       46
+      ]
+     ],
+     "curve": 1,
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       180,
+       106
+      ],
+      [
+       180,
+       84
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "diligent",
+   "split": [
+    "di",
+    "lig",
+    "ent"
+   ],
+   "node": "di-",
+   "parts": [
+    {
+     "m": "di-",
+     "cn": "分开",
+     "of": "dis-",
+     "how": "变体"
+    },
+    [
+     "lig",
+     "挑"
+    ],
+    [
+     "-ent",
+     "……的"
+    ]
+   ],
+   "link": "挑中了一样，把它从一堆里单独拿出来，捧在手里——",
+   "literal": "单独挑出来，捧着",
+   "caption": "从一堆里单独挑出一个，捧在胸前",
+   "bridge": "从一堆里单独挑出来的东西，你会格外上心。拉丁语 diligere 从「挑出来」走到了「看重、珍爱」，diligens 是「专注的、细心的」——到了英语里，就是肯一直下功夫：勤勉。",
+   "meaning": "adj. 勤奋的；认真细致的",
+   "senses": [
+    "diligence n. 勤勉",
+    "due diligence 尽职调查：做交易前该下的那份功夫"
+   ],
+   "ex": [
+    "She is a diligent student who never misses a class.",
+    "她是个勤奋的学生，一节课都不落。"
+   ],
+   "caveat": "这里的 dis- 写成了 di-，s 不见了。「看重了所以上心」是帮你连起来的联想，词典只记了这几层意思。",
+   "fact": "拉丁语 diligens「专注的、勤勉的、细心的」，diligere「单独挑出；看重、珍爱」的现在分词，原义「挑出、选择」= dis-「分开」+ legere；英语 14 世纪中期",
+   "scene": [
+    {
+     "k": "circle",
+     "x": 36,
+     "y": 101,
+     "r": 6
+    },
+    {
+     "k": "circle",
+     "x": 50,
+     "y": 101,
+     "r": 6
+    },
+    {
+     "k": "circle",
+     "x": 64,
+     "y": 101,
+     "r": 6,
+     "op": 0.3
+    },
+    {
+     "k": "circle",
+     "x": 78,
+     "y": 101,
+     "r": 6
+    },
+    {
+     "k": "circle",
+     "x": 92,
+     "y": 101,
+     "r": 6
+    },
+    {
+     "k": "fig",
+     "x": 176,
+     "pose": "withdraw"
+    },
+    {
+     "k": "circle",
+     "x": 186,
+     "y": 63,
+     "r": 6,
+     "fill": "#f3d9c6"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       66,
+       90
+      ],
+      [
+       110,
+       40
+      ],
+      [
+       166,
+       58
+      ]
+     ],
+     "curve": 1,
+     "dash": 1
+    },
+    {
+     "k": "heart",
+     "x": 214,
+     "y": 38
+    }
+   ]
+  },
+  {
+   "w": "legend",
+   "split": [
+    "",
+    "leg",
+    "end"
+   ],
+   "node": "leg",
+   "parts": [
+    {
+     "m": "leg",
+     "cn": "读（legere 的现在时词干）",
+     "kind": "r"
+    },
+    [
+     "-end",
+     "要被……的（拉丁语 -endus）"
+    ]
+   ],
+   "link": "捡的东西也可以是字：眼睛在一行字里一个一个捡过去。拉丁语 legere 后来就多了一个意思——读。",
+   "literal": "要拿来读的东西",
+   "caption": "有人捧着书念，大家坐着听",
+   "bridge": "中世纪的修道院里，晨祷时、饭堂里，要念圣徒的生平，这些「要读的」就叫 legenda。后来不论是不是圣徒、是不是真事，这类故事都叫 legend：传说。地图角落的小框也叫 legend，图例——看地图前先读它。",
+   "meaning": "n. 传说；传奇人物；（地图、图表的）图例",
+   "senses": [
+    "a living legend 活着的传奇：legend in one's own time 这个说法 1958 年起",
+    "地图上的 legend 图例：1903 年起",
+    "legendary adj. 传说中的；传奇的"
+   ],
+   "ex": [
+    "According to legend, the lake has no bottom.",
+    "传说这个湖没有底。"
+   ],
+   "caveat": "leg 是 legere 的现在时词干。「捡字就是读」只是可能：etymonline 说，读在词源上「也许」就是「挑出词来」。",
+   "fact": "中世纪拉丁语 legenda「要读的东西」，legere「读；采集、挑选」的动形容词中性复数，尤指晨祷和修院饭堂里诵读的圣徒传；英语 14 世纪早期；「非史实的故事」义 14 世纪晚期",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 70,
+     "pose": "explain"
+    },
+    {
+     "k": "path",
+     "d": "M90,40 L104,36 L118,40 L118,58 L104,54 L90,58 Z",
+     "fill": "#ffffff",
+     "c": "#5e6670"
+    },
+    {
+     "k": "line",
+     "x1": 104,
+     "y1": 36,
+     "x2": 104,
+     "y2": 54,
+     "c": "#5e6670",
+     "w": 1.2
+    },
+    {
+     "k": "bubble",
+     "x": 78,
+     "y": 16,
+     "text": "从前……",
+     "tail": [
+      78,
+      33
+     ]
+    },
+    {
+     "k": "rect",
+     "x": 187,
+     "y": 95,
+     "w": 18,
+     "h": 13,
+     "r": 2
+    },
+    {
+     "k": "fig",
+     "x": 196,
+     "pose": "sit",
+     "flip": 1,
+     "s": 0.8
+    },
+    {
+     "k": "rect",
+     "x": 227,
+     "y": 95,
+     "w": 18,
+     "h": 13,
+     "r": 2
+    },
+    {
+     "k": "fig",
+     "x": 236,
+     "pose": "sit",
+     "flip": 1,
+     "s": 0.8
+    }
+   ]
+  }
+ ],
+ "finale": {
+  "w": "lesson",
+  "split": [
+   "",
+   "less",
+   "on"
+  ],
+  "node": "↩",
+  "parts": [
+   {
+    "m": "less",
+    "cn": "读（lect 经法语变形）",
+    "of": "lect"
+   },
+   [
+    "-on",
+    "名词词尾（-ion 经法语）"
+   ]
+  ],
+  "link": "回到开头的投票站：选民领到选票，上面一排名字，得一个个读过去，才挑得出一个。读和挑，在拉丁语里本是同一个动词。还有一个词，你此刻就在它里面。",
+  "literal": "一次朗读",
+  "caption": "有人指着板子，上面写着 Lesson 1",
+  "bridge": "lesson 最早是「一次朗读」：13 世纪早期，教堂里念的一段《圣经》叫 lesson，学生要学的一段内容也叫 lesson。一课、一个教训，都从这一次「读」长出来——你正在上的这一课，也是 lect 家的人。",
+  "meaning": "n. 课；一节课；教训",
+  "senses": [
+   "learn one's lesson 吃一堑长一智：「能从中学到东西的事」这个义 1580 年代起",
+   "Lesson 1 第一课：学生要学的一段内容，13 世纪早期就叫 lesson"
+  ],
+  "ex": [
+   "Today's lesson is about word roots.",
+   "今天这一课讲词根。"
+  ],
+  "caveat": "拉丁语 lectionem 进了古法语成了 leçon，lect 磨成了 leç，英语写作 less。",
+  "fact": "古法语 leçon ← 拉丁语 lectionem（主格 lectio）「一次读」，legere「读」的过去分词词干 + 名词词尾；英语 13 世纪早期，指「朗读一段《圣经》」，也指学生要学的内容",
+  "scene": [
+   {
+    "k": "rect",
+    "x": 120,
+    "y": 18,
+    "w": 128,
+    "h": 62,
+    "r": 3,
+    "fill": "#ffffff"
+   },
+   {
+    "k": "text",
+    "x": 184,
+    "y": 56,
+    "text": "Lesson 1",
+    "size": 18,
+    "serif": 1
+   },
+   {
+    "k": "fig",
+    "x": 84,
+    "pose": "point"
+   }
+  ]
+ },
+ "daily": [
+  "election 选举",
+  "collection 收藏、合集",
+  "AI 的 I：intelligence",
+  "eligible 有资格的（可被选的）"
+ ],
+ "traps": [
+  "<b class='serif'>leg</b>（腿）<b>不是这一家</b>：它很可能来自古北欧语 leggr，跟拉丁语 legere 没有关系。",
+  "<b class='serif'>league</b>（联盟、联赛）和 <b class='serif'>oblige</b>（迫使；使感激）<b>不是这一家</b>：它们来自拉丁语 ligare「绑」，属于另一个词根 *leig-。同样写作 lig，intelligent 里的是「挑」，oblige 里的是「绑」。所以《英雄联盟》League of Legends 里，legends 是这一家，league 不是。"
+ ],
+ "transfer": [
+  [
+   "select = se-（分开、离开）+ lect",
+   "挑出来，放到一边：挑选、选择。手机上的 Select All 就是「全选」，selection 是选择、精选。"
+  ],
+  [
+   "elegant = e-（向外）+ leg + -ant（……的）",
+   "挑了又挑的：讲究、雅致、优雅。它和 elect 出自同一个拉丁动词 eligere「仔细挑选」。有意思的是，拉丁语 elegans 起初是贬义：挑剔、娇气。"
+  ],
+  [
+   "lecture = lect + -ure（……的动作）",
+   "一次读：中世纪拉丁语 lectura。15 世纪早期指朗读（礼拜上、给学生），1530 年代起指讲座、讲课；1706 年起还多了「把人训一顿」的意思。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取，scripts/etym.py），2026-10-28。时事：U.S. News，2026-10-20"
+}

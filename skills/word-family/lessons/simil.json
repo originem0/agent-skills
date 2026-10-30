@@ -1,0 +1,730 @@
+{
+ "title": "从模拟人生开始：simil / simul「像、同时」一家",
+ "root": {
+  "m": "simil",
+  "cn": "像、同时",
+  "variants": [
+   {
+    "m": "simul",
+    "note": "拉丁语 simul「同时」，动词 simulare「使像」",
+    "ex": "simultaneous"
+   },
+   {
+    "m": "semble",
+    "note": "simulare 经古法语 sembler 变形",
+    "ex": "resemble"
+   }
+  ]
+ },
+ "seqTitle": "两样东西并在一起：看长相是像，看时间是同时",
+ "opening": {
+  "type": "pop",
+  "big": "The Sims ＝ 模拟人生",
+  "say": "头顶一颗绿色菱形的小人叫 Sims，这款游戏叫 The Sims，中文名模拟人生。名字里正好有个 sim——英语里，它就是 simulation「模拟」的简称。可这串 simul，还藏在 simultaneous「同时」里，隔壁又住着 similar「相像」。模拟、相像、同时，凭什么是一家？",
+  "muted": "答案是一个画面：两样东西并在一起，像是一个。顺着它能认出一整家人：长得像、做得像、变得像、聚到一处、同一刻……最后还有一台办公室里的老机器，干的也是「做一个像的」。",
+  "source": {
+   "title": "The Sims Celebrates 25 Years of Simulated Life（EA 新闻稿）",
+   "url": "https://news.ea.com/press-releases/press-releases-details/2025/The-Sims-Celebrates-25-Years-of-Simulated-Life/default.aspx",
+   "date": "2025-02-04"
+  },
+  "caption": "The Sims 的标志：那颗绿色菱形",
+  "photo": {
+   "file": "media/simil/opening.jpg",
+   "credit": "标志：作者不详（Commons 注明取自 EA 官网），Public domain（PD-textlogo），Wikimedia Commons",
+   "source": "https://commons.wikimedia.org/wiki/File:The_Sims_2_logo_(2024).png"
+  }
+ },
+ "anchor": {
+  "text": "记住这个画面：两个人并肩站在一起，像是一个人。",
+  "more": "这个「并在一起」，在拉丁语里长出了两个词：similis「像」、simul「同时」。接下来每个词都从这个画面出发：看长相——长得一样、做得一样、变得一样；看位置和时间——聚到一处、同一刻发生。",
+  "scene": [
+   {
+    "k": "path",
+    "d": "M80,64 A60,48 0 1,1 200,64 A60,48 0 1,1 80,64",
+    "c": "#176b4d",
+    "sw": 1.6
+   },
+   {
+    "k": "fig",
+    "x": 118,
+    "pose": "carry"
+   },
+   {
+    "k": "fig",
+    "x": 162,
+    "pose": "carry"
+   },
+   {
+    "k": "tag",
+    "x": 230,
+    "y": 26,
+    "text": "并成一个",
+    "tone": "root"
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      216,
+      38
+     ],
+     [
+      200,
+      50
+     ]
+    ],
+    "dash": 1
+   }
+  ],
+  "caption": "simil / simul 的母画面：两个并成一个"
+ },
+ "words": [
+  {
+   "w": "similar",
+   "split": [
+    "",
+    "simil",
+    "ar"
+   ],
+   "node": "simil",
+   "parts": [
+    [
+     "simil",
+     "像（similis）"
+    ],
+    [
+     "-ar",
+     "……的"
+    ]
+   ],
+   "link": "先看最直接的：两样东西并排一放，一个样。",
+   "literal": "形状一样，大小不同",
+   "caption": "一大一小两个三角形：角一样，形状一样",
+   "bridge": "数学课上的相似三角形，英文就叫 similar triangles：角一样，形状一样，只是大小不同。日常说两样东西 similar，也是这个分寸——很像，但不是同一个。",
+   "meaning": "adj. 相似的，类似的",
+   "senses": [
+    "be similar to 和……相似",
+    "similarity n. 相似之处",
+    "dissimilar adj. 不相似的：dis- 把「像」否定掉"
+   ],
+   "ex": [
+    "Your phone is similar to mine.",
+    "你的手机跟我的差不多。"
+   ],
+   "caveat": "similar 是很像，不是同一个；一模一样要用 same——same 倒是远房亲戚，也来自印欧词根 *sem-。",
+   "fact": "法语 similaire ← 中世纪拉丁语 similaris ← 拉丁语 similis「像、同类的」← 古拉丁语 semol「一起」（原始印欧语 *sem-「一；像一个、和……一起」）；英语 1610 年代",
+   "scene": [
+    {
+     "k": "path",
+     "d": "M36,108 L132,108 L60,36 Z",
+     "fill": "#efe9de"
+    },
+    {
+     "k": "path",
+     "d": "M176,108 L233.6,108 L190.4,64.8 Z",
+     "fill": "#efe9de"
+    },
+    {
+     "k": "path",
+     "d": "M48,108 A12,12 0 0,0 39.8,96.6",
+     "c": "#b84a14"
+    },
+    {
+     "k": "path",
+     "d": "M184,108 A8,8 0 0,0 178.5,100.4",
+     "c": "#b84a14"
+    },
+    {
+     "k": "text",
+     "x": 154,
+     "y": 98,
+     "text": "∽",
+     "size": 34,
+     "c": "#176b4d"
+    }
+   ]
+  },
+  {
+   "w": "resemble",
+   "split": [
+    "re",
+    "semble"
+   ],
+   "node": "re-",
+   "parts": [
+    [
+     "re-",
+     "加强（大概）"
+    ],
+    {
+     "m": "semble",
+     "cn": "像、看起来像",
+     "of": "simul"
+    }
+   ],
+   "link": "同样是像，换个说法：不说两样东西，说一个人长得像另一个人。",
+   "literal": "跟妈妈一个模子刻的",
+   "caption": "妈妈和孩子并排站着，连头上的发髻都一样",
+   "bridge": "孩子往妈妈身边一站，眉眼、神态一个模子刻出来的——这就是 resemble，长得像。它比 similar 省事：不带 to，后面直接跟人。",
+   "meaning": "v. 像，长得像（多指外表）",
+   "senses": [
+    "resemblance n. 相像",
+    "条件分叉：说两样东西差不多，常说 be similar to；说一个人长得像另一个人，常说 resemble sb，不加 to"
+   ],
+   "ex": [
+    "You really resemble your mother.",
+    "你长得真像你妈妈。"
+   ],
+   "caveat": "semble 是 simulare 经古法语 sembler 变的形。这里的 re- 不是「回」，etymonline 说大概只是加强语气。",
+   "fact": "古法语 resembler「像」= re-（etymonline：此处大概是加强前缀）+ sembler「显得、看起来像」← 拉丁语 simulare「使像、模仿」← similis；英语 14 世纪中期",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 104,
+     "pose": "stand"
+    },
+    {
+     "k": "circle",
+     "x": 104,
+     "y": 31,
+     "r": 4.5,
+     "fill": "#1e242b",
+     "c": "#1e242b"
+    },
+    {
+     "k": "fig",
+     "x": 166,
+     "pose": "stand",
+     "s": 0.7
+    },
+    {
+     "k": "circle",
+     "x": 166,
+     "y": 54,
+     "r": 3.2,
+     "fill": "#1e242b",
+     "c": "#1e242b"
+    },
+    {
+     "k": "text",
+     "x": 135,
+     "y": 62,
+     "text": "=",
+     "size": 22,
+     "c": "#b84a14",
+     "serif": 1
+    }
+   ]
+  },
+  {
+   "w": "simulate",
+   "split": [
+    "",
+    "simul",
+    "ate"
+   ],
+   "node": "simul",
+   "parts": [
+    [
+     "simul",
+     "使像（simulare）"
+    ],
+    [
+     "-ate",
+     "动词后缀"
+    ]
+   ],
+   "link": "不是天生就像，而是照着一个样子，故意做得像。",
+   "literal": "照着真的做一个像的",
+   "caption": "照着天上的真飞机，在屏幕里做一架一样的",
+   "bridge": "照着真的人生做一个像的出来，就是模拟人生。不过 simulate 刚进英语时是「假装」：故意装出像的样子；1947 年起才有「用模型模仿真实情况，供研究、训练」的意思——飞行员练手的飞行模拟器，就叫 flight simulator。",
+   "meaning": "v. 模拟，假装；（为训练、研究）仿真",
+   "senses": [
+    "simulation n. 模拟；sim 就是它的简称（1983 年起）",
+    "simulator n. 模拟器：flight simulator 飞行模拟器",
+    "simulated adj. 仿造的：simulated leather 人造革"
+   ],
+   "ex": [
+    "The training program simulates a real emergency.",
+    "这个训练项目模拟了一场真实的紧急情况。"
+   ],
+   "caveat": "这里的 simul 是动词 simulare「使像」的词干，从 similis 来；和 simultaneous 里表示「同时」的 simul 拼法一样，意思走的是「像」这一支。",
+   "fact": "拉丁语 simulatus，simulare「使像、模仿、复制」的过去分词，源自 similis；英语 1620 年代先指「假装」，1947 年起指「用模型模拟（以供研究、训练）」",
+   "scene": [
+    {
+     "k": "path",
+     "d": "M28.0,34.0 L24.0,16.0 L32.0,16.0 L40.0,26.0 L72.0,26.0 Q81.0,27.0 81.0,30.0 Q81.0,33.0 72.0,34.0 Z",
+     "fill": "#fff",
+     "sw": 1.8
+    },
+    {
+     "k": "path",
+     "d": "M48.0,31.0 L60.0,31.0 L52.0,44.0 L46.0,44.0 Z",
+     "fill": "#fff",
+     "sw": 1.8
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       86,
+       28
+      ],
+      [
+       172,
+       40
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "rect",
+     "x": 178,
+     "y": 30,
+     "w": 76,
+     "h": 50,
+     "r": 3,
+     "fill": "#fff"
+    },
+    {
+     "k": "path",
+     "d": "M200.4,57.6 L197.8,45.9 L203.0,45.9 L208.2,52.4 L229.0,52.4 Q234.8,53.0 234.8,55.0 Q234.8,57.0 229.0,57.6 Z",
+     "fill": "#fff",
+     "sw": 1.5
+    },
+    {
+     "k": "path",
+     "d": "M213.4,55.6 L221.2,55.6 L216.0,64.1 L212.1,64.1 Z",
+     "fill": "#fff",
+     "sw": 1.5
+    },
+    {
+     "k": "line",
+     "x1": 216,
+     "y1": 80,
+     "x2": 216,
+     "y2": 108,
+     "c": "#5e6670",
+     "w": 2
+    },
+    {
+     "k": "rect",
+     "x": 134,
+     "y": 92,
+     "w": 18,
+     "h": 16,
+     "r": 2
+    },
+    {
+     "k": "fig",
+     "x": 148,
+     "pose": "sit"
+    }
+   ]
+  },
+  {
+   "w": "assimilate",
+   "split": [
+    "as",
+    "simil",
+    "ate"
+   ],
+   "node": "as-",
+   "parts": [
+    {
+     "m": "as-",
+     "cn": "朝向",
+     "of": "ad-"
+    },
+    [
+     "simil",
+     "像"
+    ],
+    [
+     "-ate",
+     "动词后缀"
+    ]
+   ],
+   "link": "做得像还只是外表。要是朝着别人的样子靠过去，真的变成一样呢？",
+   "literal": "朝那群人的样子靠拢",
+   "caption": "新来的人走进一群人，连帽子都戴成了一样",
+   "bridge": "新来的人走进一群人，说话、穿衣都朝他们靠过去，慢慢就成了一样的人，这是同化。把吃下去的东西变成身体的一部分、把学到的东西变成自己的，也叫 assimilate：吸收。",
+   "meaning": "v. 同化，融入；吸收（知识、养分）",
+   "senses": [
+    "assimilation n. 同化；语言学里指一个音向邻近的音靠拢（1854 年起）",
+    "条件分叉：如果是人融进一个群体，是同化、融入；如果是把东西收进身体或脑子，是吸收"
+   ],
+   "ex": [
+    "It takes time to assimilate into a new culture.",
+    "融入一种新文化需要时间。"
+   ],
+   "caveat": "ad- 碰到 s 同化成 as-：一个讲「同化」的词，自己先被同化了。",
+   "fact": "拉丁语 assimilatus，assimilare / assimulare「使像、模仿」的过去分词 = ad「朝向」+ similare / simulare「使像」；英语 15 世纪早期先指（生理上）吸收，1620 年代起指使相像，1854 年起用于语言学",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 36,
+     "pose": "walk",
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       56,
+       64
+      ],
+      [
+       106,
+       64
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 128,
+     "pose": "walk"
+    },
+    {
+     "k": "path",
+     "d": "M122,37 Q131,22 140,37 Z",
+     "fill": "#f3d9c6"
+    },
+    {
+     "k": "fig",
+     "x": 184,
+     "pose": "stand",
+     "flip": 1
+    },
+    {
+     "k": "path",
+     "d": "M175,37 Q184,22 193,37 Z",
+     "fill": "#f3d9c6"
+    },
+    {
+     "k": "fig",
+     "x": 232,
+     "pose": "stand",
+     "flip": 1
+    },
+    {
+     "k": "path",
+     "d": "M223,37 Q232,22 241,37 Z",
+     "fill": "#f3d9c6"
+    }
+   ]
+  },
+  {
+   "w": "assemble",
+   "split": [
+    "as",
+    "semble"
+   ],
+   "node": "as-",
+   "parts": [
+    {
+     "m": "as-",
+     "cn": "朝向",
+     "of": "ad-"
+    },
+    {
+     "m": "semble",
+     "cn": "聚到一起（经法语）",
+     "of": "simul"
+    }
+   ],
+   "link": "同一个拉丁词，还分出了另一支：不是变得一样，而是聚到一起。",
+   "literal": "从两头聚到一处",
+   "caption": "两个人从两头走过来，聚到同一处",
+   "bridge": "如果聚到一起的是人，就是集合、开会，联合国大会就叫 General Assembly；如果聚到一起的是零件，就是组装，工厂的流水线叫 assembly line。",
+   "meaning": "v. 集合，聚集；组装",
+   "senses": [
+    "assembly n. 集会；组装：assembly line 流水线",
+    "条件分叉：如果聚到一起的是人，是集合；如果是零件，是组装（1852 年起）"
+   ],
+   "ex": [
+    "It took me two hours to assemble this bookshelf.",
+    "这个书架我装了两个小时。"
+   ],
+   "caveat": "拉丁语 assimulare 本来是「使像」，后来才多出「聚到一起」；它和 assimilate 原是一个词，一支走了「像」，一支走了「一起」。",
+   "fact": "古法语 assembler「聚集、联合」← 拉丁语 assimulare「使像、比较；模仿」，后来又指「聚到一起」= ad「朝向」+ simulare「使像」；英语 14 世纪早期；「组装零件」义 1852 年起",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 32,
+     "pose": "walk",
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       52,
+       66
+      ],
+      [
+       94,
+       66
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 114,
+     "pose": "walk"
+    },
+    {
+     "k": "fig",
+     "x": 248,
+     "pose": "walk",
+     "flip": 1,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       228,
+       66
+      ],
+      [
+       186,
+       66
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 166,
+     "pose": "walk",
+     "flip": 1
+    },
+    {
+     "k": "spot",
+     "x": 140,
+     "label": ""
+    }
+   ]
+  },
+  {
+   "w": "simultaneous",
+   "split": [
+    "",
+    "simul",
+    "taneous"
+   ],
+   "node": "simul",
+   "parts": [
+    [
+     "simul",
+     "同时"
+    ],
+    [
+     "-taneous",
+     "……的（仿 spontaneous）"
+    ]
+   ],
+   "link": "并在一起的，也可以不是位置，而是时间：两件事落在同一刻。",
+   "literal": "两件事落在同一刻",
+   "caption": "台上的人在讲，隔间里的译员同一刻在翻",
+   "bridge": "国际会议上，台上的人一边讲，隔间里的译员几乎同一刻就翻了出来——这叫同声传译，simultaneous interpretation。两件事挤进同一刻，这不就是「同时」吗？",
+   "meaning": "adj. 同时的，同时发生的",
+   "senses": [
+    "simultaneously adv. 同时地",
+    "simultaneous interpretation 同声传译"
+   ],
+   "ex": [
+    "Two phones rang simultaneously.",
+    "两部手机同时响了。"
+   ],
+   "caveat": "词尾 -taneous 可能是仿 spontaneous（自发的）加上的，只管把它变成形容词。",
+   "fact": "中世纪拉丁语 simultaneus ← 拉丁语 simul「同时」，与 similis 同源；词尾可能仿自晚期拉丁语 spontaneus；英语 1650 年代",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 56,
+     "pose": "explain"
+    },
+    {
+     "k": "bubble",
+     "x": 70,
+     "y": 16,
+     "text": "Welcome!",
+     "tail": [
+      58,
+      36
+     ]
+    },
+    {
+     "k": "circle",
+     "x": 134,
+     "y": 62,
+     "r": 11,
+     "fill": "#fff"
+    },
+    {
+     "k": "path",
+     "d": "M134,62 L134,54 M134,62 L140,65",
+     "sw": 1.6
+    },
+    {
+     "k": "rect",
+     "x": 170,
+     "y": 34,
+     "w": 78,
+     "h": 74,
+     "r": 2,
+     "fill": "#fff"
+    },
+    {
+     "k": "fig",
+     "x": 210,
+     "pose": "explain",
+     "flip": 1
+    },
+    {
+     "k": "path",
+     "d": "M199,47 Q210,26 221,47",
+     "c": "#b84a14",
+     "sw": 2
+    },
+    {
+     "k": "bubble",
+     "x": 210,
+     "y": 16,
+     "text": "欢迎！",
+     "tail": [
+      206,
+      36
+     ]
+    }
+   ]
+  }
+ ],
+ "finale": {
+  "w": "facsimile",
+  "split": [
+   "fac",
+   "simile"
+  ],
+  "node": "↩",
+  "parts": [
+   {
+    "m": "fac",
+    "cn": "做！（facere 的命令式）",
+    "kind": "p"
+   },
+   [
+    "simile",
+    "一个像的（similis）"
+   ]
+  ],
+  "link": "回到开头那颗绿菱形：The Sims 是照着人生做了一个像的。要是照着一页纸，做一张像的呢？",
+  "literal": "照着原件做一份",
+  "caption": "这头放进一页，那头出来一页一模一样的",
+  "bridge": "拉丁语 fac simile 是一句吩咐：「做一个像的！」facsimile 就是照原样做出来的副本。1948 年起，远程传送副本的技术被简称为 fax——传真。The Sims 复制的是人生，fax 复制的是一页纸。",
+  "meaning": "n. 摹本，复制件；缩写 fax 指传真",
+  "senses": [
+   "fax n./v. 传真；发传真（名词 1948 年起指这项技术，动词 1970 年起）"
+  ],
+  "ex": [
+   "Please send me the contract by fax.",
+   "请把合同传真给我。"
+  ],
+  "caveat": "fac 不是前缀，是拉丁语 facere「做」的命令式；fac simile 原是两个词，20 世纪起多连写成一个。",
+  "fact": "拉丁语 fac simile「做一个像的」，fac 是 facere「做」的命令式，simile 是 similis 的中性形式；英语 1690 年代；fax 1948 年起作 facsimile (telegraphy) 的缩写",
+  "scene": [
+   {
+    "k": "paper",
+    "x": 34,
+    "y": 58,
+    "label": "合同"
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      52,
+      66
+     ],
+     [
+      64,
+      76
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "rect",
+    "x": 64,
+    "y": 76,
+    "w": 40,
+    "h": 24,
+    "r": 3
+   },
+   {
+    "k": "path",
+    "d": "M104,90 Q138,62 172,90",
+    "c": "#8a6a4a",
+    "sw": 1.8
+   },
+   {
+    "k": "rect",
+    "x": 172,
+    "y": 76,
+    "w": 40,
+    "h": 24,
+    "r": 3
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      212,
+      76
+     ],
+     [
+      226,
+      66
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "paper",
+    "x": 246,
+    "y": 58,
+    "label": "合同"
+   }
+  ]
+ },
+ "daily": [
+  "The Sims 模拟人生",
+  "fax 传真（facsimile 缩写）",
+  "same 一样（远房亲戚）",
+  "ensemble 合奏团（一起演）"
+ ],
+ "traps": [
+  "<b class='serif'>simian</b>（猿猴的）长得像 similar，说的又是「像人的猴子」，最容易误认——它<b>不是这一家</b>：来自拉丁语 simia「猿」← simus「塌鼻子」，再往上是希腊语 simos「塌鼻子」。",
+  "<b class='serif'>sympathy</b>（同情）、<b class='serif'>symphony</b>（交响乐）里的 sym- 也是「一起」，读音还和 sim 一样，却<b>不是这一家</b>：它是希腊语前缀 syn-，碰到 b、m、p 写成 sym-，etymonline 把它追到另一个印欧词根 *ksun-「和」。",
+  "<b class='serif'>same</b>（一样）倒是远房亲戚：来自原始印欧语 *samos，是 *sem- 的一个变形。中古英语里它还能当「一起」讲（comen same 聚到一起）——「一样」和「一起」，本来就是一回事。"
+ ],
+ "transfer": [
+  [
+   "simile = simil（像）+ e",
+   "比喻里明说「像」的那一种：明喻。as brave as a lion（勇猛如狮）就是 simile；不说「像」、直接说「他是一头狮子」的，是暗喻 metaphor。"
+  ],
+  [
+   "simulcast = simul（simultaneous 的前半）+ cast（broadcast 的后半）",
+   "同时播出：一档节目在电台和电视上同一刻播出。1948 年拼出来的词。"
+  ],
+  [
+   "dissimulate = dis-（不、分开）+ simulate",
+   "让它看起来不像真实的样子：掩饰、隐瞒（情绪、意图）。simulate 是装出本来没有的，dissimulate 是藏起本来有的。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取，scripts/etym.py），2026-10-28；The Sims 资料：EA 官网新闻稿，2025-02-04"
+}

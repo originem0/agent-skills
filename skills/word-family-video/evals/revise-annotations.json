@@ -1,0 +1,13 @@
+{
+  "query": "/word-family-video 我在 pend 的脚本里写了几条批注，按批注改",
+  "files": [
+    "projects/pend/script.md"
+  ],
+  "setup": "在 projects/pend/script.md 里加两行批注：一条要求开场换成生活场景，一条要求删掉某个节拍",
+  "expected_behavior": [
+    "逐条处理每一行 >> 批注，处理完删除批注行",
+    "改完运行 plan 到无错误无提醒",
+    "告诉用户每条批注是怎么处理的",
+    "不自行 mark approved：等用户说通过，或按用户要求再走一遍 AI 审稿"
+  ]
+}

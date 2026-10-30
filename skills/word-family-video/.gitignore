@@ -1,4 +1,5 @@
-# 运行产物，不进仓库：配音缓存、每个项目的中间文件和成片。projects/<课>/narration.json 要进仓库。
+# 运行产物不进仓库；脚本、审稿记录和素材保留。
+.venv/
 cache/
 projects/*/build/
 projects/*/stills/

@@ -1,0 +1,816 @@
+{
+ "title": "从一条出口新闻开始：port「搬、运」一家",
+ "teaching": {
+  "known": [
+   "给手机充电的接口",
+   "随身带的充电宝 portable charger",
+   "把文件导入和导出"
+  ],
+  "discovery": "充电口 port 是入口，portable 却讲能带着走；出口不必经过港口，export 的直接词根是搬运",
+  "contrasts": [
+   {
+    "a": "export",
+    "b": "port",
+    "distinction": "export 的 port 来自 portare 搬运，港口和接口的 port 来自 portus、porta 的入口与通道；不能把出口直接解释成出港",
+    "fact": "exportare = ex + portare；港口 port 经 portus，电脑端口沿 porta、portal 的入口义；这些分支远源都可追到 *per-，但不是同一个直接拉丁词根",
+    "source": "https://www.etymonline.com/word/export ; https://www.etymonline.com/word/port"
+   }
+  ]
+ },
+ "root": {
+  "m": "port",
+  "cn": "搬、运"
+ },
+ "seqTitle": "同一个人扛着箱子，换个方向就是一个新词",
+ "opening": {
+  "type": "news",
+  "big": "export 出口 · port 港口？",
+  "say": "一条出口新闻的配图说明写着：Containers bound for export are stacked at a port in Busan——准备出口的集装箱，堆在釜山的一个港口里。export 里正好藏着一个 port：出口，难道就是「出港」？",
+  "muted": "听着顺，可惜不对。export 里的 port 不是港口，而是一个动作。顺着这个动作，能搬出一整家人：进口、运输、报道、支撑、便携……最后还有一个你天天挂在嘴边的词。",
+  "source": {
+   "title": "Exports double in 1st 20 days of October on robust chip shipments（The Korea Times）",
+   "url": "https://www.koreatimes.co.kr/economy/20261021/exports-double-in-1st-20-days-of-october-on-robust-chip-shipments",
+   "date": "2026-10-21"
+  },
+  "scene": [
+   {
+    "k": "rect",
+    "x": 24,
+    "y": 84,
+    "w": 40,
+    "h": 24
+   },
+   {
+    "k": "rect",
+    "x": 64,
+    "y": 84,
+    "w": 40,
+    "h": 24
+   },
+   {
+    "k": "rect",
+    "x": 44,
+    "y": 60,
+    "w": 40,
+    "h": 24
+   },
+   {
+    "k": "tag",
+    "x": 64,
+    "y": 40,
+    "text": "port？",
+    "tone": "muted"
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      116,
+      84
+     ],
+     [
+      172,
+      84
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "tag",
+    "x": 212,
+    "y": 84,
+    "text": "export",
+    "tone": "pre"
+   }
+  ],
+  "caption": "釜山港：堆着准备出口的集装箱",
+  "photo": {
+   "file": "media/port/opening.png",
+   "credit": "网页截图：www.koreatimes.co.kr，2026-10-28",
+   "source": "https://www.koreatimes.co.kr/economy/20261021/exports-double-in-1st-20-days-of-october-on-robust-chip-shipments"
+  }
+ },
+ "anchor": {
+  "text": "记住这个画面：一个人，把箱子举过头顶，从这儿搬到那儿。",
+  "more": "接下来每个词，都是这个人在搬，只是换了方向——往外搬、往里搬、搬过河、搬回来、钻到底下往上扛，或者干脆揣上就走。",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 76,
+    "pose": "carry",
+    "op": 0.3
+   },
+   {
+    "k": "rect",
+    "x": 58,
+    "y": 12,
+    "w": 36,
+    "h": 18,
+    "op": 0.3
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      104,
+      64
+     ],
+     [
+      164,
+      64
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "fig",
+    "x": 200,
+    "pose": "carry"
+   },
+   {
+    "k": "rect",
+    "x": 182,
+    "y": 12,
+    "w": 36,
+    "h": 18
+   }
+  ],
+  "caption": "port 的母画面：扛着箱子搬"
+ },
+ "words": [
+  {
+   "w": "export",
+   "split": [
+    "ex",
+    "port"
+   ],
+   "node": "ex-",
+   "parts": [
+    [
+     "ex-",
+     "向外"
+    ],
+    [
+     "port",
+     "搬"
+    ]
+   ],
+   "link": "先回答开头的问题：export 不是「出港」，是往外搬。",
+   "literal": "把箱子往外搬",
+   "caption": "扛着箱子，从里面走到外面",
+   "bridge": "货一箱一箱往国境外面搬，就是出口。电脑里把文件往软件外面存，菜单上写的也是 Export：导出。",
+   "meaning": "v. 出口；（数据）导出　n. 出口；出口商品",
+   "senses": [
+    "exporter n. 出口商",
+    "export controls 出口管制",
+    "Export as PDF 导出为 PDF：把文件往外搬"
+   ],
+   "ex": [
+    "Can you export this file as a PDF?",
+    "你能把这个文件导出成 PDF 吗？"
+   ],
+   "caveat": "「出港」是望文生义：港口那个 port 是拉丁语 portus，这里的 port 是 portare「搬」。",
+   "fact": "拉丁语 exportare「搬出、运走；出口」= ex「向外」+ portare「搬、运」；英语 1610 年代作「从某地运出」，「把商品运往他国」义 1660 年代",
+   "scene": [
+    {
+     "k": "line",
+     "x1": 140,
+     "y1": 14,
+     "x2": 140,
+     "y2": 108,
+     "dash": 1
+    },
+    {
+     "k": "tag",
+     "x": 36,
+     "y": 22,
+     "text": "里",
+     "tone": "muted"
+    },
+    {
+     "k": "tag",
+     "x": 244,
+     "y": 22,
+     "text": "外",
+     "tone": "muted"
+    },
+    {
+     "k": "fig",
+     "x": 80,
+     "pose": "carry",
+     "op": 0.3
+    },
+    {
+     "k": "rect",
+     "x": 62,
+     "y": 12,
+     "w": 36,
+     "h": 18,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       106,
+       64
+      ],
+      [
+       172,
+       64
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 204,
+     "pose": "carry",
+     "id": "carrier",
+     "motion": {
+      "from": [
+       80,
+       108
+      ],
+      "duration": 3.2
+     },
+     "flip": 0
+    },
+    {
+     "k": "rect",
+     "x": 186,
+     "y": 12,
+     "w": 36,
+     "h": 18,
+     "follow": "carrier"
+    }
+   ]
+  },
+  {
+   "w": "import",
+   "split": [
+    "im",
+    "port"
+   ],
+   "node": "im-",
+   "parts": [
+    {
+     "m": "im-",
+     "cn": "向里",
+     "of": "in-"
+    },
+    [
+     "port",
+     "搬"
+    ]
+   ],
+   "link": "方向反过来：从外面往里搬。",
+   "literal": "把箱子往里搬",
+   "caption": "扛着箱子，从外面走进来",
+   "bridge": "条件分叉：搬进国境的是货，就是进口；搬进软件的是文件，就是导入。export 一出，import 一进，正好一对。",
+   "meaning": "v. 进口；（数据）导入　n. 进口；进口商品",
+   "senses": [
+    "imported adj. 进口的：imported fruit 进口水果",
+    "Import contacts 导入联系人",
+    "import n. 意义、重要性（正式，1580 年代起）：a matter of great import 事关重大——结尾的 important 就从这里来"
+   ],
+   "ex": [
+    "This app can import photos from your phone.",
+    "这个 App 能从手机里导入照片。"
+   ],
+   "caveat": "in- 碰到 p，嘴唇要先合上，n 就顺势变成 m：in + port → import。这个 in- 是「往里」，不是表示否定的 in-。",
+   "fact": "拉丁语 importare「搬进来，从外国运进」= in-「往里」（同化为 im-）+ portare「搬」；英语 15 世纪初先作「表示、意味着」，「从外国运进货物」义 1540 年代",
+   "scene": [
+    {
+     "k": "line",
+     "x1": 140,
+     "y1": 14,
+     "x2": 140,
+     "y2": 108,
+     "dash": 1
+    },
+    {
+     "k": "tag",
+     "x": 36,
+     "y": 22,
+     "text": "里",
+     "tone": "muted"
+    },
+    {
+     "k": "tag",
+     "x": 244,
+     "y": 22,
+     "text": "外",
+     "tone": "muted"
+    },
+    {
+     "k": "fig",
+     "x": 204,
+     "pose": "carry",
+     "op": 0.3
+    },
+    {
+     "k": "rect",
+     "x": 186,
+     "y": 12,
+     "w": 36,
+     "h": 18,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       176,
+       64
+      ],
+      [
+       108,
+       64
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 80,
+     "pose": "carry",
+     "id": "carrier",
+     "motion": {
+      "from": [
+       204,
+       108
+      ],
+      "duration": 3.2
+     },
+     "flip": 1
+    },
+    {
+     "k": "rect",
+     "x": 62,
+     "y": 12,
+     "w": 36,
+     "h": 18,
+     "follow": "carrier"
+    }
+   ]
+  },
+  {
+   "w": "transport",
+   "split": [
+    "trans",
+    "port"
+   ],
+   "node": "trans-",
+   "parts": [
+    [
+     "trans-",
+     "穿过、到另一边"
+    ],
+    [
+     "port",
+     "搬"
+    ]
+   ],
+   "link": "不进也不出：从这一头搬到那一头，中间隔着一条河。",
+   "literal": "把箱子搬过河",
+   "caption": "扛着箱子，从河这边搬到对岸",
+   "bridge": "东西从这一头搬到另一头，中间隔着河、隔着城，这一路就是运输。公共交通叫 public transport：一整车人被搬到城的另一头。",
+   "meaning": "v. 运输，运送　n. 运输；交通工具",
+   "senses": [
+    "public transport 公共交通",
+    "transportation n. 运输；交通",
+    "be transported 被感情「搬走」：欣喜若狂（文学用法，约 1500 年起）"
+   ],
+   "ex": [
+    "How are you going to transport all this stuff?",
+    "这么多东西，你打算怎么运过去？"
+   ],
+   "fact": "古法语 transporter 及拉丁语 transportare「搬过去、运到另一边」= trans「越过、穿过」+ portare；英语 14 世纪晚期；「被强烈的感情带走」义约 1500 年",
+   "scene": [
+    {
+     "k": "river",
+     "x": 96,
+     "w": 88
+    },
+    {
+     "k": "fig",
+     "x": 52,
+     "pose": "carry",
+     "op": 0.3
+    },
+    {
+     "k": "rect",
+     "x": 34,
+     "y": 12,
+     "w": 36,
+     "h": 18,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       80,
+       56
+      ],
+      [
+       140,
+       28
+      ],
+      [
+       200,
+       56
+      ]
+     ],
+     "dash": 1,
+     "curve": 1
+    },
+    {
+     "k": "fig",
+     "x": 228,
+     "pose": "carry"
+    },
+    {
+     "k": "rect",
+     "x": 210,
+     "y": 12,
+     "w": 36,
+     "h": 18
+    }
+   ]
+  },
+  {
+   "w": "report",
+   "split": [
+    "re",
+    "port"
+   ],
+   "node": "re-",
+   "parts": [
+    [
+     "re-",
+     "往回"
+    ],
+    [
+     "port",
+     "搬"
+    ]
+   ],
+   "link": "搬过去的反面：出去一趟，再搬回来。",
+   "literal": "把外面的消息搬回来",
+   "caption": "出门看了一圈，把消息带回来，交给等着的人",
+   "bridge": "派一个人出去看看，他回来，把看到的一五一十「搬」给大家——这就是报告。专门出去把消息搬回来的人叫 reporter，记者；开头那条新闻，本身就是一篇 report。",
+   "meaning": "v. 报告；报道；举报　n. 报告；报道",
+   "senses": [
+    "reporter n. 记者：把消息搬回来的人",
+    "report card 成绩单（1913 年起见于美国英语）",
+    "a weather report 天气预报"
+   ],
+   "ex": [
+    "She reported the problem to her manager.",
+    "她把这个问题报告给了经理。"
+   ],
+   "fact": "古法语 reporter「讲述；带回」← 拉丁语 reportare「搬回、带回」，比喻「回来讲述」= re-「往回」+ portare；英语 14 世纪晚期作「告知、讲述」",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 44
+    },
+    {
+     "k": "paper",
+     "x": 84,
+     "y": 58,
+     "label": "消息",
+     "follow": "messenger"
+    },
+    {
+     "k": "fig",
+     "x": 126,
+     "pose": "give",
+     "flip": 1,
+     "id": "messenger",
+     "motion": {
+      "from": [
+       228,
+       108
+      ],
+      "duration": 2.6
+     }
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       206,
+       22
+      ],
+      [
+       152,
+       22
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 228,
+     "pose": "walk",
+     "flip": 1,
+     "op": 0.3
+    }
+   ]
+  },
+  {
+   "w": "support",
+   "split": [
+    "sup",
+    "port"
+   ],
+   "node": "sup-",
+   "parts": [
+    {
+     "m": "sup-",
+     "cn": "从下往上",
+     "of": "sub-"
+    },
+    [
+     "port",
+     "搬、扛"
+    ]
+   ],
+   "link": "换一个方向：不往前搬了，钻到东西底下，往上扛。",
+   "literal": "从底下往上扛住",
+   "caption": "人钻到木板底下，把板子连同上面的箱子往上托住",
+   "bridge": "又是条件分叉：托住的是一块木板，就是支撑；托住的是一个人，就是支持；托住的是一家人的生活，就是供养。",
+   "meaning": "v. 支撑；支持；供养　n. 支持；支撑物",
+   "senses": [
+    "tech support 技术支持：有人在底下托着你的电脑（1953 年起）",
+    "support a team 支持一支球队，当它的球迷（1952 年起）",
+    "supporter n. 支持者；球迷"
+   ],
+   "ex": [
+    "My parents have always supported me.",
+    "我爸妈一直很支持我。"
+   ],
+   "caveat": "sub- 碰到 p，b 也跟着变成 p，所以 support 有两个 p。",
+   "fact": "古法语 suporter 及拉丁语 supportare「运送、搬上来」= sub「从下往上」（同化为 sup-）+ portare；英语 14 世纪晚期作「撑住、承受重量」，也作「援助」",
+   "scene": [
+    {
+     "k": "rect",
+     "x": 70,
+     "y": 24,
+     "w": 140,
+     "h": 6
+    },
+    {
+     "k": "rect",
+     "x": 84,
+     "y": 10,
+     "w": 28,
+     "h": 14
+    },
+    {
+     "k": "rect",
+     "x": 168,
+     "y": 10,
+     "w": 28,
+     "h": 14
+    },
+    {
+     "k": "fig",
+     "x": 140,
+     "pose": "carry"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       236,
+       100
+      ],
+      [
+       236,
+       40
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "portable",
+   "split": [
+    "",
+    "port",
+    "able"
+   ],
+   "node": "port",
+   "parts": [
+    [
+     "port",
+     "搬"
+    ],
+    [
+     "-able",
+     "能……的"
+    ]
+   ],
+   "link": "最后，不加任何方向：只要搬得动、能带着走。",
+   "literal": "能随身搬着走",
+   "caption": "一台小机器拿在手里，人走到哪儿，它跟到哪儿",
+   "bridge": "大机器只能留在家里，小机器揣上就走——能搬着走，这不就是便携吗？手机快没电时掏出来的充电宝，英文就常叫 portable charger。",
+   "meaning": "adj. 便携的，手提式的　n. 便携式设备",
+   "senses": [
+    "portable fan 便携小风扇",
+    "portability n. 便携性；（号码、数据）可携带转移"
+   ],
+   "ex": [
+    "I bought a portable speaker for the trip.",
+    "我为这次旅行买了个便携音箱。"
+   ],
+   "fact": "法语 portable「能搬的」← 晚期拉丁语 portabilis ← portare「搬」；英语 15 世纪初，「能从一处搬到另一处的」",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 56,
+     "pose": "walk",
+     "op": 0.3
+    },
+    {
+     "k": "rect",
+     "x": 62,
+     "y": 64,
+     "w": 16,
+     "h": 12,
+     "r": 2,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       92,
+       90
+      ],
+      [
+       148,
+       90
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 180,
+     "pose": "walk"
+    },
+    {
+     "k": "rect",
+     "x": 186,
+     "y": 64,
+     "w": 16,
+     "h": 12,
+     "r": 2
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       214,
+       90
+      ],
+      [
+       250,
+       90
+      ]
+     ],
+     "dash": 1,
+     "op": 0.3
+    }
+   ]
+  }
+ ],
+ "finale": {
+  "w": "important",
+  "split": [
+   "im",
+   "port",
+   "ant"
+  ],
+  "node": "↩",
+  "parts": [
+   {
+    "m": "im-",
+    "cn": "向里",
+    "of": "in-"
+   },
+   [
+    "port",
+    "搬"
+   ],
+   [
+    "-ant",
+    "……的"
+   ]
+  ],
+  "link": "回到新闻里的 import。它有个兄弟，你一天能说好几遍。",
+  "literal": "带着分量搬进来",
+  "caption": "搬进来的箱子一放上秤，这一边就沉了下去",
+  "bridge": "中世纪拉丁语里，importare 从「搬进来」引申出「有分量、有意义」。一件事往你的生活里搬进来的分量越重，它就越 important：重要。",
+  "meaning": "adj. 重要的；有影响力的",
+  "senses": [
+   "importance n. 重要性",
+   "import n. 意义（正式）：a matter of great import 事关重大"
+  ],
+  "ex": [
+   "It's important to drink enough water.",
+   "多喝水很重要。"
+  ],
+  "caveat": "「搬进来」怎么变成「要紧」，etymonline 只记了结果；秤沉下去的画面是帮你记的联想。",
+  "fact": "中世纪拉丁语 importans「重要的、重大的」，是 importare「在其中有分量」的现在分词 ← 拉丁语 importare「搬进来」= in- + portare；英语 15 世纪中叶作「意义重大，有分量、有后果」",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 48,
+    "pose": "carry",
+    "op": 0.3
+   },
+   {
+    "k": "rect",
+    "x": 30,
+    "y": 12,
+    "w": 36,
+    "h": 18,
+    "op": 0.3
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      72,
+      36
+     ],
+     [
+      104,
+      62
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "balance",
+    "x": 176,
+    "tilt": -12
+   },
+   {
+    "k": "rect",
+    "x": 110,
+    "y": 72,
+    "w": 20,
+    "h": 16
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      96,
+      70
+     ],
+     [
+      96,
+      98
+     ]
+    ],
+    "dash": 1
+   }
+  ]
+ },
+ "daily": [
+  "porter 搬运工",
+  "reporter 记者",
+  "supporter 球迷",
+  "exporter 出口商"
+ ],
+ "traps": [
+  "<b class='serif'>airport</b>（机场）、<b class='serif'>passport</b>（护照）里的 port 才是「港口」：拉丁语 portus。airport = air（飞行器）+ port（港口），1919 年起常用；passport 来自法语 passeport，原意是「准许通过港口」进出国境。它们<b>不是「搬」这一家</b>。",
+  "<b class='serif'>opportunity</b>（机会）也是港口：拉丁语短语 ob portum veniens「（风）朝着港口吹来」，由此有 opportunus「合适、有利的」，再有 opportunity「时机」。",
+  "<b class='serif'>portal</b>（大门、门户网站）是「门」：拉丁语 porta。<b class='serif'>porter</b> 一词两家：搬运工来自 portare「搬」，门房来自 porta「门」。",
+  "港口 portus、门 porta、搬 portare，在拉丁语里已经是三个词；etymonline 把它们往上追到同一个印欧词根 *per-「引领、越过」，算远亲，不算一家。连 deport 都曾被民间词源附会成「港口」。"
+ ],
+ "transfer": [
+  [
+   "sport = s-（disport 磨掉了 di）+ port",
+   "消遣、玩乐，后来也指体育运动。dis- 是离开：把心思从正事上搬开；到 1520 年代已有「体育运动」义。老写法 disport 就是它的前身。"
+  ],
+  [
+   "deport = de-（离开、往下）+ port",
+   "把人从一个国家搬走：驱逐出境、遣送（1640 年代起）。它还有个更早的意思（15 世纪晚期）：deport oneself，举止、表现——怎么「搬运」自己。"
+  ],
+  [
+   "portfolio = port（搬）+ folio（纸页）",
+   "意大利语 portafoglio，装散页纸、随手带走的夹子：文件夹、作品集。1930 年起还指投资组合——一夹子带着走的证券。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取，scripts/etym.py），2026-10-28；开场新闻：The Korea Times，2026-10-21"
+}

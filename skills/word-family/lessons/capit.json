@@ -1,0 +1,977 @@
+{
+ "title": "从 capital 的四个意思开始：capit / capt / chief / chap「头」一家",
+ "teaching": {
+  "known": [
+   "随身擦手擦脸的手帕",
+   "CEO 里的 chief",
+   "美国队长 Captain America"
+  ],
+  "discovery": "chief 的头既能带领人，也曾被布盖住；handkerchief 的名字里仍藏着盖头布的历史",
+  "contrasts": [
+   {
+    "a": "captain",
+    "b": "capture",
+    "distinction": "captain 的 capt 是 capit 的历史变形；capture 的 capt 来自抓的过去分词词干，不能凭相似拼写混成一家",
+    "fact": "captain 经古法语 capitaine、晚期拉丁语 capitaneus 来自 caput；capture 经 captura 来自 capere 的过去分词 captus",
+    "source": "https://www.etymonline.com/word/captain ; https://www.etymonline.com/word/capture"
+   }
+  ]
+ },
+ "root": {
+  "m": "capit",
+  "cn": "头",
+  "variants": [
+   {
+    "m": "capt",
+    "note": "中间的 i 脱落",
+    "ex": "captain"
+   },
+   {
+    "m": "chief",
+    "note": "经古法语变形",
+    "ex": "mischief"
+   },
+   {
+    "m": "chap",
+    "note": "经古法语变形",
+    "ex": "chapter"
+   },
+   {
+    "m": "cip",
+    "note": "前面加了前缀时",
+    "ex": "precipitation"
+   }
+  ]
+ },
+ "seqTitle": "同一颗头，换个地方安上，就是一个新词",
+ "opening": {
+  "type": "polysemy",
+  "big": "capital ＝ 首都 · 资本 · 大写字母",
+  "say": "背单词时你多半见过它三回：首都、资本、大写字母。看新闻还会撞见第四回：capital punishment，死刑。四个意思八竿子打不着，凭什么是同一个词？",
+  "muted": "谜底只有一个字：头。这颗头还会当上船长、坐上首领的位子、顶在一章的最上面、走到一条路的尽头……最后，它会变成一头牛。",
+  "scene": {
+   "ground": false,
+   "items": [
+    {
+     "k": "text",
+     "x": 140,
+     "y": 72,
+     "text": "capital",
+     "size": 30,
+     "serif": 1,
+     "c": "#176b4d"
+    },
+    {
+     "k": "tag",
+     "x": 56,
+     "y": 26,
+     "text": "首都",
+     "tone": "muted"
+    },
+    {
+     "k": "tag",
+     "x": 224,
+     "y": 26,
+     "text": "资本",
+     "tone": "muted"
+    },
+    {
+     "k": "tag",
+     "x": 56,
+     "y": 100,
+     "text": "大写字母",
+     "tone": "muted"
+    },
+    {
+     "k": "tag",
+     "x": 224,
+     "y": 100,
+     "text": "死刑",
+     "tone": "muted"
+    },
+    {
+     "k": "line",
+     "x1": 92,
+     "y1": 52,
+     "x2": 70,
+     "y2": 37,
+     "dash": 1
+    },
+    {
+     "k": "line",
+     "x1": 188,
+     "y1": 52,
+     "x2": 210,
+     "y2": 37,
+     "dash": 1
+    },
+    {
+     "k": "line",
+     "x1": 92,
+     "y1": 80,
+     "x2": 70,
+     "y2": 89,
+     "dash": 1
+    },
+    {
+     "k": "line",
+     "x1": 188,
+     "y1": 80,
+     "x2": 210,
+     "y2": 89,
+     "dash": 1
+    },
+    {
+     "k": "text",
+     "x": 140,
+     "y": 30,
+     "text": "？",
+     "size": 20,
+     "c": "#b84a14"
+    }
+   ]
+  },
+  "caption": "capital：首都？资本？大写字母？死刑？"
+ },
+ "anchor": {
+  "text": "记住这个画面：一个人的头。拉丁语叫它 caput，进了别的词，词干是 capit。",
+  "more": "头是身上最高、最前的那一截。接下来每个词，都是这颗头换了个地方：走在一队人最前头、站在一群人最上头、顶在一段文字最上头、走到一条路的尽头——好的尽头，坏的尽头。最后，capital 一个词就占了四个头。",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 110,
+    "pose": "stand"
+   },
+   {
+    "k": "circle",
+    "x": 110,
+    "y": 44,
+    "r": 14,
+    "fill": "none",
+    "c": "#176b4d",
+    "sw": 2
+   },
+   {
+    "k": "tag",
+    "x": 202,
+    "y": 38,
+    "text": "caput 头",
+    "tone": "root"
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      166,
+      40
+     ],
+     [
+      130,
+      44
+     ]
+    ],
+    "dash": 1
+   }
+  ],
+  "caption": "capit 的母画面：头"
+ },
+ "words": [
+  {
+   "w": "captain",
+   "split": [
+    "",
+    "capt",
+    "ain"
+   ],
+   "node": "capt",
+   "parts": [
+    {
+     "m": "capt",
+     "cn": "头（capit 掉了 i）",
+     "of": "capit"
+    },
+    [
+     "-ain",
+     "历史词尾"
+    ]
+   ],
+   "link": "先把这颗头放到一队人的最前面。",
+   "literal": "走在一队人最前头",
+   "caption": "一队人往前走，领头的那个走在最前头",
+   "bridge": "一船人、一队兵、一支球队，总得有个人站在最前头拿主意。英语叫他 captain：船长、上尉、队长；飞机上广播「我是机长」，用的也是 captain。",
+   "meaning": "n. 船长；机长；（球队）队长；（陆军）上尉　v. 担任队长",
+   "senses": [
+    "team captain 队长；sea captain 船长",
+    "captaincy n. 队长、船长的职位"
+   ],
+   "ex": [
+    "This is your captain speaking.",
+    "我是本次航班的机长。"
+   ],
+   "caveat": "capt 与 ain 是历史词形的辨认，ain 不能当作表示人的通用英语后缀。captain 来自头，capture 来自抓。",
+   "fact": "古法语 capitaine ← 晚期拉丁语 capitaneus「首领」← 拉丁语 caput（属格 capitis）「头」；英语 14 世纪晚期写作 capitayn，指「站在别人最前头的人」；海军义 1550 年代，球队队长义 1823 年",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 60,
+     "pose": "walk",
+     "op": 0.35
+    },
+    {
+     "k": "fig",
+     "x": 108,
+     "pose": "walk",
+     "op": 0.35
+    },
+    {
+     "k": "fig",
+     "x": 170,
+     "pose": "walk"
+    },
+    {
+     "k": "circle",
+     "x": 173,
+     "y": 44,
+     "r": 14,
+     "fill": "none",
+     "c": "#176b4d",
+     "sw": 2
+    },
+    {
+     "k": "tag",
+     "x": 228,
+     "y": 28,
+     "text": "最前头",
+     "tone": "root"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       196,
+       72
+      ],
+      [
+       248,
+       72
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "chief",
+   "split": [
+    "",
+    "chief"
+   ],
+   "node": "chief",
+   "parts": [
+    {
+     "m": "chief",
+     "cn": "头（经古法语）",
+     "of": "capit"
+    }
+   ],
+   "link": "不在最前面，而在最上面：一群人头顶上的那一个。",
+   "literal": "一群人最上头那个",
+   "caption": "一群人里，站在最上头的那个",
+   "bridge": "拉丁语的 caput 进了法语，磨成 chief，意思还是头。说的是人，就是首领、头儿；说的是事，就是排在最上头的那一件：chief reason，主要原因。",
+   "meaning": "n. 首领；（机构的）长　adj. 主要的；首席的",
+   "senses": [
+    "CEO = chief executive officer，首席执行官：C 就是 chief",
+    "commander-in-chief 总司令（1660 年代）",
+    "chef n. 主厨：chief 在现代法语里写成 chef，chef de cuisine 就是「厨房的头」，1842 年进入英语"
+   ],
+   "ex": [
+    "Cost is our chief concern.",
+    "成本是我们最关心的问题。"
+   ],
+   "caveat": "caput 在通俗拉丁语里简化成 *capum，到古法语成了 chief；意大利语至今还是 capo。",
+   "fact": "古法语 chief「首领；头」（10 世纪，现代法语 chef）← 通俗拉丁语 *capum ← 拉丁语 caput「头」；英语约 1300 年",
+   "scene": [
+    {
+     "k": "crate",
+     "x": 140
+    },
+    {
+     "k": "fig",
+     "x": 140,
+     "y": 78,
+     "pose": "stand",
+     "s": 0.85
+    },
+    {
+     "k": "circle",
+     "x": 140,
+     "y": 24,
+     "r": 12,
+     "fill": "none",
+     "c": "#176b4d",
+     "sw": 2
+    },
+    {
+     "k": "fig",
+     "x": 76,
+     "pose": "stand",
+     "op": 0.4
+    },
+    {
+     "k": "fig",
+     "x": 204,
+     "pose": "stand",
+     "op": 0.4
+    },
+    {
+     "k": "tag",
+     "x": 218,
+     "y": 20,
+     "text": "最上头",
+     "tone": "root"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       190,
+       22
+      ],
+      [
+       156,
+       24
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "chapter",
+   "split": [
+    "",
+    "chapter"
+   ],
+   "node": "chapter",
+   "parts": [
+    {
+     "m": "chapter",
+     "cn": "小头（历史词形）",
+     "of": "capitulum",
+     "how": "经古法语演变"
+    }
+   ],
+   "link": "头不光长在人身上，还能顶在一段文字的最上面。",
+   "literal": "一段文字顶上的小头",
+   "caption": "一页书：每一块文字的最上面，都顶着一个小标题",
+   "bridge": "一本书分成好几块，每一块都顶着一个打头的标题。拉丁语管这样的一块叫 capitulum，字面是「小头」；英语接过来，就是 chapter：章。",
+   "meaning": "n. 章；（人生、历史的）一个阶段；（协会的）分会",
+   "senses": [
+    "a new chapter 新的一章：人生、历史翻开新的阶段",
+    "chapter and verse 原原本本：出自《圣经》的章和节（1620 年代）",
+    "（协会、组织的）分会（1815 年）：大概来自教堂里按章诵读规章的议事会"
+   ],
+   "ex": [
+    "Read Chapter 3 before class.",
+    "上课前读完第三章。"
+   ],
+   "caveat": "chapter 整体从 capitulum 经古法语演变而来。这里的“小”属于拉丁语原词，英语 -ter 不是指小后缀。",
+   "fact": "古法语 chapitre（12 世纪，由 chapitle 改变而来）← 晚期拉丁语 capitulum「书的主要部分、章」，字面「小头」，caput 的指小词；英语约 1200 年",
+   "scene": {
+    "ground": false,
+    "items": [
+     {
+      "k": "rect",
+      "x": 84,
+      "y": 10,
+      "w": 104,
+      "h": 102,
+      "r": 2,
+      "fill": "#fff"
+     },
+     {
+      "k": "rect",
+      "x": 96,
+      "y": 20,
+      "w": 46,
+      "h": 9,
+      "r": 2,
+      "fill": "#f3d9c6",
+      "c": "#b84a14",
+      "sw": 1.2
+     },
+     {
+      "k": "line",
+      "x1": 96,
+      "y1": 38,
+      "x2": 176,
+      "y2": 38,
+      "c": "#d6d0c4",
+      "w": 2
+     },
+     {
+      "k": "line",
+      "x1": 96,
+      "y1": 46,
+      "x2": 176,
+      "y2": 46,
+      "c": "#d6d0c4",
+      "w": 2
+     },
+     {
+      "k": "line",
+      "x1": 96,
+      "y1": 54,
+      "x2": 156,
+      "y2": 54,
+      "c": "#d6d0c4",
+      "w": 2
+     },
+     {
+      "k": "rect",
+      "x": 96,
+      "y": 66,
+      "w": 46,
+      "h": 9,
+      "r": 2,
+      "fill": "#f3d9c6",
+      "c": "#b84a14",
+      "sw": 1.2
+     },
+     {
+      "k": "line",
+      "x1": 96,
+      "y1": 84,
+      "x2": 176,
+      "y2": 84,
+      "c": "#d6d0c4",
+      "w": 2
+     },
+     {
+      "k": "line",
+      "x1": 96,
+      "y1": 92,
+      "x2": 176,
+      "y2": 92,
+      "c": "#d6d0c4",
+      "w": 2
+     },
+     {
+      "k": "line",
+      "x1": 96,
+      "y1": 100,
+      "x2": 146,
+      "y2": 100,
+      "c": "#d6d0c4",
+      "w": 2
+     },
+     {
+      "k": "tag",
+      "x": 230,
+      "y": 24,
+      "text": "小头",
+      "tone": "root"
+     },
+     {
+      "k": "arrow",
+      "pts": [
+       [
+        208,
+        24
+       ],
+       [
+        148,
+        24
+       ]
+      ],
+      "dash": 1
+     },
+     {
+      "k": "tag",
+      "x": 230,
+      "y": 70,
+      "text": "小头",
+      "tone": "root",
+      "op": 0.5
+     },
+     {
+      "k": "arrow",
+      "pts": [
+       [
+        208,
+        70
+       ],
+       [
+        148,
+        70
+       ]
+      ],
+      "dash": 1,
+      "op": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "w": "achieve",
+   "split": [
+    "a",
+    "chieve"
+   ],
+   "node": "a-",
+   "parts": [
+    {
+     "m": "a-",
+     "cn": "到",
+     "of": "ad-",
+     "how": "法语形式"
+    },
+    {
+     "m": "chieve",
+     "cn": "头 → 尽头",
+     "of": "capit"
+    }
+   ],
+   "link": "头还是最末端：一条路，走到头。",
+   "literal": "一条路走到了头",
+   "caption": "沿着路一直走，走到了尽头的旗子下",
+   "bridge": "罗马帝国晚期，caput 多了个意思：尽头。ad caput venire 就是「走到头」。事情走到头，就是办成了——法语磨成 achever，英语成了 achieve：达成、实现。",
+   "meaning": "v. 达到，实现；（经过努力）取得",
+   "senses": [
+    "achievement n. 成就：走到头时拿到手的东西",
+    "achieve a goal / success 实现目标、取得成功"
+   ],
+   "ex": [
+    "She finally achieved her dream of running a marathon.",
+    "她终于实现了跑一次马拉松的梦想。"
+   ],
+   "caveat": "a- 是拉丁语 ad「到」在法语里的样子（à）。中文也说「到头」，正好帮你记。",
+   "fact": "古法语 achever「完成、结束」（12 世纪）← 短语 à chef (venir)，或晚期拉丁语 ad caput (venire)，字面「到头」= ad「到」+ caput「头」；罗马帝国晚期 caput 已有「尽头」义；英语 14 世纪早期",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 52,
+     "pose": "walk",
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       74,
+       66
+      ],
+      [
+       164,
+       66
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 186,
+     "pose": "stand"
+    },
+    {
+     "k": "flag",
+     "x": 236
+    },
+    {
+     "k": "tag",
+     "x": 238,
+     "y": 18,
+     "text": "尽头",
+     "tone": "root"
+    }
+   ]
+  },
+  {
+   "w": "mischief",
+   "split": [
+    "mis",
+    "chief"
+   ],
+   "node": "mis-",
+   "parts": [
+    [
+     "mis-",
+     "坏"
+    ],
+    {
+     "m": "chief",
+     "cn": "到头（chever）",
+     "of": "capit"
+    }
+   ],
+   "link": "同一条路，要是走到了一个坏的头呢？",
+   "literal": "走到一个坏的头",
+   "caption": "同样走到了头，这回前面是个坑",
+   "bridge": "achieve 是好好地走到头。换成 mis-「坏」，就是落了个坏结局：中世纪的 mischief 是灾祸、倒霉。几百年下来口气越来越软，今天多半是孩子的淘气、捣蛋。",
+   "meaning": "n. 淘气，恶作剧；损害，麻烦",
+   "senses": [
+    "mischievous adj. 淘气的，调皮的",
+    "full of mischief 一肚子坏点子；中古英语里却是「惨透了」"
+   ],
+   "ex": [
+    "The kids are always getting into mischief.",
+    "这几个孩子老是调皮捣蛋。"
+   ],
+   "caveat": "这里的 chief 不是首领，是古法语动词 chever「到头」，和 achieve 里的是同一个。",
+   "fact": "古法语 meschief「不幸、灾祸」← meschever「落得坏结局」（achieve 的反义）= mes-「坏」+ chever「到头」← 通俗拉丁语 *capare ← 拉丁语 caput；英语约 1300 年，「淘气」义 1784 年起",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 52,
+     "pose": "walk",
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       74,
+       66
+      ],
+      [
+       158,
+       66
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 184,
+     "pose": "lean"
+    },
+    {
+     "k": "path",
+     "d": "M206,108 Q232,126 258,108",
+     "fill": "#d9d2c5",
+     "c": "#5e6670"
+    },
+    {
+     "k": "tag",
+     "x": 232,
+     "y": 82,
+     "text": "坏的头",
+     "tone": "pre"
+    }
+   ]
+  },
+  {
+   "w": "capital",
+   "split": [
+    "",
+    "capit",
+    "al"
+   ],
+   "node": "capit",
+   "parts": [
+    [
+     "capit",
+     "头"
+    ],
+    [
+     "-al",
+     "……的"
+    ]
+   ],
+   "link": "回到开头那个 capital：拿这颗头，去对它的四个意思。",
+   "literal": "国家、句子、借款的头",
+   "caption": "一颗头，连着 capital 的四个意思",
+   "bridge": "首都，是一个国家的头；大写字母，站在句子的头上；资本，是一笔借款的头——中世纪拉丁语管本金叫 capitalis pars，「头那部分」，后面跟着的才是利息；capital punishment 呢，罪重到要拿头来抵。",
+   "meaning": "n. 首都，大写字母，资本　adj. 可判死刑的；主要的",
+   "senses": [
+    "capital letter 大写字母：站在句子或单词的头上（14 世纪晚期）",
+    "the capital 首都（1660 年代）：古英语叫 heafodstol，前半截 heafod 就是今天的 head",
+    "capital n. 资本（1610 年代）：本金是头，利息跟在后面",
+    "capital punishment 死刑：拉丁语 capitis poena，「头的刑罚」"
+   ],
+   "ex": [
+    "Please write your name in capital letters.",
+    "请用大写字母填写姓名。"
+   ],
+   "caveat": "中文的「首都」也藏着一颗头：首就是头。",
+   "fact": "古法语 capital ← 拉丁语 capitalis「头的」，引申为「首要的」← caput（属格 capitis）「头」；英语形容词 13 世纪早期；大写字母 14 世纪晚期，资本 1610 年代，首都 1660 年代；死罪 1520 年代",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 140,
+     "pose": "stand"
+    },
+    {
+     "k": "circle",
+     "x": 140,
+     "y": 44,
+     "r": 14,
+     "fill": "none",
+     "c": "#176b4d",
+     "sw": 2
+    },
+    {
+     "k": "tag",
+     "x": 56,
+     "y": 24,
+     "text": "国家的头",
+     "tone": "root"
+    },
+    {
+     "k": "tag",
+     "x": 224,
+     "y": 24,
+     "text": "句子的头",
+     "tone": "root"
+    },
+    {
+     "k": "tag",
+     "x": 56,
+     "y": 84,
+     "text": "借款的头",
+     "tone": "root"
+    },
+    {
+     "k": "tag",
+     "x": 224,
+     "y": 84,
+     "text": "拿头抵罪",
+     "tone": "pre"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       124,
+       38
+      ],
+      [
+       90,
+       27
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       156,
+       38
+      ],
+      [
+       190,
+       27
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       125,
+       52
+      ],
+      [
+       90,
+       80
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       155,
+       52
+      ],
+      [
+       190,
+       80
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  }
+ ],
+ "finale": {
+  "w": "cattle",
+  "split": [
+   "",
+   "cattle"
+  ],
+  "node": "↩",
+  "parts": [
+   {
+    "m": "cattle",
+    "cn": "家产",
+    "of": "capitale",
+    "how": "法语变形"
+   }
+  ],
+  "link": "资本那个意思，在英语里还有个双胞胎，你在牧场上见过。",
+  "literal": "头等的家产",
+  "caption": "左：中世纪的家产 capitale；右：后来只剩下牛",
+  "bridge": "中世纪拉丁语把家产、本钱叫 capitale，「头等的那份」。它进英语分成两支：一支成了 capital，资本；另一支经过法语磨成 catel，起初什么家产都算，后来专指能赶着走的牲口，16 世纪晚期起只剩下牛——cattle。",
+  "meaning": "n. 牛（总称）",
+  "senses": [
+   "历史旧义：起初泛指家产，后来指家畜；16 世纪晚期起主要指牛",
+   "chattel n. 动产：和 cattle 同出一源，来自古法语 chatel"
+  ],
+  "ex": [
+   "The farm raises about fifty cattle.",
+   "这个农场养了大约五十头牛。"
+  ],
+  "caveat": "中文数牛也论「头」，这是巧合，正好帮你记；cattle 本身的来历是「头等的家产」，不是数头数。",
+  "fact": "英格兰法语 catel「财产」（古法语 chatel）← 中世纪拉丁语 capitale「财产、本钱」，拉丁语 capitalis「主要的」（字面「头的」）的中性名词用法；13 世纪中期指一切财产，14 世纪早期多指牲口，16 世纪晚期起专指牛",
+  "scene": [
+   {
+    "k": "circle",
+    "x": 50,
+    "y": 98,
+    "r": 8,
+    "fill": "#f3d9c6",
+    "op": 0.5
+   },
+   {
+    "k": "circle",
+    "x": 68,
+    "y": 98,
+    "r": 8,
+    "fill": "#f3d9c6",
+    "op": 0.5
+   },
+   {
+    "k": "circle",
+    "x": 59,
+    "y": 84,
+    "r": 8,
+    "fill": "#f3d9c6",
+    "op": 0.5
+   },
+   {
+    "k": "tag",
+    "x": 66,
+    "y": 44,
+    "text": "capitale 家产",
+    "tone": "pre"
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      88,
+      84
+     ],
+     [
+      122,
+      80
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "rect",
+    "x": 128,
+    "y": 62,
+    "w": 78,
+    "h": 30,
+    "r": 10
+   },
+   {
+    "k": "rect",
+    "x": 200,
+    "y": 52,
+    "w": 26,
+    "h": 20,
+    "r": 6
+   },
+   {
+    "k": "path",
+    "d": "M205,53 Q201,44 207,41"
+   },
+   {
+    "k": "path",
+    "d": "M221,53 Q225,44 219,41"
+   },
+   {
+    "k": "circle",
+    "x": 218,
+    "y": 60,
+    "r": 1.5,
+    "fill": "#1e242b",
+    "c": "#1e242b",
+    "sw": 1
+   },
+   {
+    "k": "line",
+    "x1": 140,
+    "y1": 92,
+    "x2": 140,
+    "y2": 108,
+    "c": "#5e6670",
+    "w": 2.2
+   },
+   {
+    "k": "line",
+    "x1": 152,
+    "y1": 92,
+    "x2": 152,
+    "y2": 108,
+    "c": "#5e6670",
+    "w": 2.2
+   },
+   {
+    "k": "line",
+    "x1": 184,
+    "y1": 92,
+    "x2": 184,
+    "y2": 108,
+    "c": "#5e6670",
+    "w": 2.2
+   },
+   {
+    "k": "line",
+    "x1": 196,
+    "y1": 92,
+    "x2": 196,
+    "y2": 108,
+    "c": "#5e6670",
+    "w": 2.2
+   },
+   {
+    "k": "path",
+    "d": "M128,68 Q116,76 120,90"
+   }
+  ]
+ },
+ "daily": [
+  "chef 主厨（厨房的头）",
+  "cabbage 卷心菜（一颗头）",
+  "handkerchief 手帕（盖头布）",
+  "head 头（远房亲戚）"
+ ],
+ "traps": [
+  "<b class='serif'>capture</b>（捕获）和 captain 都以 capt 开头，却<b>不是一家</b>：capture 的 capt 来自拉丁语 capere「拿、抓」的过去分词 captus，captain 的 capt 是 capit 掉了个 i。<b class='serif'>accept</b>、<b class='serif'>capacity</b> 也是「拿」那一家（见 cap 课），两家连原始印欧语词根都不同：*kap-「抓」，*kaput-「头」。",
+  "<b class='serif'>caption</b>（标题、图片说明）意思最像「头」，偏偏也<b>不是这一家</b>：它来自 capere「拿」，原义是扣押、逮捕。17 世纪中期它是扣押类法律文书开头的字眼，于是被当成「文件开头」，再变成「标题」（1789 年），后来在美国又指图片下面的说明（1919 年）。",
+  "<b class='serif'>cap</b>（帽子）戴在头上，看着最像一家，etymonline 却只说<b>可能</b>有关：它来自晚期拉丁语 cappa「斗篷、头巾」，来源不确定。"
+ ],
+ "transfer": [
+  [
+   "biceps = bi-（二）+ ceps（头）",
+   "两个头的肌肉：二头肌。解剖学上，上臂这块肌肉有两个起点，就说它有两个头。末尾的 s 不是复数，一块就叫 biceps；三个头的是 triceps，三头肌。"
+  ],
+  [
+   "per capita = per（每）+ capita（头）",
+   "按人头算：人均。GDP per capita 就是人均 GDP——总数除以人头。"
+  ],
+  [
+   "precipitation = pre-（在前）+ cipit（头）+ -ation",
+   "头朝前栽下去：先是一头栽落、操之过急；炼金术里指东西从溶液里沉下去；1670 年代起又指天上的水落到地面——天气预报里的降水。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取，scripts/etym.py），2026-10-28"
+}

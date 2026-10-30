@@ -1,0 +1,689 @@
+{
+ "title": "从变形金刚开始：form「形状」一家",
+ "root": {
+  "m": "form",
+  "cn": "形状；塑形"
+ },
+ "seqTitle": "同一团泥，换个方向捏，就是一个新词",
+ "opening": {
+  "type": "pop",
+  "big": "Transformers 变形金刚 · transformer 变压器",
+  "say": "变形金刚的英文名叫 Transformers；可电线杆上那个灰扑扑的铁箱子——变压器——英文也叫 transformer。一个会变成汽车的机器人，一个一动不动的铁箱子，凭什么同名？",
+  "muted": "答案藏在中间那四个字母里：form，形状。顺着它，能捏出一整家人：变形、改革、走样、遵守、制服、通知……最后还会开上赛车场。",
+  "caption": "变形金刚：会变成汽车的机器人",
+  "photo": {
+   "file": "media/form/opening.jpg",
+   "credit": "照片：Rjcastillo，CC BY-SA 4.0，Wikimedia Commons",
+   "source": "https://commons.wikimedia.org/wiki/File:Transformers_A74006420250206.jpg"
+  }
+ },
+ "anchor": {
+  "text": "记住这个画面：一双手，把一团泥捏出一个形状。",
+  "more": "接下来每个词，都是这双手在捏，只是换了方向——捏成另一个形、捏歪了重新捏、把好好的形捏坏、照着别人的形捏、大家只用一个形，最后把形捏进脑子里。",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 60,
+    "pose": "push"
+   },
+   {
+    "k": "table",
+    "x": 140,
+    "top": 82,
+    "w": 110
+   },
+   {
+    "k": "path",
+    "d": "M94,82 C90,72 98,66 106,68 C114,63 124,68 122,75 C127,79 123,82 118,82 Z",
+    "fill": "#efe9de",
+    "c": "#5e6670",
+    "op": 0.35
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      130,
+      66
+     ],
+     [
+      152,
+      66
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "path",
+    "d": "M166,82 C156,74 158,64 168,60 L168,54 L164,52 L184,52 L180,54 L180,60 C190,64 192,74 182,82 Z",
+    "fill": "#efe9de",
+    "c": "#5e6670"
+   }
+  ],
+  "caption": "form 的母画面：把一团泥捏出形状"
+ },
+ "words": [
+  {
+   "w": "transform",
+   "split": [
+    "trans",
+    "form"
+   ],
+   "node": "trans-",
+   "parts": [
+    [
+     "trans-",
+     "穿过、到另一边"
+    ],
+    [
+     "form",
+     "形状"
+    ]
+   ],
+   "link": "先把它捏成另一个形状。",
+   "literal": "从一个形变到另一个",
+   "caption": "一个人形，一转身成了一辆车",
+   "bridge": "从这个形状跨到那个形状，就是变形、转变。变形金刚的中文名把它译得很直白：变，形。",
+   "meaning": "v. 使变形，彻底改变；使改观",
+   "senses": [
+    "transformation n. 转变；变形",
+    "transformer n. 会变形的东西；变压器（1882 年起）",
+    "transform A into B：把 A 变成 B"
+   ],
+   "ex": [
+    "The old factory was transformed into a museum.",
+    "那座旧工厂被改造成了博物馆。"
+   ],
+   "caveat": "变压器也叫 transformer：它自己的外形没变，变的是电的状态。",
+   "fact": "拉丁语 transformare「改变形状、变形」= trans「越过、穿过」+ formare「塑形」；英语 14 世纪晚期；transformer 1882 年起指变压器",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 70,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       90,
+       54
+      ],
+      [
+       124,
+       34
+      ],
+      [
+       158,
+       64
+      ]
+     ],
+     "dash": 1,
+     "curve": 1
+    },
+    {
+     "k": "path",
+     "d": "M164,100 L164,86 L178,86 L188,72 L218,72 L228,86 L242,86 L242,100 Z",
+     "fill": "#efe9de",
+     "c": "#1e242b",
+     "sw": 1.8
+    },
+    {
+     "k": "circle",
+     "x": 182,
+     "y": 100,
+     "r": 8,
+     "fill": "#fff",
+     "c": "#1e242b",
+     "sw": 1.8
+    },
+    {
+     "k": "circle",
+     "x": 224,
+     "y": 100,
+     "r": 8,
+     "fill": "#fff",
+     "c": "#1e242b",
+     "sw": 1.8
+    }
+   ]
+  },
+  {
+   "w": "reform",
+   "split": [
+    "re",
+    "form"
+   ],
+   "node": "re-",
+   "parts": [
+    [
+     "re-",
+     "再、重新"
+    ],
+    [
+     "form",
+     "塑形"
+    ]
+   ],
+   "link": "要是捏歪了呢？推倒，再捏一遍。",
+   "literal": "捏歪了，重新捏一遍",
+   "caption": "一个捏歪的罐子，被重新捏成端正的样子",
+   "bridge": "条件分叉：重新捏的是一套制度，就是改革——「改革开放」的英文就是 reform and opening up；重新捏的是一个人，就是改过自新。",
+   "meaning": "v. 改革，改良；（使）改过自新　n. 改革",
+   "senses": [
+    "reform and opening up 改革开放",
+    "a reformed smoker 戒了烟的人：把自己重新捏了一遍",
+    "reform school 工读学校（1859 年起）"
+   ],
+   "ex": [
+    "The government promised to reform the tax system.",
+    "政府承诺改革税制。"
+   ],
+   "fact": "拉丁语 reformare「重新塑形、改变、改造」= re-「再」+ formare；英语 14 世纪晚期作「恢复成更好的形」，15 世纪初用于政府、机构",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 56,
+     "pose": "push"
+    },
+    {
+     "k": "table",
+     "x": 148,
+     "top": 82,
+     "w": 120
+    },
+    {
+     "k": "path",
+     "d": "M100,82 C92,74 96,64 108,62 L116,54 L112,50 L128,54 L123,58 L120,64 C130,70 128,78 122,82 Z",
+     "fill": "#efe9de",
+     "c": "#5e6670",
+     "op": 0.35
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       118,
+       44
+      ],
+      [
+       146,
+       22
+      ],
+      [
+       172,
+       44
+      ]
+     ],
+     "dash": 1,
+     "curve": 1
+    },
+    {
+     "k": "path",
+     "d": "M172,82 C162,74 164,64 174,60 L174,54 L170,52 L190,52 L186,54 L186,60 C196,64 198,74 188,82 Z",
+     "fill": "#efe9de",
+     "c": "#5e6670"
+    }
+   ]
+  },
+  {
+   "w": "deform",
+   "split": [
+    "de",
+    "form"
+   ],
+   "node": "de-",
+   "parts": [
+    [
+     "de-",
+     "离开、去掉"
+    ],
+    [
+     "form",
+     "形状"
+    ]
+   ],
+   "link": "反过来：不是捏得更好，而是让它离开原来的形。",
+   "literal": "让好好的形走了样",
+   "caption": "端正的罐子被一压，扁了、歪了",
+   "bridge": "一个好好的形被压扁、拧歪，离开了原来的样子，就是 deform：使变形、使走样。它和 transform 不一样，几乎总是往坏处变。",
+   "meaning": "v. 使变形，使走样；损坏外形",
+   "senses": [
+    "deformation n. 变形；（物理）形变",
+    "deformed adj. 变了形的；畸形的",
+    "deformity n. 畸形"
+   ],
+   "ex": [
+    "Heat can deform plastic.",
+    "高温会让塑料变形。"
+   ],
+   "caveat": "transform 只说变了形，好坏都可以；deform 是变坏了、走了样。",
+   "fact": "拉丁语 deformare「使走样、毁坏外形」= de-（离开；也表示撤销、毁掉）+ formare；英语约 1400 年",
+   "scene": [
+    {
+     "k": "path",
+     "d": "M72,108 C62,100 64,90 74,86 L74,80 L70,78 L90,78 L86,80 L86,86 C96,90 98,100 88,108 Z",
+     "fill": "#efe9de",
+     "c": "#5e6670",
+     "op": 0.35
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       108,
+       92
+      ],
+      [
+       148,
+       92
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       190,
+       58
+      ],
+      [
+       190,
+       84
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "path",
+     "d": "M160,108 C158,98 168,93 178,97 C184,91 198,91 204,97 C214,95 222,100 220,108 Z",
+     "fill": "#efe9de",
+     "c": "#5e6670"
+    }
+   ]
+  },
+  {
+   "w": "conform",
+   "split": [
+    "con",
+    "form"
+   ],
+   "node": "con-",
+   "parts": [
+    {
+     "m": "con-",
+     "cn": "一起、相同",
+     "of": "com-"
+    },
+    [
+     "form",
+     "形状"
+    ]
+   ],
+   "link": "如果不是想怎么捏就怎么捏，而是照着身边的人捏呢？",
+   "literal": "照着大家的形改自己",
+   "caption": "一排方块里混进一个圆，它把自己也捏成了方的",
+   "bridge": "一排都是方的，只有你是圆的。你把自己也捏成方的，跟大家一个形——守规矩、随大流，都是这一下。",
+   "meaning": "v. 遵守，符合（规则、标准）；随大流",
+   "senses": [
+    "conform to the rules 遵守规定",
+    "conformity n. 一致；（心理学）从众",
+    "nonconformist n. 不随大流的人"
+   ],
+   "ex": [
+    "All products must conform to safety standards.",
+    "所有产品都必须符合安全标准。"
+   ],
+   "caveat": "con- 是 com-「一起」的同化形式：com- 碰上 f，m 就变成 n，读着顺口。",
+   "fact": "拉丁语 conformare「塑形；使一致」= com「一起」（同化为 con-）+ formare；英语 14 世纪中叶作「顺从」，14 世纪晚期作「使同形、使一致」",
+   "scene": [
+    {
+     "k": "rect",
+     "x": 26,
+     "y": 82,
+     "w": 26,
+     "h": 26,
+     "r": 2
+    },
+    {
+     "k": "rect",
+     "x": 60,
+     "y": 82,
+     "w": 26,
+     "h": 26,
+     "r": 2
+    },
+    {
+     "k": "rect",
+     "x": 94,
+     "y": 82,
+     "w": 26,
+     "h": 26,
+     "r": 2
+    },
+    {
+     "k": "rect",
+     "x": 128,
+     "y": 82,
+     "w": 26,
+     "h": 26,
+     "r": 2,
+     "fill": "#f1ddd6"
+    },
+    {
+     "k": "circle",
+     "x": 190,
+     "y": 62,
+     "r": 13,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       176,
+       68
+      ],
+      [
+       158,
+       84
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 236,
+     "pose": "push",
+     "flip": 1
+    }
+   ]
+  },
+  {
+   "w": "uniform",
+   "split": [
+    "uni",
+    "form"
+   ],
+   "node": "uni-",
+   "parts": [
+    [
+     "uni-",
+     "一"
+    ],
+    [
+     "form",
+     "形状"
+    ]
+   ],
+   "link": "照着别人捏还不够：干脆大家只用一个形。",
+   "literal": "大家只有一个形",
+   "caption": "三个人，穿着一模一样的衣服",
+   "bridge": "开学第一天，全班换上校服，远远看去，几十个人一个形——这就是 uniform。它当形容词也还常用：统一的、一致的。",
+   "meaning": "n. 制服，校服　adj. 统一的，一致的",
+   "senses": [
+    "school uniform 校服",
+    "uniform adj. 一样的：uniform size 统一尺码",
+    "uniformity n. 一致性"
+   ],
+   "ex": [
+    "Do you have to wear a uniform at school?",
+    "你们上学要穿校服吗？"
+   ],
+   "caveat": "先有形容词「一个样的」（15 世纪晚期）；「制服」义 1748 年才出现，最早指军装。",
+   "fact": "拉丁语 uniformis「只有一种形状的」= uni-「一」+ forma；英语形容词 15 世纪晚期，名词「制服」1748 年起，最初指军装",
+   "scene": [
+    {
+     "k": "rect",
+     "x": 72,
+     "y": 56,
+     "w": 16,
+     "h": 24,
+     "r": 2,
+     "fill": "#f1ddd6"
+    },
+    {
+     "k": "rect",
+     "x": 132,
+     "y": 56,
+     "w": 16,
+     "h": 24,
+     "r": 2,
+     "fill": "#f1ddd6"
+    },
+    {
+     "k": "rect",
+     "x": 192,
+     "y": 56,
+     "w": 16,
+     "h": 24,
+     "r": 2,
+     "fill": "#f1ddd6"
+    },
+    {
+     "k": "fig",
+     "x": 80
+    },
+    {
+     "k": "fig",
+     "x": 140
+    },
+    {
+     "k": "fig",
+     "x": 200
+    }
+   ]
+  },
+  {
+   "w": "inform",
+   "split": [
+    "in",
+    "form"
+   ],
+   "node": "in-",
+   "parts": [
+    [
+     "in-",
+     "往里、进入"
+    ],
+    [
+     "form",
+     "塑形"
+    ]
+   ],
+   "link": "最后一个方向：往里——把形捏进一个人的脑子里。",
+   "literal": "给脑子塑个形",
+   "caption": "一个人在讲，一个形状被放进另一个人的脑子里",
+   "bridge": "拉丁语里，它先是给东西塑形，又引申为教育、培养——给脑子塑形。英语最早也用它说「教导」；14 世纪晚期，才多了「告诉、通知」：把一条消息放进你脑子里。",
+   "meaning": "v. 通知，告知；告发（inform on）",
+   "senses": [
+    "information n. 信息：放进你脑子里的东西",
+    "informed adj. 有见识的：an informed decision 知情后做的决定",
+    "inform on sb 告发某人"
+   ],
+   "ex": [
+    "Please inform us if your address changes.",
+    "如果地址有变，请通知我们。"
+   ],
+   "caveat": "这里的 in- 是「往里」；informal 里的 in- 是「不」，两个 in- 不是一回事。",
+   "fact": "拉丁语 informare「塑形、勾勒」，比喻「训练、教育」= in-「进入」+ formare；英语 14 世纪初作「教导」，14 世纪晚期作「告知」",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 70,
+     "pose": "explain"
+    },
+    {
+     "k": "rect",
+     "x": 94,
+     "y": 36,
+     "w": 12,
+     "h": 12,
+     "r": 1,
+     "fill": "#f1ddd6"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       112,
+       40
+      ],
+      [
+       208,
+       24
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 196,
+     "flip": 1
+    },
+    {
+     "k": "thought",
+     "x": 238,
+     "y": 22,
+     "text": " ",
+     "from": [
+      204,
+      38
+     ]
+    },
+    {
+     "k": "rect",
+     "x": 232,
+     "y": 16,
+     "w": 12,
+     "h": 12,
+     "r": 1,
+     "fill": "#f1ddd6"
+    }
+   ]
+  }
+ ],
+ "finale": {
+  "w": "formula",
+  "split": [
+   "",
+   "form",
+   "ula"
+  ],
+  "node": "↩",
+  "parts": [
+   [
+    "form",
+    "形状"
+   ],
+   [
+    "-ula",
+    "小"
+   ]
+  ],
+  "link": "回到汽车。变形金刚想变什么形就变什么形；赛车场上的车正相反。",
+  "literal": "一个规定好的小模子",
+  "caption": "一张写着规则的纸，赛车照着它造",
+  "bridge": "F1 中文叫一级方程式，可它跟方程没什么关系。formula 是「小形」：一个规定好的模子。F1 官网解释，这个 Formula 是一套所有车队都得遵守的规则——车怎么造、发动机多大，都写在里面。数学公式、配方也叫 formula：照着它套，就出结果。",
+  "meaning": "n. 公式，配方；（方程式赛车的）级别规则",
+  "senses": [
+   "Formula One / F1 一级方程式：最高一级的那套规则",
+   "a winning formula 屡试不爽的办法",
+   "baby formula 婴儿配方奶"
+  ],
+  "ex": [
+   "There's no magic formula for success.",
+   "成功没有万能公式。"
+  ],
+  "caveat": "「一级方程式」里的「方程式」是 formula 的译名；比赛和方程无关，这里的 formula 指的是规则。",
+  "fact": "拉丁语 formula「小形；草案、契约、规章」，法律上指「规则、方法」，是 forma 的指小词；英语 1630 年代作「仪式用语」，1706 年作「处方、配方」，数学义 1796 年，赛车「车辆级别、规格」义 1927 年",
+  "scene": [
+   {
+    "k": "paper",
+    "x": 68,
+    "y": 52,
+    "label": "FORMULA"
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      104,
+      56
+     ],
+     [
+      142,
+      78
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "path",
+    "d": "M150,100 L156,92 L184,90 L192,82 L206,82 L212,90 L236,92 L236,100 Z",
+    "fill": "#efe9de",
+    "c": "#1e242b",
+    "sw": 1.8
+   },
+   {
+    "k": "rect",
+    "x": 228,
+    "y": 76,
+    "w": 14,
+    "h": 5,
+    "r": 1
+   },
+   {
+    "k": "path",
+    "d": "M235,81 L233,91",
+    "c": "#1e242b"
+   },
+   {
+    "k": "circle",
+    "x": 166,
+    "y": 100,
+    "r": 8,
+    "fill": "#fff",
+    "c": "#1e242b",
+    "sw": 1.8
+   },
+   {
+    "k": "circle",
+    "x": 222,
+    "y": 100,
+    "r": 8,
+    "fill": "#fff",
+    "c": "#1e242b",
+    "sw": 1.8
+   }
+  ]
+ },
+ "daily": [
+  "Transformers 变形金刚",
+  "information 信息",
+  "formal 正式的（合乎形式）",
+  "formation 形成；队形"
+ ],
+ "traps": [
+  "<b class='serif'>perform</b>（表演、执行）看着是 per + form，其实<b>不是这一家</b>：它来自古法语 parfornir「做完、完成」= par-（彻底）+ fornir（提供，furnish 的来源）。拼成 -form，是后来受了 forme「形」的影响。",
+  "<b class='serif'>former</b>（以前的、前者）<b>不是这一家</b>：它是古英语 forma「第一」的比较级。只有名词 former「塑形的人」才是 form 的亲戚。",
+  "<b class='serif'>formidable</b>（可怕的、难对付的）<b>不是这一家</b>：来自拉丁语 formido「恐惧」。",
+  "<b class='serif'>formal</b>（正式的）倒是真亲戚：拉丁语 formalis ← forma，「合乎规定的形式」。"
+ ],
+ "transfer": [
+  [
+   "platform = plat（平）+ form",
+   "平平的一块形：平台、讲台、站台。1832 年起指火车站台。政党的 platform 是政纲——大概原本就是政客们站上去讲话的那块台子。"
+  ],
+  [
+   "informal = in-（不）+ formal（合乎形式的）",
+   "不拘形式的：非正式的、随意的。informal dress 便装。注意：这里的 in- 是「不」，和 inform 里「往里」的 in- 不是一回事。"
+  ],
+  [
+   "format = form + -at（拉丁语 formatus「做成某种形的」）",
+   "一本书做成的样子：开本、版式，后来泛指格式。1964 年起用作动词：format a disk，格式化磁盘——给它重新定个形。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取，scripts/etym.py），2026-10-28"
+}

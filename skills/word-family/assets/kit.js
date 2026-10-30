@@ -1,4 +1,4 @@
-/* 线稿零件库：网页版（lesson_template.html）和视频版（video_template.html）共用，由 scripts/build.py、scripts/video.py 内联进页面。 */
+/* 线稿零件库：网页版（assets/lesson_template.html，由 scripts/build.py 内联）和 word-family-video 的视频画面（它的 assets/story_frame.html，由它的 scripts/video.py 内联）共用。 */
 /* ===================== 线稿零件库 =====================
    坐标系：viewBox 280×122，地面 y=108。新增零件后无需改 build.py（它会自动读取这里的名字）。 */
 const INK = "#1e242b", PRE = "#b84a14", ROOT = "#176b4d", BLUE = "#2b5c8f", GREY = "#9aa0a8",
@@ -92,8 +92,9 @@ const K = {
     <line x1="${o.x - (o.r || 22) * .7}" y1="${o.y - (o.r || 22) * .7}" x2="${o.x + (o.r || 22) * .7}" y2="${o.y + (o.r || 22) * .7}" stroke="${PRE}" stroke-width="2.6"/>`,
   envelope: o => `<g stroke="#5e6670" stroke-width="1.6" stroke-linejoin="round"><rect x="${o.x - 13}" y="${o.y - 9}" width="26" height="18" fill="${FILL}"/>
     <polyline points="${o.x - 13},${o.y - 9} ${o.x},${o.y + 1} ${o.x + 13},${o.y - 9}" fill="none"/></g>`,
-  paper: o => `<g transform="rotate(${o.rot || 0} ${o.x} ${o.y})" opacity="${o.op ?? 1}"><rect x="${o.x - 18}" y="${o.y - 14}" width="36" height="28" fill="#fff" stroke="#5e6670" stroke-width="1.6"/>
-    <text x="${o.x}" y="${o.y + 4}" text-anchor="middle" font-size="10" font-weight="700" fill="${PRE}">${esc(o.label || "")}</text></g>`,
+  // 纸片按标签加宽：粗体大写比 textW 估的宽约 1.25 倍（RECEIPT 曾溢出固定 36 宽的框）
+  paper: o => { const w = Math.max(36, textW(o.label || "", 10) * 1.25 + 10); return `<g transform="rotate(${o.rot || 0} ${o.x} ${o.y})" opacity="${o.op ?? 1}"><rect x="${o.x - w / 2}" y="${o.y - 14}" width="${w}" height="28" fill="#fff" stroke="#5e6670" stroke-width="1.6"/>
+    <text x="${o.x}" y="${o.y + 4}" text-anchor="middle" font-size="10" font-weight="700" fill="${PRE}">${esc(o.label || "")}</text></g>`; },
   crate: o => `<g stroke="#5e6670" stroke-width="1.8"><rect x="${o.x - 20}" y="78" width="40" height="30" fill="${FILL}"/>
     <line x1="${o.x - 20}" y1="78" x2="${o.x + 20}" y2="108"/><line x1="${o.x + 20}" y1="78" x2="${o.x - 20}" y2="108"/></g>`,
   rock: o => `<circle cx="${o.x}" cy="${o.y ?? 108 - (o.r || 30)}" r="${o.r || 30}" fill="#d9d2c5" stroke="#5e6670" stroke-width="2"/>`,
@@ -112,8 +113,8 @@ const K = {
   bag: o => `<g stroke="${INK}" stroke-width="1.6" stroke-linejoin="round">
     <path d="M${o.x - 6},62 C${o.x - 34},70 ${o.x - 34},108 ${o.x},108 C${o.x + 34},108 ${o.x + 34},70 ${o.x + 6},62 Z" fill="${FILL}"/>
     <g stroke="${ROPE}" fill="none" stroke-linecap="round"><path d="M${o.x - 6},62 Q${o.x - 22},52 ${o.x - 36},40"/><path d="M${o.x + 6},62 Q${o.x + 22},52 ${o.x + 36},40"/></g></g>
-    <path d="M${o.x - 26},70 L${o.x - 12},66" stroke="${PRE}" stroke-width="1.6" marker-end="url(#ah-b84a14)"/>
-    <path d="M${o.x + 26},70 L${o.x + 12},66" stroke="${PRE}" stroke-width="1.6" marker-end="url(#ah-b84a14)"/>`,
+    <path d="M${o.x - 26},70 L${o.x - 12},66" stroke="${PRE}" stroke-width="1.6" marker-end="url(#ah-${PRE.slice(1)})"/>
+    <path d="M${o.x + 26},70 L${o.x + 12},66" stroke="${PRE}" stroke-width="1.6" marker-end="url(#ah-${PRE.slice(1)})"/>`,
   river: o => [70, 80, 90, 100].map(y => `<path d="M${o.x},${y} q${o.w / 4},-5 ${o.w / 2},0 t${o.w / 2},0" fill="none" stroke="${BLUE}" stroke-width="1.6" opacity=".7"/>`).join(""),
   channel: o => `<line x1="${o.x1}" y1="${o.y - 6}" x2="${o.x2}" y2="${o.y - 6}" stroke="${GREY}" stroke-width="1.6"/>
     <line x1="${o.x1}" y1="${o.y + 6}" x2="${o.x2}" y2="${o.y + 6}" stroke="${GREY}" stroke-width="1.6"/>
@@ -192,7 +193,8 @@ const variantLine = v => (v || []).map(x => `${x.m}${x.note ? `（${x.note}）` 
 function familyMap(L) {
   const W = 680, H = 356, cx = 340, cy = 174, n = L.words.length;
   const vs = (L.root.variants || []).map(v => v.m).join(" · ");
-  const rx = vs ? 78 : 62, ry = vs ? 46 : 36;
+  // 变体行在椭圆下部（低于中心约 28）：椭圆在那个高度的半宽要容得下整行，所以按字宽反推 rx
+  const ry = vs ? 50 : 36, rx = vs ? Math.max(78, (textW(vs, 12) / 2 + 6) / Math.sqrt(1 - (28 / ry) ** 2)) : 62;
   const rootFs = Math.min(24, 150 / Math.max(L.root.m.length, 1));
   const nodes = L.words.map((w, i) => {
     const a = (-90 + i * 360 / n) * Math.PI / 180, c = Math.cos(a), s = Math.sin(a);

@@ -1,0 +1,12 @@
+{
+  "query": "/word-family-video 让 AI 把 pend 的脚本审一遍",
+  "files": [
+    "projects/pend/script.md"
+  ],
+  "expected_behavior": [
+    "先运行 review 生成审稿包，按用户授权由当前 agent 或可用的独立审稿方审核，不依赖固定模型名",
+    "把审稿意见写进 build/review_raw.md 后运行 review --record，在 review.md 的处理结果里逐条写采纳/不采纳及理由",
+    "按采纳的意见改稿，plan 跑到无错误无提醒，并告诉用户改了什么",
+    "不调用 Codex 等外部命令行；不自行 mark approved"
+  ]
+}

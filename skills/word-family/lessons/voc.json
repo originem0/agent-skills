@@ -1,0 +1,708 @@
+{
+ "title": "从初音未来开始：voc / vok「叫、喊」一家",
+ "root": {
+  "m": "voc",
+  "cn": "叫、喊",
+  "variants": [
+   {
+    "m": "vok",
+    "note": "经法语 -voquer，动词写成 -voke",
+    "ex": "provoke"
+   },
+   {
+    "m": "vouch",
+    "note": "经古法语 vocher",
+    "ex": "voucher"
+   },
+   {
+    "m": "vow",
+    "note": "vocalis 经法语磨掉了 c",
+    "ex": "vowel"
+   },
+   {
+    "m": "voice",
+    "note": "vox 经古法语 voiz",
+    "ex": "voicemail"
+   }
+  ]
+ },
+ "seqTitle": "同一张嘴在喊，换个方向就是一个新词",
+ "opening": {
+  "type": "pop",
+  "big": "VOCALOID ＝ vocal + android",
+  "say": "初音未来的歌，是电脑唱出来的。她是为雅马哈的唱歌软件 VOCALOID 做的虚拟歌手，而雅马哈说，VOCALOID 是 vocal android 的缩写——vocal，嗓音。可这个 voc，也藏在替人辩护的 advocate、惹人发火的 provoke、你天天背的 vocabulary 里。辩护、惹火、词汇，跟嗓子有什么关系？",
+  "muted": "答案是一个动作：张嘴喊一声。顺着这一声，能叫出一整家人：被叫来替你说话的、被你喊出火来的、被叫回去的、被叫出来的……最后再回到初音未来，听她唱的那几个音。",
+  "source": {
+   "title": "Making Self-Expression Accessible for Everyone（Yamaha 官网 The Key 专栏）",
+   "url": "https://www.yamaha.com/en/stories/the-key/003-01/",
+   "date": "2023-03-15"
+  },
+  "scene": [
+   {
+    "k": "text",
+    "x": 140,
+    "y": 52,
+    "text": "VOCALOID",
+    "size": 28,
+    "serif": 1
+   },
+   {
+    "k": "tag",
+    "x": 96,
+    "y": 86,
+    "text": "vocal 嗓音",
+    "tone": "root"
+   },
+   {
+    "k": "tag",
+    "x": 192,
+    "y": 86,
+    "text": "android 机器人",
+    "tone": "muted"
+   }
+  ],
+  "caption": "一场初音未来演唱会，台下挥着荧光棒",
+  "photo": {
+   "file": "media/voc/opening.jpg",
+   "credit": "照片：Markbenecke，CC BY 4.0，Wikimedia Commons",
+   "source": "https://commons.wikimedia.org/wiki/File:Hatsune_miku_live_concert_hanacon_hanover_germany_2026.jpg"
+  }
+ },
+ "anchor": {
+  "text": "记住这个画面：一个人张开嘴，冲远处喊了一声。",
+  "more": "拉丁语里，嗓音是 vox，用嗓音叫人是 vocare，进了英语就剩下 voc。接下来每个词，都是这一声喊，只是换了方向——给东西叫个名、把人叫到身边、把人叫出来、把放出去的叫回来、把藏着的叫出来、仰头朝上喊。",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 72,
+    "pose": "point"
+   },
+   {
+    "k": "path",
+    "d": "M82,37 Q86,42 82,47",
+    "c": "#176b4d"
+   },
+   {
+    "k": "path",
+    "d": "M87,33 Q93,42 87,51",
+    "c": "#176b4d"
+   },
+   {
+    "k": "bubble",
+    "x": 126,
+    "y": 20,
+    "text": "喂——！",
+    "tail": [
+     92,
+     34
+    ]
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      112,
+      62
+     ],
+     [
+      198,
+      62
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "fig",
+    "x": 228,
+    "pose": "stand",
+    "flip": 1
+   }
+  ],
+  "caption": "voc 的母画面：张嘴喊一声"
+ },
+ "words": [
+  {
+   "w": "vocabulary",
+   "split": [
+    "",
+    "voc",
+    "abulary"
+   ],
+   "node": "voc",
+   "parts": [
+    {
+     "m": "voc",
+     "cn": "叫、叫作",
+     "kind": "r"
+    },
+    {
+     "m": "-abulary",
+     "cn": "叫法 → 清单",
+     "kind": "s"
+    }
+   ],
+   "link": "先不加方向。中文的「叫」也能是「叫作」：这个东西叫什么？",
+   "literal": "给每样东西叫个名",
+   "caption": "指着一样样东西，叫出它们的名字",
+   "bridge": "指着果子说「这叫 apple」，指着旗子说「这叫 flag」——每样东西都有个叫法。拉丁语把「叫法」说成 vocabulum，一个个记下来，就是你天天背的 vocabulary：词汇、词汇表。",
+   "meaning": "n. 词汇；词汇量；词汇表",
+   "senses": [
+    "build / expand your vocabulary 积累、扩大词汇量",
+    "vocabulary list 单词表",
+    "1530 年代先指「带释义的词表」，1753 年起指「一个人掌握的词汇」"
+   ],
+   "ex": [
+    "Reading every day is a good way to build your vocabulary.",
+    "每天读点东西，是积累词汇的好办法。"
+   ],
+   "caveat": "拉丁语 vocare 既是「叫」，也是「给……起名」，和中文的「叫」一样一词两用。",
+   "fact": "中世纪拉丁语 vocabularium「词表」← 拉丁语 vocabulum「词、名称」← vocare「叫、起名」；英语 1530 年代指「带简短释义的词表」，「一个人掌握的词汇」义 1753 年",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 56,
+     "pose": "point"
+    },
+    {
+     "k": "path",
+     "d": "M66,37 Q70,42 66,47",
+     "c": "#176b4d"
+    },
+    {
+     "k": "path",
+     "d": "M71,33 Q77,42 71,51",
+     "c": "#176b4d"
+    },
+    {
+     "k": "apple",
+     "x": 150
+    },
+    {
+     "k": "tag",
+     "x": 150,
+     "y": 56,
+     "text": "apple",
+     "tone": "root"
+    },
+    {
+     "k": "flag",
+     "x": 224
+    },
+    {
+     "k": "tag",
+     "x": 228,
+     "y": 20,
+     "text": "flag",
+     "tone": "root"
+    }
+   ]
+  },
+  {
+   "w": "advocate",
+   "split": [
+    "ad",
+    "voc",
+    "ate"
+   ],
+   "node": "ad-",
+   "parts": [
+    [
+     "ad-",
+     "朝向、到……身边"
+    ],
+    [
+     "voc",
+     "叫"
+    ],
+    [
+     "-ate",
+     "被……的（人）"
+    ]
+   ],
+   "link": "加上方向：把人叫到自己身边来。",
+   "literal": "被叫到身边帮忙的人",
+   "caption": "一声喊，把远处的人叫到自己身边",
+   "bridge": "罗马法里，advocatus 是被叫来帮你的人：站到你身边，替你出庭说话——辩护人。后来不只在法庭上，凡是站出来替别人、替一件事说话的，都叫 advocate：拥护者、倡导者。",
+   "meaning": "n. 拥护者、倡导者；辩护人　v. 提倡、主张",
+   "senses": [
+    "an advocate for children's rights 儿童权益的倡导者",
+    "advocate (v.) 公开主张、提倡（1640 年代起作动词）",
+    "advocacy n. 倡导、维护"
+   ],
+   "ex": [
+    "She is a strong advocate of online learning.",
+    "她大力提倡在线学习。"
+   ],
+   "caveat": "名词 advocate 结尾念 /kət/，动词念 /keɪt/。",
+   "fact": "古法语 avocat ← 拉丁语 advocatus「被叫来帮忙的人、替人辩护者」，advocare「叫来（作证、出主意）、请来帮忙」的过去分词 = ad「朝向」+ vocare「叫」；罗马法术语，英语 14 世纪中叶；动词 1640 年代",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 60,
+     "pose": "point"
+    },
+    {
+     "k": "path",
+     "d": "M70,37 Q74,42 70,47",
+     "c": "#176b4d"
+    },
+    {
+     "k": "path",
+     "d": "M75,33 Q81,42 75,51",
+     "c": "#176b4d"
+    },
+    {
+     "k": "fig",
+     "x": 128,
+     "pose": "walk",
+     "flip": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       214,
+       64
+      ],
+      [
+       150,
+       64
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 234,
+     "pose": "walk",
+     "flip": 1,
+     "op": 0.3
+    }
+   ]
+  },
+  {
+   "w": "provoke",
+   "split": [
+    "pro",
+    "vok",
+    "e"
+   ],
+   "node": "pro-",
+   "parts": [
+    [
+     "pro-",
+     "往前"
+    ],
+    {
+     "m": "vok",
+     "cn": "叫（法语拼法）",
+     "of": "voc"
+    }
+   ],
+   "link": "要是不把人叫过来，而是冲着他喊，把他叫出来呢？",
+   "literal": "冲人喊，叫他出来",
+   "caption": "冲着门里的人喊：有本事出来！",
+   "bridge": "拉丁语 provocare 就是冲人喊、叫他出来较量：挑战。被你这么一喊，对方的火气也被叫了出来——激怒、挑衅。叫出来的也可以是别的反应：provoke a debate，引发一场争论。",
+   "meaning": "v. 激怒、挑衅；引起、激起",
+   "senses": [
+    "provocative adj. 挑衅的；引人深思的",
+    "provocation n. 挑衅",
+    "unprovoked adj. 无缘无故的：an unprovoked attack 无端的攻击",
+    "14 世纪晚期先用在医学里：provoke sleep 催眠"
+   ],
+   "ex": [
+    "Don't provoke the dog.",
+    "别去招惹那条狗。"
+   ],
+   "caveat": "vok 就是 voc：经法语进来的动词写成 -voke，名词还照拉丁语写 c，比如 provocation。",
+   "fact": "古法语 provoker、provochier（现代法语 provoquer）及拉丁语 provocare「叫出来、挑战」= pro「向前」+ vocare「叫」；英语 14 世纪晚期先用于医学「诱发（睡意、呕吐）」，约 1400 年起泛指「激起、煽动」",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 56,
+     "pose": "point"
+    },
+    {
+     "k": "path",
+     "d": "M66,37 Q70,42 66,47",
+     "c": "#176b4d"
+    },
+    {
+     "k": "path",
+     "d": "M71,33 Q77,42 71,51",
+     "c": "#176b4d"
+    },
+    {
+     "k": "bubble",
+     "x": 110,
+     "y": 20,
+     "text": "出来！",
+     "tail": [
+      80,
+      34
+     ]
+    },
+    {
+     "k": "door",
+     "x": 238
+    },
+    {
+     "k": "fig",
+     "x": 238,
+     "pose": "stand",
+     "flip": 1,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       218,
+       58
+      ],
+      [
+       198,
+       58
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 178,
+     "pose": "stern",
+     "flip": 1
+    }
+   ]
+  },
+  {
+   "w": "revoke",
+   "split": [
+    "re",
+    "vok",
+    "e"
+   ],
+   "node": "re-",
+   "parts": [
+    [
+     "re-",
+     "往回"
+    ],
+    {
+     "m": "vok",
+     "cn": "叫",
+     "of": "voc"
+    }
+   ],
+   "link": "往前叫的反面：把已经放出去的，再叫回来。",
+   "literal": "把放出去的叫回来",
+   "caption": "发出去的一张许可，被一声喊叫了回来",
+   "bridge": "条件分叉：叫回来的是一道命令，就是收回；叫回来的是一张驾照、一份签证，就是吊销、撤销。英语的 recall，有时就是照着拉丁语 revocare 一个字一个字翻过来的：re 回，call 叫。",
+   "meaning": "v. 撤销、吊销；废除",
+   "senses": [
+    "revoke a licence / a visa 吊销执照、撤销签证",
+    "revocation n. 撤销、吊销",
+    "irrevocable adj. 不可撤销的：叫不回来的"
+   ],
+   "ex": [
+    "His driving licence was revoked after the accident.",
+    "出了那次事故，他的驾照被吊销了。"
+   ],
+   "fact": "古法语 revoquer（13 世纪）← 拉丁语 revocare「叫回来；撤销」= re-「往回」+ vocare「叫」；英语 14 世纪中叶，约 1400 年起作「废除、取消」；recall 部分是 revocare 的仿译",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 60,
+     "pose": "point"
+    },
+    {
+     "k": "path",
+     "d": "M70,37 Q74,42 70,47",
+     "c": "#176b4d"
+    },
+    {
+     "k": "path",
+     "d": "M75,33 Q81,42 75,51",
+     "c": "#176b4d"
+    },
+    {
+     "k": "paper",
+     "x": 112,
+     "y": 66,
+     "label": "许可"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       204,
+       44
+      ],
+      [
+       136,
+       60
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "paper",
+     "x": 228,
+     "y": 38,
+     "label": "许可",
+     "op": 0.3
+    }
+   ]
+  },
+  {
+   "w": "evoke",
+   "split": [
+    "e",
+    "vok",
+    "e"
+   ],
+   "node": "e-",
+   "parts": [
+    {
+     "m": "e-",
+     "cn": "向外",
+     "of": "ex-"
+    },
+    {
+     "m": "vok",
+     "cn": "叫",
+     "of": "voc"
+    }
+   ],
+   "link": "换个方向：东西藏在里面，把它叫出来。",
+   "literal": "把藏着的叫出来",
+   "caption": "一声喊，盒子里藏着的东西冒了出来",
+   "bridge": "evoke 刚进英语时，常带着「招魂」的意味：把藏在另一边的东西叫出来。到 19 世纪中叶，被叫出来的换成了回忆和感情——一首老歌、一股味道，把你心底藏了很久的东西叫了出来：唤起。",
+   "meaning": "v. 唤起、引起（回忆、感情）",
+   "senses": [
+    "evoke memories 唤起回忆",
+    "evocative adj. 引人联想的；能唤起感情的"
+   ],
+   "ex": [
+    "The smell of rain evokes memories of my childhood.",
+    "雨的味道让我想起了小时候。"
+   ],
+   "caveat": "ex- 碰到 v 常常简化成 e-，所以是 evoke，不是 exvoke。",
+   "fact": "法语 évoquer 或直接来自拉丁语 evocare「叫出来、唤醒、召唤」= ex「向外」（简化为 e-）+ vocare「叫」；英语 1620 年代，常带「招魂」意味；用于感情、回忆约 1856 年起",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 60,
+     "pose": "point"
+    },
+    {
+     "k": "path",
+     "d": "M70,37 Q74,42 70,47",
+     "c": "#176b4d"
+    },
+    {
+     "k": "path",
+     "d": "M75,33 Q81,42 75,51",
+     "c": "#176b4d"
+    },
+    {
+     "k": "rect",
+     "x": 176,
+     "y": 84,
+     "w": 56,
+     "h": 24
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       204,
+       82
+      ],
+      [
+       204,
+       70
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "heart",
+     "x": 204,
+     "y": 52
+    }
+   ]
+  },
+  {
+   "w": "invoke",
+   "split": [
+    "in",
+    "vok",
+    "e"
+   ],
+   "node": "in-",
+   "parts": [
+    [
+     "in-",
+     "朝着、在……上"
+    ],
+    {
+     "m": "vok",
+     "cn": "叫",
+     "of": "voc"
+    }
+   ],
+   "link": "evoke 是把东西叫出来；invoke 是抬起头，冲着上面喊。",
+   "literal": "仰起头朝上面喊",
+   "caption": "仰起头朝天上喊，请上面出手",
+   "bridge": "拉丁语 invocare 是冲着神喊，求它出手：祈求。后来喊的对象换成了法律、规定——invoke a law，把一条法律喊出来替自己撑腰，就是援引。写程序的人说 invoke a function：喊函数一声，它就出来干活，调用。",
+   "meaning": "v. 援引（法律、权利）；祈求（神灵）；调用（程序）",
+   "senses": [
+    "invoke a law / a right 援引法律、行使权利",
+    "invoke a function 调用函数",
+    "invocation n. 祈祷；援引；调用"
+   ],
+   "ex": [
+    "The government invoked emergency powers.",
+    "政府动用了紧急权力。"
+   ],
+   "caveat": "这里的 in- 是「朝着、在……上」，不是表示否定的 in-。拉丁语里两个 in- 正好撞车：invocare 是「呼求」，invocatus 却可以是「没被请来的」。",
+   "fact": "古法语 invoquer、envoquer、envochier「呼求、恳求」（12 世纪）← 拉丁语 invocare「呼求、恳求」= in-「在……上、朝着」+ vocare「叫」；英语 15 世纪晚期",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 80,
+     "pose": "point"
+    },
+    {
+     "k": "path",
+     "d": "M90,37 Q94,42 90,47",
+     "c": "#176b4d"
+    },
+    {
+     "k": "path",
+     "d": "M95,33 Q101,42 95,51",
+     "c": "#176b4d"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       112,
+       40
+      ],
+      [
+       150,
+       12
+      ],
+      [
+       198,
+       24
+      ]
+     ],
+     "dash": 1,
+     "curve": 1
+    },
+    {
+     "k": "circle",
+     "x": 224,
+     "y": 30,
+     "r": 12
+    },
+    {
+     "k": "path",
+     "d": "M224,10 L224,14 M224,46 L224,50 M204,30 L208,30 M240,30 L244,30 M210,16 L213,19 M235,41 L238,44 M238,16 L235,19 M210,44 L213,41"
+    }
+   ]
+  }
+ ],
+ "finale": {
+  "w": "vowel",
+  "split": [
+   "",
+   "vow",
+   "el"
+  ],
+  "node": "↩",
+  "parts": [
+   {
+    "m": "vow",
+    "cn": "声音（voc 掉了 c）",
+    "kind": "r",
+    "of": "voc"
+   },
+   [
+    "-el",
+    "……的（-alis 经法语）"
+   ]
+  ],
+  "link": "回到开头 VOCALOID 里那个 vocal。它在英语里还有个双胞胎，你学英语头一天就见过。",
+  "literal": "能出声的字母",
+  "caption": "a、e、i、o、u：嘴一张开就能拉长的音",
+  "bridge": "vocal 来自拉丁语 vocalis：出声的。拉丁语管元音字母叫 littera vocalis，「出声的字母」。这个词走了一趟法语，c 被磨掉，成了 vowel：元音。所以 VOCALOID 的 vocal 和课本上的 vowel，是同一个拉丁词的两个样子。",
+  "meaning": "n. 元音；元音字母",
+  "senses": [
+   "vowel sound 元音",
+   "vocal adj. 嗓音的；直言不讳的：vocal cords 声带（1872 年起）"
+  ],
+  "ex": [
+   "English has only five vowel letters, but far more vowel sounds.",
+   "英语只有五个元音字母，元音却多得多。"
+  ],
+  "caveat": "vowel 的 vow 是 voc 磨掉了 c；单独一个 vow（发誓）是另一家，见下面的形近陷阱。",
+  "fact": "英法语 vouel、vowel，古法语 voieul（现代法语 voyelle）← 拉丁语 vocalis，用在 littera vocalis「出声的字母」里 ← vox「声音」；英语约 1300 年；vocal 也直接来自拉丁语 vocalis",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 50,
+    "pose": "explain"
+   },
+   {
+    "k": "path",
+    "d": "M60,37 Q64,42 60,47",
+    "c": "#176b4d"
+   },
+   {
+    "k": "path",
+    "d": "M65,33 Q71,42 65,51",
+    "c": "#176b4d"
+   },
+   {
+    "k": "text",
+    "x": 178,
+    "y": 72,
+    "text": "a e i o u",
+    "size": 24,
+    "serif": 1,
+    "c": "#b84a14"
+   }
+  ]
+ },
+ "daily": [
+  "vocal 嗓音的（VOCALOID）",
+  "voice 声音",
+  "voicemail 语音信箱",
+  "voucher 代金券（vouch 作保）"
+ ],
+ "traps": [
+  "<b class='serif'>vow</b>（发誓）和 vowel 只差两个字母，却<b>不是这一家</b>：它来自拉丁语 votum「向神许下的愿」，etymonline 把它追到另一个印欧词根 *wegwh-「庄重地说、许愿」。",
+  "<b class='serif'>invoice</b>（发票）里藏着一个 voice，却和声音无关：它是法语 envois「寄出去的东西」，来自 envoyer「送出」，根子是拉丁语 via「路」。",
+  "<b class='serif'>avocado</b>（牛油果）和 advocate 长得像，还真沾了点边：它本是阿兹特克人的纳瓦特尔语 ahuakatl，西班牙语受民间词源影响，把它改成了自己现成的词 avocado「律师」——这个「律师」和 advocate 同出一源。果子本身和「叫」无关。",
+  "<b class='serif'>vouch</b>（担保）、<b class='serif'>voucher</b>（代金券）倒是真亲戚：古法语 vocher「叫来、传唤」，最早指把人叫上法庭，替产权作保；voucher 作「可以换东西的凭证」1947 年起才有。"
+ ],
+ "transfer": [
+  [
+   "vocation = vocat（被叫）+ -ion",
+   "被叫去做的事：天职、使命，后来泛指职业。1550 年代起有「职业」义；vocational school 职业学校。"
+  ],
+  [
+   "convocation = con-（一起）+ vocat + -ion",
+   "把大家叫到一起：召集、（正式的）集会。"
+  ],
+  [
+   "equivocal = equi-（相等）+ voc + -al",
+   "两种说法一样响，听不出到底是哪个：模棱两可的、含糊的。反过来 unequivocal，明确的、毫不含糊的。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取，scripts/etym.py），2026-10-28；VOCALOID 名称：Yamaha 官网 The Key 专栏，2023-03-15"
+}

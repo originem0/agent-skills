@@ -1,0 +1,674 @@
+{
+ "title": "从一张小票开始：cap / cip / cept / ceive「拿、抓」一家",
+ "root": {
+  "m": "cap",
+  "cn": "拿、抓",
+  "variants": [
+   {
+    "m": "capt",
+    "note": "过去分词 captus 的词干",
+    "ex": "capture"
+   },
+   {
+    "m": "cept",
+    "note": "前面加了前缀的过去分词词干",
+    "ex": "accept"
+   },
+   {
+    "m": "cip",
+    "note": "加前缀后 a 弱化成 i（-cipere）",
+    "ex": "anticipate"
+   },
+   {
+    "m": "ceive",
+    "note": "-cipere 经古法语变形",
+    "ex": "receive"
+   }
+  ]
+ },
+ "seqTitle": "同一只手在拿，换个方向就是一个新词",
+ "opening": {
+  "type": "scene",
+  "big": "RECEIPT ＝ 小票、收据",
+  "say": "超市小票上印着 RECEIPT，可没人把那个 p 念出来。它既不发音，凭什么待在那儿？",
+  "muted": "那个哑巴 p 是一个拉丁动词留下的指纹。顺着它，能摸出一整家人：抓住、接受、除外、截住、预料、收到……最后还会回到你家厨房。",
+  "scene": [
+   {
+    "k": "paper",
+    "x": 140,
+    "y": 58,
+    "label": "RECEIPT"
+   },
+   {
+    "k": "tag",
+    "x": 208,
+    "y": 30,
+    "text": "p 不发音？",
+    "tone": "pre"
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      196,
+      36
+     ],
+     [
+      164,
+      50
+     ]
+    ],
+    "dash": 1
+   }
+  ],
+  "caption": "一张印着 RECEIPT 的购物小票"
+ },
+ "anchor": {
+  "text": "记住这个画面：一个人，伸手把一样东西拿住。",
+  "more": "接下来每个词，都是这只手在拿，只是换了方向——直接抓住、朝自己接过来、从一堆里拿出去、在半路截住、提前拿、拿回自己这儿。",
+  "scene": [
+   {
+    "k": "fig",
+    "x": 96,
+    "pose": "give"
+   },
+   {
+    "k": "circle",
+    "x": 130,
+    "y": 64,
+    "r": 7
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      196,
+      64
+     ],
+     [
+      144,
+      64
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "circle",
+    "x": 210,
+    "y": 64,
+    "r": 7,
+    "op": 0.3
+   }
+  ],
+  "caption": "cap 的母画面：伸手拿住"
+ },
+ "words": [
+  {
+   "w": "capture",
+   "split": [
+    "",
+    "capt",
+    "ure"
+   ],
+   "node": "capt",
+   "parts": [
+    {
+     "m": "capt",
+     "cn": "抓住（captus）",
+     "kind": "r"
+    },
+    [
+     "-ure",
+     "……的动作"
+    ]
+   ],
+   "link": "先看最原始的样子：没有前缀，直接一把抓住。",
+   "literal": "一把抓住跑动的东西",
+   "caption": "伸手抓住一只正要逃走的鸟",
+   "bridge": "东西在跑，你一把抓住不放——这就是捕获。拍照叫 capture 也一样：把一瞬间抓住、留下来。",
+   "meaning": "v. 捕获；夺取；（照片、文字）捕捉、记录　n. 捕获",
+   "senses": [
+    "capture the moment 抓住那一刻",
+    "screen capture 截屏",
+    "captive n. 俘虏：被抓住的人"
+   ],
+   "ex": [
+    "The photo captures the moment perfectly.",
+    "这张照片把那一刻抓得恰到好处。"
+   ],
+   "caveat": "capt 是过去分词 captus（被拿住的）的词干。拉丁语动词不同时态词干不同：capere 现在时、captus 过去分词，后面的 cept 就从这里来。",
+   "fact": "拉丁语 captura「捕获（尤指猎物）」← captus，capere「拿、抓」的过去分词；英语名词 1540 年代，动词 1779 年",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 80,
+     "pose": "point"
+    },
+    {
+     "k": "circle",
+     "x": 108,
+     "y": 50,
+     "r": 6,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       180,
+       40
+      ],
+      [
+       116,
+       46
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "circle",
+     "x": 196,
+     "y": 40,
+     "r": 6,
+     "op": 0.3
+    }
+   ]
+  },
+  {
+   "w": "accept",
+   "split": [
+    "ac",
+    "cept"
+   ],
+   "node": "ac-",
+   "parts": [
+    {
+     "m": "ac-",
+     "cn": "朝向",
+     "of": "ad-"
+    },
+    [
+     "cept",
+     "拿（captus 的变体）"
+    ]
+   ],
+   "link": "加一个方向：朝自己这边拿。",
+   "literal": "把递来的东西接到手里",
+   "caption": "一个人递出，另一个人伸手接过来",
+   "bridge": "别人递过来，你伸手接住，没往回推——收下礼物、接受邀请、认可一个说法，都是这一个「接过来」。",
+   "meaning": "v. 接受；同意；认可",
+   "senses": [
+    "acceptable adj. 可以接受的",
+    "accept an offer / an apology 接受录用、接受道歉"
+   ],
+   "ex": [
+    "She accepted the job offer.",
+    "她接受了这份工作。"
+   ],
+   "caveat": "ad- 碰到 c 同化成 ac-，所以有两个 c。加了前缀，词根 capt 里的 a 弱化成 e，就成了 cept。",
+   "fact": "拉丁语 acceptare「欣然接受」，accipere 的反复动词 = ad「朝向」+ capere「拿」；英语 14 世纪晚期",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 80,
+     "pose": "give"
+    },
+    {
+     "k": "circle",
+     "x": 112,
+     "y": 64,
+     "r": 7,
+     "op": 0.3
+    },
+    {
+     "k": "fig",
+     "x": 200,
+     "pose": "give",
+     "flip": 1
+    },
+    {
+     "k": "circle",
+     "x": 168,
+     "y": 64,
+     "r": 7
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       160,
+       40
+      ],
+      [
+       118,
+       40
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "except",
+   "split": [
+    "ex",
+    "cept"
+   ],
+   "node": "ex-",
+   "parts": [
+    [
+     "ex-",
+     "向外"
+    ],
+    [
+     "cept",
+     "拿"
+    ]
+   ],
+   "link": "反过来：不是拿进来，而是从一堆里拿出去。",
+   "literal": "从一堆里拿出一个",
+   "caption": "一排球里，把其中一个拿到外面",
+   "bridge": "一排人都算数，把其中一个单独拿出去——剩下的是「所有人」，拿出去的那个就是「除了他」。",
+   "meaning": "prep./conj. 除了……之外　v. 把……除外",
+   "senses": [
+    "exception n. 例外：被拿出去的那个",
+    "exceptional adj. 非同寻常的——不在一般之列"
+   ],
+   "ex": [
+    "Everyone came except Tom.",
+    "除了汤姆，大家都来了。"
+   ],
+   "caveat": "别和 accept 混：ac- 是拿进来、接受；ex- 是拿出去、除外。两个词读音很近，方向正好相反。",
+   "fact": "拉丁语 excipere「拿出、保留、作为例外」= ex「向外」+ capere；「排除在外」义始于 1510 年代，后转作介词、连词",
+   "scene": [
+    {
+     "k": "circle",
+     "x": 40,
+     "y": 96,
+     "r": 7
+    },
+    {
+     "k": "circle",
+     "x": 60,
+     "y": 96,
+     "r": 7
+    },
+    {
+     "k": "circle",
+     "x": 80,
+     "y": 96,
+     "r": 7,
+     "op": 0.3
+    },
+    {
+     "k": "circle",
+     "x": 100,
+     "y": 96,
+     "r": 7
+    },
+    {
+     "k": "circle",
+     "x": 120,
+     "y": 96,
+     "r": 7
+    },
+    {
+     "k": "fig",
+     "x": 200,
+     "pose": "give",
+     "flip": 1
+    },
+    {
+     "k": "circle",
+     "x": 168,
+     "y": 64,
+     "r": 7
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       84,
+       80
+      ],
+      [
+       150,
+       62
+      ]
+     ],
+     "dash": 1,
+     "curve": 0
+    }
+   ]
+  },
+  {
+   "w": "intercept",
+   "split": [
+    "inter",
+    "cept"
+   ],
+   "node": "inter-",
+   "parts": [
+    [
+     "inter-",
+     "在……之间"
+    ],
+    [
+     "cept",
+     "拿"
+    ]
+   ],
+   "link": "东西正在两个人之间飞，第三个人伸手——",
+   "literal": "在半路上拿走",
+   "caption": "两人传球，中间的人伸手截住",
+   "bridge": "球从左边传向右边，还没到，就被中间的人一把拿住。足球里的「抢断」、导弹「拦截」、情报「截获」，都是这一下。",
+   "meaning": "v. 拦截；截获；截住",
+   "senses": [
+    "interception n. 拦截；（球赛）抢断",
+    "intercept a message 截获消息"
+   ],
+   "ex": [
+    "The police intercepted the package at the border.",
+    "警方在边境截获了那个包裹。"
+   ],
+   "fact": "拉丁语 intercipere「在中间拿住、半路夺取」= inter「之间」+ -cipere（capere 的复合形式）；「截住来往的人或物」义 1540 年代",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 36,
+     "pose": "give"
+    },
+    {
+     "k": "fig",
+     "x": 244,
+     "pose": "give",
+     "flip": 1
+    },
+    {
+     "k": "fig",
+     "x": 140,
+     "pose": "carry",
+     "s": 0.85
+    },
+    {
+     "k": "circle",
+     "x": 150,
+     "y": 38,
+     "r": 6
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       70,
+       64
+      ],
+      [
+       132,
+       44
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       164,
+       44
+      ],
+      [
+       206,
+       64
+      ]
+     ],
+     "dash": 1,
+     "op": 0.3
+    }
+   ]
+  },
+  {
+   "w": "anticipate",
+   "split": [
+    "anti",
+    "cip",
+    "ate"
+   ],
+   "node": "anti-",
+   "parts": [
+    {
+     "m": "anti-",
+     "cn": "在前、提前（ante 的旧形）",
+     "kind": "p"
+    },
+    [
+     "cip",
+     "拿（capere 的弱化形）"
+    ],
+    [
+     "-ate",
+     "动词后缀"
+    ]
+   ],
+   "link": "换成时间上的方向：东西还没到，先拿。",
+   "literal": "东西还没到，先伸手",
+   "caption": "球还在半空，人已经提前把手伸到落点",
+   "bridge": "别人还没扔，你已经把手伸到它要落下的地方——心里先把未来「拿」住了。所以它是预料、预见，还带着「提前准备好」的意思。",
+   "meaning": "v. 预料、预见；（提前）预备应对；期待",
+   "senses": [
+    "anticipation n. 预期；期待",
+    "highly anticipated 万众期待的"
+   ],
+   "ex": [
+    "We didn't anticipate so many guests.",
+    "我们没料到会来这么多客人。"
+   ],
+   "caveat": "这里的 anti- 不是「反对」，而是 ante「在前」的旧形。加了前缀，capere 的 a 弱化成 i，所以是 cip。",
+   "fact": "拉丁语 anticipare「提前拿、预先占有」= anti（ante「在前」的旧形）+ capere；「预料到」义 1640 年代",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 70,
+     "pose": "give"
+    },
+    {
+     "k": "spot",
+     "x": 104,
+     "label": "落点"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       220,
+       30
+      ],
+      [
+       180,
+       20
+      ],
+      [
+       108,
+       52
+      ]
+     ],
+     "dash": 1,
+     "curve": 1
+    },
+    {
+     "k": "circle",
+     "x": 224,
+     "y": 32,
+     "r": 6,
+     "op": 0.3
+    },
+    {
+     "k": "fig",
+     "x": 232,
+     "pose": "carry",
+     "flip": 1,
+     "op": 0.3
+    }
+   ]
+  },
+  {
+   "w": "receive",
+   "split": [
+    "re",
+    "ceive"
+   ],
+   "node": "re-",
+   "parts": [
+    [
+     "re-",
+     "回（这里的确切含义存疑）"
+    ],
+    [
+     "ceive",
+     "拿（经法语变形）"
+    ]
+   ],
+   "link": "最后，把东西拿回到自己这儿。",
+   "literal": "把来的东西收到自己这儿",
+   "caption": "一封信从远处飞来，被收到手里",
+   "bridge": "信、包裹、消息从外面来，落到你手里，归你了——这是收到。所以收件人叫 recipient，收据叫 receipt。",
+   "meaning": "v. 收到；接待；受到（对待）",
+   "senses": [
+    "receiver n. 接收者；听筒",
+    "reception n. 接待；前台；信号",
+    "recipient n. 收件人、领受者"
+   ],
+   "ex": [
+    "Did you receive my email?",
+    "你收到我的邮件了吗？"
+   ],
+   "caveat": "ceive 是 -cipere 经古法语变形：拉丁语 recipere → 法语 receivre → receive。同一个词的名词 reception 又回到了 cept。",
+   "fact": "古北法语 receivre ← 拉丁语 recipere「收回、收进来」= re-「回」（etymonline：确切含义不明）+ -cipere（capere 的复合形式）；英语约 1300 年",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 76,
+     "pose": "give"
+    },
+    {
+     "k": "envelope",
+     "x": 112,
+     "y": 62
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       220,
+       40
+      ],
+      [
+       130,
+       56
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "envelope",
+     "x": 230,
+     "y": 36,
+     "op": 0.3
+    }
+   ]
+  }
+ ],
+ "finale": {
+  "w": "recipe",
+  "split": [
+   "re",
+   "cip",
+   "e"
+  ],
+  "node": "↩",
+  "parts": [
+   [
+    "re-",
+    "回（这里的确切含义存疑）"
+   ],
+   [
+    "cip",
+    "拿"
+   ],
+   [
+    "-e",
+    "命令式词尾"
+   ]
+  ],
+  "link": "回到开头那张 RECEIPT。它有个亲兄弟，就在你家厨房里。",
+  "literal": "「拿！」",
+  "caption": "一张纸，上面写着「拿：……」",
+  "bridge": "中世纪医生开药方，第一个字写 recipe——拉丁语「你拿！」，后面列这味药、那味药。药方慢慢变成做菜的配方，就是今天的 recipe。小票 receipt 当年也指药方，它的 p 正是学者照拉丁语补回去的，只补了字形，没补读音。",
+  "meaning": "n. 菜谱、食谱；秘诀、方法",
+  "senses": [
+   "a recipe for disaster 祸根：必然出事的「配方」",
+   "药方符号 Rx 就是 recipe 的缩写"
+  ],
+  "ex": [
+   "Can you share the recipe for this cake?",
+   "能把这个蛋糕的做法告诉我吗？"
+  ],
+  "caveat": "conceit、deceit 当年也被补过 p，后来都掉了，只有 receipt 留下了这个哑巴 p。",
+  "fact": "拉丁语 recipe「拿！」，recipere 的命令式，写在药方开头；英语 1580 年代指药方，1716 年起指食谱；receipt 的 -p- 约 1500 年后照拉丁语恢复，读音未变",
+  "scene": [
+   {
+    "k": "paper",
+    "x": 120,
+    "y": 58,
+    "label": "Recipe:"
+   },
+   {
+    "k": "fig",
+    "x": 220,
+    "pose": "point",
+    "flip": 1
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      196,
+      50
+     ],
+     [
+      150,
+      50
+     ]
+    ],
+    "dash": 1
+   }
+  ]
+ },
+ "daily": [
+  "receipt 收据（哑巴 p）",
+  "catch 接住（经法语）",
+  "capacity 容量（能拿多少）",
+  "recipient 收件人"
+ ],
+ "traps": [
+  "<b class='serif'>captain</b>（船长、队长）和 <b class='serif'>capital</b>（首都、大写字母、资本）长得最像，却<b>不是这一家</b>：它们来自拉丁语 caput「头」。队长是「站在最前头的人」，首都是国家的头，大写字母站在句子的头上。",
+  "<b class='serif'>chief</b>（首领）也是 caput「头」，经法语变了形，和 captain 是一家，和 capture 不是。",
+  "<b class='serif'>cap</b>（帽子）来自晚期拉丁语 cappa「斗篷、头巾」，etymonline 标「来源不确定」，可能和 caput「头」有关，总之不是「拿」。<b class='serif'>escape</b> 是「从斗篷里溜出去」，也是 cappa。",
+  "<b class='serif'>catch</b> 倒是真亲戚：经法语来自拉丁语 captare，capere 的反复动词。"
+ ],
+ "transfer": [
+  [
+   "perceive = per-（彻底）+ ceive",
+   "彻底拿住——用脑子把它整个抓住：察觉、感知。perception 感知，又回到了 cept。"
+  ],
+  [
+   "deceive = de-（从……，带贬义）+ ceive",
+   "把人「拿进」圈套：欺骗。deceit 欺骗——它当年也被补过 p，后来掉了。"
+  ],
+  [
+   "participate = parti-（部分）+ cip + -ate",
+   "拿走属于自己的那一部分：参与、分享。participant 参与者。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取，scripts/etym.py），2026-10-28"
+}

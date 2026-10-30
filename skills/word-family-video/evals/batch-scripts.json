@@ -1,0 +1,10 @@
+{
+  "query": "/word-family-video 给 tract 和 pend 各写一份视频脚本",
+  "files": [],
+  "expected_behavior": [
+    "逐课完成；只有用户允许并行代理且环境支持时才分工，不依赖固定模型名",
+    "每份脚本先跑 brief，写完跑 plan 到无错误无提醒，并按 script_guide 自查",
+    "两课的 spine 不同（tract 方向型、pend 演变型）；每个真实事件都有已打开核实的 > 来源 链接；照片适合内容且带署名，不强制配额",
+    "写完就停下，汇报主线、时长、事件与图片及出处和试听音频路径；不自行审稿、不自行 mark approved、不渲染"
+  ]
+}

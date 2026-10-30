@@ -1,0 +1,765 @@
+{
+ "title": "从一台对折的手机开始：dis- / di- / dif-「分开、否定」一家",
+ "root": {
+  "m": "dis-",
+  "cn": "分开；不",
+  "variants": [
+   {
+    "m": "dif-",
+    "note": "f 前",
+    "ex": "different"
+   },
+   {
+    "m": "di-",
+    "note": "多数浊辅音前，如 v、g、l",
+    "ex": "divide"
+   }
+  ]
+ },
+ "seqTitle": "同一下「一分为二」：先分开，再拿开，最后成了「不」",
+ "opening": {
+  "type": "news",
+  "big": "iPhone Duo：名字里有个「二」",
+  "say": "2026 年 9 月 9 日，苹果发布了第一款折叠 iPhone，叫 iPhone Duo：从中间一折，就是两半。名字里正好有个 duo，拉丁语的「二」。英语里有个前缀是 duo 的远亲：dis。可今天的 dis，最常见的意思却是「不」——dislike 不喜欢，disappear 消失。从「二」到「不」，中间发生了什么？",
+  "muted": "答案是一个动作：一分为二，各走一边。顺着它，会走过切开、站开、不同、发现、不喜欢、困难……最后回到这台手机打开的那块屏幕上。",
+  "caption": "iPhone Duo：左边合着，右边打开（苹果新闻稿配图）",
+  "photo": {
+   "file": "media/dis/opening.jpg",
+   "credit": "来源：apple.com（Apple Newsroom 新闻稿配图），2026-10-28",
+   "source": "https://www.apple.com/newsroom/images/2026/09/apple-unveils-iphone-duo/article/Apple-iPhone-Duo-display-sizes-260909_big.jpg.large_2x.jpg"
+  },
+  "source": {
+   "title": "Apple unveils iPhone Duo（Apple Newsroom 新闻稿）",
+   "url": "https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/",
+   "date": "2026-09-09"
+  }
+ },
+ "anchor": {
+  "text": "记住这个画面：一样东西从中间分成两半，各走一边。",
+  "more": "dis 的本义就是「分成两路」：etymonline 说，它和拉丁语 duo「二」、bis「两次」同源。接下来每个词都是这一下「分开」——切成两半、两人站开、分到两边、把盖着的拿开；拿掉的要是「喜欢」「容易」，dis 就成了「不」。",
+  "scene": [
+   {
+    "k": "table",
+    "x": 140,
+    "top": 84,
+    "w": 220
+   },
+   {
+    "k": "rect",
+    "x": 110,
+    "y": 56,
+    "w": 60,
+    "h": 28,
+    "r": 4,
+    "op": 0.3
+   },
+   {
+    "k": "line",
+    "x1": 140,
+    "y1": 46,
+    "x2": 140,
+    "y2": 92,
+    "c": "#b84a14",
+    "dash": 1
+   },
+   {
+    "k": "rect",
+    "x": 50,
+    "y": 56,
+    "w": 30,
+    "h": 28,
+    "r": 4
+   },
+   {
+    "k": "rect",
+    "x": 200,
+    "y": 56,
+    "w": 30,
+    "h": 28,
+    "r": 4
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      126,
+      40
+     ],
+     [
+      80,
+      40
+     ]
+    ],
+    "dash": 1
+   },
+   {
+    "k": "arrow",
+    "pts": [
+     [
+      154,
+      40
+     ],
+     [
+      200,
+      40
+     ]
+    ],
+    "dash": 1
+   }
+  ],
+  "caption": "dis- 的母画面：一分为二，往两边分开"
+ },
+ "words": [
+  {
+   "w": "divide",
+   "split": [
+    "di",
+    "vide"
+   ],
+   "node": "di-",
+   "parts": [
+    {
+     "m": "di-",
+     "cn": "分开",
+     "of": "dis-"
+    },
+    [
+     "vide",
+     "分（拉丁语 -videre）"
+    ]
+   ],
+   "link": "先看最直接的一刀：一个，从中间变成两个。",
+   "literal": "从中间切成两半",
+   "caption": "一张饼从中间切开，两个人一人一半",
+   "bridge": "一张饼从中间一刀切下去，两个人一人一半——这就是 divide：分开、分成几份。数学里的除法也是它：10 divided by 2，就是把 10 分成两份。",
+   "meaning": "v. 分开，划分；分配；除（数学）",
+   "senses": [
+    "division n. 分开；部门；除法",
+    "divided by 除以：10 divided by 2 is 5",
+    "divide and rule 分而治之：约 1600 年译自拉丁语 divide et impera"
+   ],
+   "ex": [
+    "Divide the cake into four pieces.",
+    "把蛋糕切成四块。"
+   ],
+   "caveat": "dis- 碰到 v 这类浊辅音，s 就脱落了，只剩 di-。",
+   "fact": "拉丁语 dividere「强行分开、劈开、分配」= dis-「分开」（同化形式）+ -videre「分开」；据 de Vaan，这个古老动词本义就是「一分为二」，拉丁语又加 dis- 加强；英语 14 世纪早期，数学「除」义 15 世纪早期",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 40,
+     "pose": "give"
+    },
+    {
+     "k": "fig",
+     "x": 240,
+     "pose": "give",
+     "flip": 1
+    },
+    {
+     "k": "path",
+     "d": "M134,46 A24,24 0 0,0 134,94 Z",
+     "fill": "#f3d9c6"
+    },
+    {
+     "k": "path",
+     "d": "M146,46 A24,24 0 0,1 146,94 Z",
+     "fill": "#f3d9c6"
+    },
+    {
+     "k": "line",
+     "x1": 140,
+     "y1": 36,
+     "x2": 140,
+     "y2": 104,
+     "c": "#b84a14",
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       106,
+       74
+      ],
+      [
+       78,
+       74
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       174,
+       74
+      ],
+      [
+       202,
+       74
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "distance",
+   "split": [
+    "dis",
+    "tance"
+   ],
+   "node": "dis-",
+   "parts": [
+    [
+     "dis-",
+     "分开"
+    ],
+    [
+     "tance",
+     "站（拉丁语 stare）"
+    ]
+   ],
+   "link": "切开的是东西。要是两个人，本来站在一起，后来各站一边呢？",
+   "literal": "两个人分开站",
+   "caption": "两个人本来站在一起，一个往旁边站开了",
+   "bridge": "本来肩并肩，后来一个往旁边站开：两人中间空出来的那一段，就是 distance，距离。有意思的是，英语里它最早（约 1300 年）指的是争吵、不和，到 14 世纪晚期才有「两地相隔多远」的意思。",
+   "meaning": "n. 距离；远处；（关系上的）疏远　v. 与……保持距离",
+   "senses": [
+    "distant adj. 远的；疏远的",
+    "keep your distance 保持距离：最早是比喻义（约 1600 年）",
+    "at a distance 在远处（1650 年代）"
+   ],
+   "ex": [
+    "Keep your distance from the car in front.",
+    "和前车保持距离。"
+   ],
+   "caveat": "dis- 碰上 stare，两个 s 并成一个：dis + stare → distare。",
+   "fact": "拉丁语 distantia「站开」← distare「站开、相隔」= dis-「分开」+ stare「站」；英语约 1300 年先指「争执、不和」（经古法语 destance），「空间上的距离」义 14 世纪晚期",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 56,
+     "pose": "stand"
+    },
+    {
+     "k": "fig",
+     "x": 102,
+     "pose": "stand",
+     "op": 0.3
+    },
+    {
+     "k": "fig",
+     "x": 224,
+     "pose": "stand",
+     "flip": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       118,
+       44
+      ],
+      [
+       204,
+       44
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       140,
+       116
+      ],
+      [
+       70,
+       116
+      ]
+     ]
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       140,
+       116
+      ],
+      [
+       210,
+       116
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "w": "different",
+   "split": [
+    "dif",
+    "fer",
+    "ent"
+   ],
+   "node": "dif-",
+   "parts": [
+    {
+     "m": "dif-",
+     "cn": "分开",
+     "of": "dis-"
+    },
+    [
+     "fer",
+     "搬、放（拉丁语 ferre）"
+    ],
+    [
+     "-ent",
+     "……的"
+    ]
+   ],
+   "link": "站开的是人。要是把一堆东西分开，放到两边呢？",
+   "literal": "分开放到两边",
+   "caption": "混在一起的一堆，被分到两边：圆的放左边，方的放右边",
+   "bridge": "一堆东西混在一起，你把圆的放左边，方的放右边。凭什么能分到两边？因为它们不一样。拉丁语 differre 是「分开放」，它的分词 differens 已经就是「不同的」了。",
+   "meaning": "adj. 不同的，不一样的；各种各样的",
+   "senses": [
+    "differ v. 不同；difference n. 差别",
+    "different from 和……不一样",
+    "「特别、与众不同」的口语义，1912 年起"
+   ],
+   "ex": [
+    "The twins look alike, but their voices are different.",
+    "这对双胞胎长得像，声音却不一样。"
+   ],
+   "caveat": "dis- 碰到 f，s 也跟着变成 f：dif + fer，所以 different 有两个 f。",
+   "fact": "拉丁语 differens「不同的」，differre「分开放」的现在分词 = dis-「分开、离开」（同化形式）+ ferre「搬、带」；英语 14 世纪晚期",
+   "scene": [
+    {
+     "k": "circle",
+     "x": 129,
+     "y": 99,
+     "r": 8,
+     "op": 0.3
+    },
+    {
+     "k": "rect",
+     "x": 139,
+     "y": 91,
+     "w": 16,
+     "h": 16,
+     "op": 0.3
+    },
+    {
+     "k": "circle",
+     "x": 147,
+     "y": 81,
+     "r": 8,
+     "op": 0.3
+    },
+    {
+     "k": "circle",
+     "x": 52,
+     "y": 99,
+     "r": 8,
+     "fill": "#f3d9c6"
+    },
+    {
+     "k": "circle",
+     "x": 70,
+     "y": 99,
+     "r": 8,
+     "fill": "#f3d9c6"
+    },
+    {
+     "k": "circle",
+     "x": 61,
+     "y": 84,
+     "r": 8,
+     "fill": "#f3d9c6"
+    },
+    {
+     "k": "rect",
+     "x": 202,
+     "y": 91,
+     "w": 16,
+     "h": 16
+    },
+    {
+     "k": "rect",
+     "x": 220,
+     "y": 91,
+     "w": 16,
+     "h": 16
+    },
+    {
+     "k": "rect",
+     "x": 211,
+     "y": 75,
+     "w": 16,
+     "h": 16
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       120,
+       62
+      ],
+      [
+       86,
+       62
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       160,
+       62
+      ],
+      [
+       194,
+       62
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "discover",
+   "split": [
+    "dis",
+    "cover"
+   ],
+   "node": "dis-",
+   "parts": [
+    [
+     "dis-",
+     "拿开、反过来"
+    ],
+    [
+     "cover",
+     "盖上"
+    ]
+   ],
+   "link": "分开的，也可以是盖子和它底下的东西：把盖着的拿开。",
+   "literal": "把盖着的拿开",
+   "caption": "把盖子从箱子上拿开，里面的东西露了出来",
+   "bridge": "cover 是盖上。dis 把它反过来：盖子一拿开，底下的东西露出来，你看见了——这不就是发现吗？中古英语里，它还真说过摘下帽子、掀掉屋顶。",
+   "meaning": "v. 发现；发觉，得知",
+   "senses": [
+    "discovery n. 发现",
+    "最早（约 1300 年）是「揭开、泄露」，常指揭人秘密；「头一回见到、得知原本不知道的东西」1550 年代起才成为主要意思",
+    "discover 和 invent：discover 是找到本来就有的，invent 是造出本来没有的"
+   ],
+   "ex": [
+    "She discovered a small café behind the station.",
+    "她在车站后面发现了一家小咖啡馆。"
+   ],
+   "caveat": "这里的 dis- 是「反着做」：把 cover（盖上）反过来。从「分开」到「拿开」，只差一步。",
+   "fact": "古法语 descovrir「揭开、掀顶、泄露」← 中世纪拉丁语 discooperire = dis-「反着做」+ cooperire「盖住」；英语约 1300 年，「发现」义 1550 年代",
+   "scene": [
+    {
+     "k": "apple",
+     "x": 128
+    },
+    {
+     "k": "rect",
+     "x": 96,
+     "y": 86,
+     "w": 64,
+     "h": 22
+    },
+    {
+     "k": "rect",
+     "x": 92,
+     "y": 80,
+     "w": 72,
+     "h": 6,
+     "r": 2,
+     "op": 0.3
+    },
+    {
+     "k": "path",
+     "d": "M170,50 L230,38 L231,44 L171,56 Z",
+     "fill": "#efe9de",
+     "c": "#5e6670"
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       158,
+       74
+      ],
+      [
+       182,
+       60
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "fig",
+     "x": 250,
+     "pose": "point",
+     "flip": 1
+    }
+   ]
+  },
+  {
+   "w": "dislike",
+   "split": [
+    "dis",
+    "like"
+   ],
+   "node": "dis-",
+   "parts": [
+    [
+     "dis-",
+     "不"
+    ],
+    [
+     "like",
+     "喜欢"
+    ]
+   ],
+   "link": "拿开的要是一样看不见的东西呢？比如，把「喜欢」拿掉。",
+   "literal": "把喜欢拿掉",
+   "caption": "原来的那点喜欢，被拿走了",
+   "bridge": "喜欢被拿掉，剩下的就是不喜欢、反感。dis 走到这一步，已经成了「不」：dishonest 不诚实，disappear 不见了，都是这么造的。",
+   "meaning": "v. 不喜欢，反感　n. 反感；不喜欢的东西",
+   "senses": [
+    "likes and dislikes 喜欢和不喜欢的东西",
+    "它挤掉了英语本土的 mislike，成了 like 的反义词",
+    "16 世纪英语里还有个 dislove「不再爱、恨」，没能活下来"
+   ],
+   "ex": [
+    "I dislike crowded places.",
+    "我不喜欢人多的地方。"
+   ],
+   "caveat": "dislike 是法语来的 dis- 拼上英语本土的 like，etymonline 管它叫「混血词」。",
+   "fact": "dis-「不、反着做」+ like；1540 年代，取代了本土的 mislike；16 世纪还有 dislove「不再爱」，没有流传下来",
+   "scene": [
+    {
+     "k": "fig",
+     "x": 62,
+     "pose": "withdraw"
+    },
+    {
+     "k": "heart",
+     "x": 112,
+     "y": 52,
+     "op": 0.3
+    },
+    {
+     "k": "heart",
+     "x": 214,
+     "y": 52
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       132,
+       48
+      ],
+      [
+       192,
+       48
+      ]
+     ],
+     "dash": 1
+    }
+   ]
+  },
+  {
+   "w": "difficult",
+   "split": [
+    "dif",
+    "ficult"
+   ],
+   "node": "dif-",
+   "parts": [
+    {
+     "m": "dif-",
+     "cn": "不",
+     "of": "dis-"
+    },
+    [
+     "ficult",
+     "容易（拉丁语 facilis 变了形）"
+    ]
+   ],
+   "link": "最后，拿掉的是「容易」。",
+   "literal": "做起来不容易",
+   "caption": "推着一块大石头上坡",
+   "bridge": "拉丁语 facilis，是「容易做的」。前面加个 dis，「容易」被拿掉，就是 difficilis：难。英语先借来了名词 difficulty，形容词 difficult 是后来从它倒推出来的。",
+   "meaning": "adj. 困难的，难做的；（人）难相处的",
+   "senses": [
+    "difficulty n. 困难：这个名词比 difficult 来得早",
+    "a difficult person 难伺候的人：1580 年代起"
+   ],
+   "ex": [
+    "The last question was really difficult.",
+    "最后一道题真的很难。"
+   ],
+   "caveat": "dis- 碰到 f 又成了 dif-，所以 difficult 也有两个 f。同一个 dif-，在 different 里是「分开」，在这里已经是「不」。",
+   "fact": "difficulty（14 世纪晚期）← 拉丁语 difficultas ← difficilis「难」= dis-「不、离开」（同化形式）+ facilis「容易做的」；形容词 difficult 约 1400 年，是从 difficulty 倒推出来的",
+   "scene": {
+    "ground": false,
+    "items": [
+     {
+      "k": "path",
+      "d": "M16,110 L264,54",
+      "c": "#5e6670",
+      "sw": 2
+     },
+     {
+      "k": "fig",
+      "x": 110,
+      "y": 89,
+      "pose": "push"
+     },
+     {
+      "k": "rock",
+      "x": 160,
+      "y": 55,
+      "r": 22
+     },
+     {
+      "k": "arrow",
+      "pts": [
+       [
+        192,
+        30
+       ],
+       [
+        236,
+        20
+       ]
+      ],
+      "dash": 1
+     }
+    ]
+   }
+  }
+ ],
+ "finale": {
+  "w": "display",
+  "split": [
+   "dis",
+   "play"
+  ],
+  "node": "↩",
+  "parts": [
+   [
+    "dis-",
+    "反过来、展开"
+   ],
+   {
+    "m": "play",
+    "cn": "折（拉丁语 plicare 经法语）",
+    "kind": "r"
+   }
+  ],
+  "link": "回到开头那台对折的手机。打开它，你看见的那块屏幕，英文叫什么？",
+  "literal": "把折着的打开",
+  "caption": "合着的对折成两半；打开，铺成一整块",
+  "bridge": "display 不是「dis + 玩」。这个 play 是拉丁语 plicare「折」，经法语磨了形；dis 把「折」反过来，就是打开、展开。最早说的是展开旗子和船帆，后来是展示，再后来，是屏幕。一台名字里有「二」的手机，打开的正是一块 display。",
+  "meaning": "n. 显示屏；展示，陈列　v. 展示，显示",
+  "senses": [
+   "on display 在展出",
+   "「展示、展现」14 世纪晚期起",
+   "「屏幕上显示电子信号」：1945 年起说雷达，1960 年起说电脑"
+  ],
+  "ex": [
+   "Her paintings are on display at the library.",
+   "她的画正在图书馆展出。"
+  ],
+  "caveat": "etymonline 特意注明：display 和 play（玩）没有关系。",
+  "fact": "古法语 desploiir「展开、解开」← 拉丁语 displicare「散开」，中世纪拉丁语义「展开」= dis-「反过来、分开」+ plicare「折」；英语约 1300 年指展开旗帜、船帆，「展示」义 14 世纪晚期，「屏幕显示」义 1945 年起（雷达）",
+  "scene": {
+   "ground": false,
+   "items": [
+    {
+     "k": "rect",
+     "x": 34,
+     "y": 40,
+     "w": 38,
+     "h": 58,
+     "r": 6,
+     "op": 0.3
+    },
+    {
+     "k": "arrow",
+     "pts": [
+      [
+       86,
+       69
+      ],
+      [
+       124,
+       69
+      ]
+     ],
+     "dash": 1
+    },
+    {
+     "k": "rect",
+     "x": 138,
+     "y": 30,
+     "w": 104,
+     "h": 78,
+     "r": 6
+    },
+    {
+     "k": "line",
+     "x1": 190,
+     "y1": 30,
+     "x2": 190,
+     "y2": 108,
+     "c": "#b84a14",
+     "dash": 1
+    },
+    {
+     "k": "arrow",
+     "d": "M178,20 Q190,8 202,20",
+     "dash": 1
+    }
+   ]
+  }
+ },
+ "daily": [
+  "dinner 晚饭（本义开斋）",
+  "disappear 消失",
+  "dishonest 不诚实",
+  "difficulty 困难"
+ ],
+ "traps": [
+  "<b class='serif'>dismal</b>（阴沉的、惨淡的）开头也是 dis，却<b>不是这一家</b>：它来自中世纪拉丁语 dies mali「倒霉的日子」，开头的 dis 是 dies「日子」。",
+  "<b class='serif'>dilemma</b>（两难）开头的 di 也<b>不是 dis 的变体</b>：它是希腊语的「二」。dilemma 本是修辞学里的「双重命题」，后来泛指两个选项都不好受的处境。"
+ ],
+ "transfer": [
+  [
+   "disconnect = dis-（反过来）+ connect（连接）",
+   "把连上的反过来：断开连接。手机 Wi-Fi、蓝牙里的 Disconnect，就是「断开」。etymonline 记它最早见于 1770 年。"
+  ],
+  [
+   "digest = di-（分开）+ gest（运、带）",
+   "把吃下去的东西「运开」、分到各处：消化。拉丁语 digerere 的本义就是「分开、划分、整理」；名词 digest 是分门别类整理好的文摘。"
+  ],
+  [
+   "diffuse = dif-（往四面）+ fuse（倒）",
+   "往四面八方倒开：扩散、散开。香薰机英文叫 diffuser，就是把香味往四下散出去。"
+  ]
+ ],
+ "source": "词源核对：etymonline（经 firecrawl 抓取，scripts/etym.py），2026-10-28。时事：Apple Newsroom 新闻稿，2026-09-09"
+}

@@ -8,7 +8,7 @@
 检查分三级：
     错误   —— 数据不合格，不生成页面（缺字段、零件名写错、split 拼不回单词……）
     提醒   —— 页面照常生成，但内容或版面有问题，交付前必须处理或向用户说明
-              （漏标的同化形式、字面画面过长、桥接没有反问、画面文字重叠/出界……）
+              （漏标的同化形式、字面画面过长、桥接句式重复、画面文字重叠/出界……）
     版面检查需要 Python 版 Playwright（pip install playwright），用本机 Chrome/Edge 运行，不需要另装浏览器；
     没装就跳过并提示，此时请用 --snap 截图人工看。
 
@@ -16,6 +16,7 @@
 """
 import argparse
 import json
+import math
 import re
 import shutil
 import subprocess
@@ -117,12 +118,27 @@ def check_scene(sc, where, kinds, poses, errs):
     if not isinstance(items, list) or not items:
         errs.append(f"{where}: scene 为空")
         return
+    roles = [it["id"] for it in items if it.get("k") == "fig" and "id" in it]
+    if any(not isinstance(role, str) or not role.strip() for role in roles) or len(set(map(str, roles))) != len(roles):
+        errs.append(f"{where}: 人物 id 应为本场景中唯一的文字")
     for i, it in enumerate(items):
         k = it.get("k")
         if k not in kinds:
             errs.append(f"{where}: 第 {i + 1} 个零件 k={k!r} 不存在（可用：{', '.join(sorted(kinds))}）")
         if k == "fig" and it.get("pose", "stand") not in poses:
             errs.append(f"{where}: 姿势 {it.get('pose')!r} 不存在（可用：{', '.join(sorted(poses))}）")
+        motion = it.get("motion")
+        if motion is not None:
+            frm = motion.get("from") if isinstance(motion, dict) else None
+            numeric = lambda x: isinstance(x, (int, float)) and not isinstance(x, bool) and math.isfinite(x)
+            if k != "fig" or not isinstance(frm, list) or len(frm) != 2 or not all(numeric(x) for x in frm):
+                errs.append(f"{where}: 第 {i + 1} 个图元 motion 需要人物的 from: [x,y] 起点")
+            if k == "fig" and (not numeric(it.get("x")) or not numeric(it.get("y", 108))):
+                errs.append(f"{where}: 第 {i + 1} 个图元 motion 需要有效的终位 x/y")
+            if isinstance(motion, dict) and "duration" in motion and (not numeric(motion["duration"]) or motion["duration"] <= 0):
+                errs.append(f"{where}: motion.duration 应为正的秒数")
+        if "follow" in it and (k == "fig" or not isinstance(it["follow"], str) or it["follow"] not in roles):
+            errs.append(f"{where}: 第 {i + 1} 个图元 follow={it['follow']!r} 需要道具指向本场景的人物 id")
 
 
 def validate(L, kinds, poses):
@@ -133,6 +149,24 @@ def validate(L, kinds, poses):
             errs.append(f"缺少顶层字段 {key}")
     if errs:
         return errs, warns
+    teaching = L.get("teaching", {})
+    if not isinstance(teaching, dict):
+        errs.append("teaching 应为对象（known、discovery、contrasts），旧课可省略")
+    else:
+        if "known" in teaching and (not isinstance(teaching["known"], list)
+                                    or any(not isinstance(x, str) or not x.strip() for x in teaching["known"])):
+            errs.append("teaching.known 应为非空文字组成的数组，写学习者已有的经验")
+        if "discovery" in teaching and not isinstance(teaching["discovery"], str):
+            errs.append("teaching.discovery 应为文字，说明解释带来的新联系")
+        contrasts = teaching.get("contrasts", [])
+        if not isinstance(contrasts, list):
+            errs.append("teaching.contrasts 应为数组")
+        else:
+            for i, contrast in enumerate(contrasts):
+                if not isinstance(contrast, dict) or any(not isinstance(contrast.get(k), str)
+                                                        or not contrast[k].strip()
+                                                        for k in ("a", "b", "distinction", "fact", "source")):
+                    errs.append(f"teaching.contrasts 第 {i + 1} 项需要 a、b、distinction、fact、source，双方先查证")
     root = L["root"]
     if not {"m", "cn"} <= set(root):
         errs.append("root 需要 m 和 cn")
@@ -179,10 +213,18 @@ def validate(L, kinds, poses):
         cav = w.get("caveat", "")
         if cav and (len(re.findall(r"[。！？]", cav)) > 2 or len(cav) > 90):
             warns.append(f"{name}: caveat 过长（{len(cav)} 字），最多两句话，细节放进 fact 或删掉")
-        if w.get("bridge") and not re.search(r"[？?]", w["bridge"]):
-            warns.append(f"{name}: bridge 没有反问。用「……这不就是 X 吗？」把画面接到词义，让读者自己推出最后一步")
+        # 标点不能判断有几个真实义项；按来源审核，避免单义词为消除提醒而凑同义改写。
+        if not w.get("ex"):
+            warns.append(f"{name}: 缺少 ex（例句）：网页卡片和视频词卡都在释义下面放这句")
         if w is not words[0] and not w.get("link"):
             warns.append(f"{name}: 缺少 link（过渡句），卡片之间会断开")
+
+    # 桥接句式：反问是推理工具，张张都「这不就是……吗」就成了口癖（视频解说曾因此像念模板）
+    same = [w.get("w", "?") for w in words + ([L["finale"]] if L.get("finale") else [])
+            if "这不就是" in w.get("bridge", "")]
+    if len(same) > 2:
+        warns.append(f"{len(same)} 张卡的 bridge 都用「这不就是……吗」（{'、'.join(same)}）：最多留两张，"
+                     f"其余换别的接法——直接点破、举一个具体场景、条件分叉")
 
     # 变体覆盖：课程本身就是某个有同化形式的前缀，却没列 variants
     rm = root.get("m", "").strip("-").lower()
@@ -372,7 +414,7 @@ def build(json_path: Path, tpl: str, kinds, poses, do_snap: bool, do_check: bool
         unused = [v for k, v in OPENING_TYPES.items() if k not in used]
         print(f"  [开场] 本课：{OPENING_TYPES.get(t, '未标注')}；其他课程用过：{stat}" + (f"；还没用过：{'、'.join(unused)}" if unused else ""))
         if t and t == used[0]:
-            warns.append(f"开场方式和最近一课相同（{OPENING_TYPES[t]}）。如果别的开场同样贴合，换一种（见 references/openings.md）")
+            print(f"  [选材] 类型与最近一课相同（{OPENING_TYPES[t]}）；比较实际的场景与新联系，不按类型硬轮换")
     if do_check:
         issues = check_layout(out)
         if issues is None:

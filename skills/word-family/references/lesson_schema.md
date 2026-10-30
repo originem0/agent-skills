@@ -2,6 +2,27 @@
 
 完整样例见 `lessons/tract.json`。写新课时先复制它再改，比从零写更不容易出错。`scripts/build.py` 会做格式校验，不通过就不生成页面。
 
+## teaching（可选，共用的创作素材）
+
+记录前知识、值得揭开的日常联系和已经查证的差异，供视频重新组织讲解。旧课可以省略；HTML 的固定布局不变。字段是素材，不规定开场、小结或对比的数量。
+
+```jsonc
+"teaching": {
+  "known": ["公司里的 CEO", "随身用的手帕"],
+  "discovery": "手里用的布，名字里仍保留了盖头的历史",
+  "contrasts": [{
+    "a": "captain", "b": "capture",
+    "distinction": "同样写 capt，前者是头的变形，后者是抓的词干",
+    "fact": "captain 经 capitaneus 来自 caput；capture 经 captura 来自 capere 的过去分词 captus",
+    "source": "https://www.etymonline.com/word/captain ; https://www.etymonline.com/word/capture"
+  }]
+}
+```
+
+`known` 是文字数组，`discovery` 是文字；`contrasts` 的每项写双方、关键差异、事实与来源。不要只列两个词名，也不要把未经核实的助记拆法写成 fact。
+
+场景图元支持可选的 `fig.id`、`fig.motion = {from: [x,y], duration: 秒}` 与道具 `follow: 人物id`。它们为视频提供动作依据，静态 HTML 忽略这些动画参数，保留终位。具体例子见 `scene_kit.md`；起点、方向和道具关系应来自这张图表达的实际场景，不随机编造。
+
 ## 顶层
 
 ```jsonc
@@ -73,10 +94,10 @@
 | `link` | | 过渡句，承接上一张卡的方向变化 |
 | `literal` | ✔ | 字面画面，也会出现在家族图上，**控制在 12 个字以内** |
 | `caption` | | 画面说明 |
-| `bridge` | ✔ | 画面 → 词义的桥接，结尾用反问 |
-| `meaning` | ✔ | 词性 + 词义 |
+| `bridge` | ✔ | 画面 → 词义的桥接；接法换着用（反问、点破、举例、条件分叉），同一句式全课最多两次 |
+| `meaning` | ✔ | 词性 + 真实常用义项，按常用度排序，「；」隔开，不同词性之间空一格：`"v. 吸引；使喜爱；引起……的好感"`。单义词可以只写一个，不用同义改写凑数量；历史旧义在 senses 或 fact 里说明 |
 | `senses` | | 派生词、一词多义、搭配，数组 |
-| `ex` | | `[英文例句, 中文]` |
+| `ex` | 应有 | `[英文例句, 中文]`。缺了 build.py 会提醒；视频词卡默认把它放在释义下面 |
 | `caveat` | | 变体为什么变、联想标注、辨析。**最多两句话** |
 | `fact` | ✔ | 词源事实，一行 |
 | `scene` | ✔ | 画面 |
