@@ -1,5 +1,7 @@
 ---
 lesson: pend
+status: approved
+checked: bd0fa20d · 用户授权 AI 审核 · 2026-10-30
 spine: 演变——挂（depend、suspend、append、impending）→ 挂上秤称（dispense、compensate）→ 称出去付钱（spend），最后回到开头那对词
 ---
 
@@ -12,8 +14,8 @@ spend，是花钱。
 
 ## 一根绳 [scene: anchor]
 先记住一个画面：一根绳，下面挂着一样东西。
-拉丁语管这个动作叫 pend，挂。
-这一家的词，是从挂开始，一步一步走出去的。
+这一家的词根，来自拉丁语里挂着的意思。
+顺着挂、称、付这三个意思，就能把这些词连起来。
 
 ## 第一步：挂 [title]
 先看挂本身。
@@ -23,7 +25,7 @@ spend，是花钱。
 它吊在什么下面，就跟着什么走。
 
 ## depend [word: depend]
-{de}，从上往下；{pend}，挂。
+前缀从上往下，词根是挂。
 从上面往下吊着，{depend}。
 吊在一个人下面，是依靠：depend on my parents。
 吊在一个条件下面，是取决于：条件一晃，结果跟着晃。
@@ -41,28 +43,29 @@ spend，是花钱。
 
 ## suspend [word: suspend]
 {sub}，从底下往上；碰到 p，它常常写成 {sus}。
-{pend}，挂。
+词根说的还是挂。
 把事情托起来吊住，不让它落地，{suspend}，暂停。
-学生被 suspended from school，是学籍先吊起来，暂时不算数。
+学生被 suspended from school，是暂时停学。
 
 ## 挂在末尾 [scene: append]
 挂上去的，也可以是多出来的一截。
 
 ## append [word: append]
+> 例句：{Append} a note
 {ad}，朝向，加到；碰到 p，变成 {ap}，所以这个词有两个 p。
-{pend}，挂。
-往绳子末尾再挂一张，{append}，附加。
+词根说的还是挂。
+{Append} a note，附加一条说明。
 书末尾挂着的几页，叫 appendix，附录。
 肠子上挂着的一小截，也叫 appendix，阑尾。
 
-## 头顶上的乌云 [scene: impending]
+## 头顶上的石头 [scene: impending]
 > 注：联想
-如果挂在你头顶上的，是一片乌云呢？
-它还没落下来，可你知道它迟早要落。
+如果挂在你头顶上的，是一块石头呢？
+它还没落下来，可你已经感到了威胁。
 
 ## impending [word: impending]
 {in}，在上面；碰到 p 变成 {im}。这里不是否定。
-{pend}，挂；{ing}，正在。
+中间是挂着，后面的词尾表示正在。
 正悬在你头顶上，{impending}，即将发生的，多半是坏事。
 
 ## 第二步：挂上秤 [title]
@@ -74,7 +77,7 @@ spend，是花钱。
 这是卢浮宫里的一杆古罗马秤。
 秤盘吊在下面，秤砣也吊着。
 古人称东西，就是把它挂起来。
-拉丁语的 pendere，本来就既是挂，又是称，还是付钱。
+拉丁语里，挂着、称重和付钱，能沿同一词源接起来。
 到了这一步，pend 常常换个样子：pens。
 
 ## 一份一份往外出 [photo: media/dispenser.jpg]
@@ -117,7 +120,7 @@ spend，挂上秤，称出去。
 ## 一家人 [map]
 脖子上的 pendant，吊坠，是挂。
 钟摆 pendulum，挂着来回晃。
-pound，磅，也是英镑，是称出来的分量。
+pound，既是重量单位磅，也是货币单位英镑。
 expensive，贵，是要称出去的钱多。
 
 ## 考考你 [quiz]

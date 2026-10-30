@@ -1,7 +1,7 @@
 ---
 lesson: spir
 status: approved
-checked: 720f476d · 用户授权 AI 审核 · 2026-10-29
+checked: e64899fa · 用户授权 AI 审核 · 2026-10-30
 spine: 演变——从呼吸和生命之气追到 spirit 的精神、幽灵、蒸馏物与烈酒，再看具体呼吸如何进入激励、到期、密谋、渴望和出汗；回扣开场的三张脸
 say_as: pire → pyre
 ---
@@ -40,7 +40,7 @@ say_as: pire → pyre
 > 来源：https://www.etymonline.com/word/spirit（缓存原文已对照）
 中世纪的炼金术里，spirit 还指挥发物和蒸馏物。
 一热就跑，像一口看不见的气。
-后来，复数 spirits 的意思收窄，专门用来指烈酒。
+这条蒸馏物的意思，后来在复数 spirits 里接到了烈酒。
 开头那三张脸，就这样接上了。
 
 ## 吹进人的心里 [scene: inspire]
@@ -127,15 +127,17 @@ s 并进了 x，后面写成 {pire}。
 > 署名：照片：J Bar，CC BY-SA 4.0，Wikimedia Commons（裁切）（https://commons.wikimedia.org/wiki/File:Sprite_Australia.jpg）
 > 来源：https://www.etymonline.com/word/sprite（缓存原文已对照）
 spirit 还有个双胞胎，在便利店冰柜里就能见到。
-雪碧瓶上写着 Sprite。
+Sprite is a soft drink，雪碧是一种汽水。
 sprite 这个英文词，是 spirit 经法语磨短的样子。
 它指小精灵，也指幽灵。
 
 ## 气息走远了 [map]
+精神、幽灵和烈酒，都从气息连起来。
 inspire 给人劲头，expire 让期限结束。
 respiratory 留在身体里，conspire 走到人群里。
 aspire 是渴望，perspire 是出汗。
 具体的呼吸，长出了这些用法。
+sprite 那个小精灵，也和 spirit 同源。
 
 ## 秘密透出来了 [quiz]
 trans，是穿过；spire，是呼吸。

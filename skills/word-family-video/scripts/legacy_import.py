@@ -136,10 +136,21 @@ def import_beats(stem, lesson, timeline, project_dir, wf_dir):
                               points=[[0,0],[0,485]], stroke="rule"))
         elif block in ("recap", "map"):
             refs = [taught[w.strip().lower()] for w in arg.split("|") if w.strip().lower() in taught] if block == "recap" else list(taught.values())
+            extras = []
+            if block == "map":
+                # 老稿会直接讲到四角旁支。只保留这段实际点名的条目，避免整课四角悄悄带入未知词。
+                for label in lesson.get("daily", []):
+                    candidates = [w for w in re.findall(r"[A-Za-z][A-Za-z-]{2,}", clean(label)) if w.lower() not in taught]
+                    hit = next((row["s"] for row in b["lines"] if any(
+                        re.search(rf"(?<![A-Za-z]){re.escape(w)}(?![A-Za-z])",row["plain"],re.I) for w in candidates)),None)
+                    if hit is not None:
+                        extras.append((clean(label),hit))
             if refs:
-                nodes.append(dict(id="summary", type="summary", x=120, y=180, w=1680, h=690,
+                nodes.append(dict(id="summary", type="summary", x=120, y=230 if extras else 180, w=1680, h=600 if extras else 690,
                                   refs=refs, layout="branches" if len(refs) > 4 else "columns",
                                   heading=f"{lesson['root']['m']} · {lesson['root']['cn']}"))
+            for i,(label,at) in enumerate(extras[:4]):
+                reveal(text_node(f"aside-{i}",label,120+(i%2)*870,135 if i<2 else 860,810,65,30,color="muted"),at)
         elif block == "event":
             nodes += [text_node("event", data.get("事件", b["title"]), 140, 180, 1640, 120, 54, color="muted"),
                       text_node("quote", "", 140, 365, 1640, 380, 64, font="en", runs=example_runs(data.get("原文", "")))]

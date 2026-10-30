@@ -1,7 +1,7 @@
 ---
 lesson: dis
 status: approved
-checked: b1c3ad92 · 用户授权 AI 审核 · 2026-10-29
+checked: 33e5e8fc · 用户授权 AI 审核 · 2026-10-30
 spine: 对照——different / difficult 的两个 f 引出同一前缀的不同作用；divide / distance 对照分开，like / dislike 对照否定，cover / discover 对照反着做，display / play 识别形近陷阱；覆盖 dis、di、dif
 say_as: keep → Keep
 ---
@@ -34,7 +34,8 @@ say_as: keep → Keep
 和别人不一样，就是 different from。
 
 ## 把容易拿掉 [scene: difficult]
-这一边，卷子太难了。
+> 注：推石头上坡是记忆联想
+这一边，要把石头推上坡。
 它要拿掉的，是容易。
 
 ## difficult [word: difficult]
@@ -126,7 +127,7 @@ We {play} games，我们玩游戏。
 
 ## 同前缀，不同作用 [map]
 分开的，有 divide、distance、different。
-反着做，记 discover。
+反着做，记 discover；把折着的展开，是 display。
 不喜欢，用 dislike；不容易，用 difficult。
 再认拼写：dis、di、dif，是同一家。
 

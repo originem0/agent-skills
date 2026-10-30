@@ -1,9 +1,9 @@
 ---
 lesson: voc
 status: approved
-checked: a99ee61e · 用户确认 · 2026-10-28
+checked: e025bae9 · 用户授权 AI 审核 · 2026-10-31
 spine: 方向——同一张嘴换方向喊：给东西叫个名 vocabulary → 叫到身边 advocate → 往前叫出来 provoke → 往回叫 revoke → 叫出藏着的 evoke ↔ 仰头朝上喊 invoke；最后回到 VOCALOID 的 vocal，它的双胞胎 vowel 回答开头的问题
-say_as: voc → voke；vok → voke；vowel → vow-el
+say_as: voc → voke；vok → voke
 ---
 
 ## 拿麦克风的歌手 [photo: media/miku.jpg]
@@ -16,9 +16,9 @@ say_as: voc → voke；vok → voke；vowel → vow-el
 > 事件：雅马哈官网 · 2023-03-15
 > 原文：Short for “{vocal android}”, VOCALOID has made its mark in music culture
 > 来源：https://www.yamaha.com/en/stories/the-key/003-01/（2023-03-15）
-初音未来，是为雅马哈的唱歌软件 VOCALOID 做的虚拟歌手。
+初音未来最初的歌声，使用了雅马哈 VOCALOID 的技术。
 雅马哈官网说，这个名字是 {vocal android} 的缩写。
-vocal，嗓音；android，机器人。
+vocal，嗓音的；android，机器人。
 
 可这个 voc，不只待在嗓子里。
 替人辩护的 advocate、惹人发火的 provoke 里，都有它。
@@ -48,7 +48,7 @@ vocal，嗓音；android，机器人。
 罗马法里，有个专门的词说这种人。
 
 ## advocate [word: advocate]
-{ad}，朝向；{voc}，叫；{ate}，被……的。
+前面表示朝向，词根是叫。
 被叫到你身边、替你出庭说话的人，最早就叫 advocate：辩护人。
 后来不只在法庭上，站出来替一件事说话的人，也叫 {advocate}：倡导者。
 
@@ -69,8 +69,9 @@ vocal，嗓音；android，机器人。
 已经放出去的东西，一声喊，又叫了回来。
 
 ## revoke [word: revoke]
+> 例句：{Revoke} a license.
 {re}，往回；{vok}，叫。
-{revoke}：撤销、吊销。
+{Revoke} a license.
 叫回来的是一张驾照，就是吊销。
 是一份签证，就是撤销。
 英语的 recall，有时就是照着拉丁语逐字翻的：往回叫。
@@ -103,21 +104,23 @@ vocal，嗓音；android，机器人。
 它在英语里有个双胞胎，你学英语头一天就见过。
 
 ## vowel [word: vowel]
+> 例句：It starts with a {vowel} sound.
 vocal 来自拉丁语 vocalis，出声的。
 拉丁语管元音字母，叫「出声的字母」。
-这个词走了一趟法语，{voc} 磨掉了 c，成了 {vow}。
-再加上 {el}：{vowel}，元音。
+这个词经过法语，变成了英语里表示元音的词。
+It starts with a {vowel} sound，开头是一个元音。
+末尾保留的是历史词形，不是通用的英语后缀。
 嘴一张开，就能一直拉长的音。
 单独一个 vow，发誓，倒是另一家人。
 
 ## 一家人 [map]
-六个词，一张嘴。
+从 vocal 的嗓音，再看这一家。
 advocate 叫来的是帮手，provoke 叫出来的是对手。
 revoke 把命令叫回，evoke 把回忆叫醒，invoke 向上求援。
 连代金券 voucher 也是这一家：最早是把人叫上法庭作保。
 
 ## 考考你 [quiz]
-advocate 末尾的 ate 是「被」，vocat 就是被叫；再加上 ion，变成名词。
+拉丁语里，把叫人、召唤这件事变成名词。
 上天把你叫去做的那件事，后来成了饭碗，是哪个词？
 答案是 {vocation}，天职，也是职业。
 职业学校，就叫 vocational school。

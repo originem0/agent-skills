@@ -1,9 +1,8 @@
 ---
 lesson: rupt
 status: approved
-checked: 4282c63d · 用户确认 · 2026-10-28
+checked: f4d07bd1 · 用户授权 AI 审核 · 2026-10-31
 spine: 方向——同一下「断」换地方、换方向：长凳从中间断 bankrupt → 话从中间截断 interrupt → 从里往外破开 erupt → 整个打散 disrupt → 从里到外坏透 corrupt → 断掉一截、前面没了 abrupt，最后回到那条劈开的路 routine
-say_as: irrupt → erupt
 ---
 
 ## 断了的长凳 [scene: opening]
@@ -39,7 +38,8 @@ rupt 就是这一下：咔嚓，断了。
 
 ## interrupt [word: interrupt]
 {inter}，在中间；{rupt}，断。
-一句话正往下说，被人从中间截断：{interrupt}，打断。
+Don't {interrupt} me.
+别打断我。
 电脑里也有 interrupt，叫中断。
 程序跑到一半，被一个信号从中间截下来，先去处理别的事。
 
@@ -54,15 +54,15 @@ rupt 就是这一下：咔嚓，断了。
 ## erupt [word: erupt]
 > 例句：the crowd {erupted} in cheers
 {ex}，往外；碰上后面的 r，x 掉了，只剩一个 {e}。
-{rupt}，破。
-山肚子里憋着的岩浆，从里往外把山口顶破：{erupt}，喷发。
+词根说的还是破。
+岩浆和火山灰从内部喷出来：{erupt}，喷发。
 这个词最早说的是疾病发作，1770 年起，才用在火山上。
 人群憋着的欢呼一下子冒出来，也是它：the crowd erupted in cheers。
 
 ## 截一刀，还是打散 [pair: interrupt | disrupt]
-同样是断，{interrupt} 是从中间截一刀，过后还能接上。
-{disrupt} 不一样：整个东西碎成好几块，往四面散开。
-原来的样子，拼不回去了。
+{interrupt}，强调进程被中断。
+{disrupt}，侧重正常秩序或安排被打乱。
+两者都可能恢复，不能只靠能否接回来区分。
 
 ## disrupt [word: disrupt]
 > 例句：{disrupted} flights
@@ -75,14 +75,15 @@ rupt 就是这一下：咔嚓，断了。
 要是不只断一处，而是从里到外，整个坏透了呢？
 
 ## corrupt [word: corrupt]
-> 例句：the file is {corrupt}
+> 例句：This file is {corrupted}.
 {com}，本来是一起；碰到 r，就变成了 {cor}，所以 corrupt 有两个 r。
 在这里，它多半只是加强语气：彻底。
 {rupt}，断，毁。
-彻底毁掉，{corrupt}。
-一个苹果坏透了，是腐烂；
-一个官员坏透了，被钱从里面泡烂，就是腐败；
-电脑里的文件坏透了，英语说 the file is corrupt，文件已损坏。
+彻底毁掉。
+它的历史用法里，也有腐烂这层意思。
+说官员收受贿赂，走向的是道德上的腐败。
+The official is {corrupt}.
+This file is corrupted，文件已经损坏。
 
 ## 断崖 [scene: abrupt]
 最后一种断法：断开以后，那一截就离你而去了。
@@ -118,8 +119,9 @@ rupta via，就是在树林里硬劈出来的一条路。
 erupt 是往外破。
 要是反过来，往里破呢？
 in 是往里，碰到 r，也会变成 ir。
-答案是 {irrupt}，闯进来，冲进去。
-它和 erupt 读音一样，方向正好相反。
+这个词和 erupt 读音一样，方向正好相反。
+一群人突然闯进房间，就可以这样说。
+The soldiers irrupted into the room。
 
 ## 那一下「断」 [title]
 从一张断了的长凳，走到一条天天走的路。

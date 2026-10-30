@@ -72,6 +72,15 @@ class LegacyImportTests(unittest.TestCase):
         self.assertEqual(film["shots"][0]["navigation"]["words"],["depend"])
         self.assertEqual(film["shots"][-1]["navigation"],{"words":["depend","suspend"],"active":["depend"]})
 
+    def test_map_keeps_spoken_asides_without_importing_unmentioned_course_words(self):
+        lesson=v.load_lesson("cap")[1]
+        text="---\nlesson: cap\nspine: 回到收据\n---\n## 收到 [word: receive]\nreceive。\n## 回扣 [map]\nreceipt 是收据。\n"
+        film=v.compiler.compile_film("cap",lesson,timeline(text),Path("."),v.WF)
+        aside=[n for n in film["shots"][-1]["nodes"] if n["id"].startswith("aside-")]
+        self.assertEqual(len(aside),1)
+        self.assertIn("receipt",aside[0]["text"])
+        self.assertNotIn("capacity",json.dumps(aside))
+
     def test_real_legacy_projects_compile_without_modifying_their_scripts(self):
         for project,lesson_name in (("capit","capit"),("port-cables","port"),("tract","tract")):
             with self.subTest(project=project):

@@ -17,3 +17,7 @@
 `build/approval.json` 现覆盖脚本、课程、实际图片、编译和画面代码、音色与语速。相关输入变化后沿用既有授权重新检查并 mark，不只改状态。实际 MP4 的检查记录在各项目 `build/verification.json` 与 `pronunciation_review_final.json`。本机音频复核继续用 FFmpeg 解码为 16 kHz 浮点数组后交给 Whisper，直接给文件路径会触发现有 PyAV 的 `metadata_errors` 不兼容；无需升级依赖。
 
 2026-10-30 用户追加要求恢复顶部单词导航，提交推送，再覆盖重生成已经存在的成片，排除词根 port 和 capit 的全部版本。此次明确授权覆盖此前不提交 git 的约定；视频覆盖范围为 cap、dis、lect、pend、rupt、spir、tract、voc，不把未出片草稿纳入批量。导航可跟随回讲而回到旧词，不用单词出现次数冒充学习完成度。
+
+2026-10-31 接续会话 `01a18cbc-c194-7392-9424-d16f4b0816e1`，上述八支已覆盖重生成并完成实际 MP4 复核，成片与证据见 [批量交付清单](references/navigation_refresh_delivery.md)。用户在本轮工作期间主动删除 `projects/capit-cloth` 并明确确认保留删除，不恢复该目录；其余五个 port/capit 版本原片哈希未变。暂停的 20 课任务仍未恢复。
+
+本轮实测发现，常规读音检查可能把 receive / Receipt、interrupt / interact 的相似拼写算作通过。关键句宜在编码前先作无提示复核，含混时使用完整英语语境，必要时将中文释义分开合成；实际成片仍须再查，重复转写不算通过。

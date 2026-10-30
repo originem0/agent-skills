@@ -1,7 +1,7 @@
 ---
 lesson: tract
 status: approved
-checked: 02fab04e · 用户确认 · 2026-10-28
+checked: 0416c91e · 用户授权 AI 审核 · 2026-10-30
 spine: 方向——同一根绳子换方向拉：往自己这边 attract → 往两边 distract → 往外 extract → 往一起 contract → 从底下抽走 subtract → 往回 retract，最后拖出一列火车 train
 ---
 
@@ -17,7 +17,7 @@ tract，拉；or，干这件事的东西。
 
 ## 一根绳子 [scene: anchor]
 先记住一个画面：一个人，拉着一根绳子。
-拉丁语里，这个动作就是 tract。
+词根 tract，来自拉丁语里表示拉的动词。
 绳子往哪个方向拉，前面就换一个前缀。
 
 ## 往自己这边拉 [scene: attract]
@@ -59,6 +59,7 @@ tract，拉；or，干这件事的东西。
 如果两只手，往一起拉呢？
 
 ## contract [word: contract]
+> 例句：sign a {contract}
 {con}，一起；{tract}，拉。
 拉到一起的是东西，东西就缩小了：金属遇冷会 {contract}，收缩。
 拉到一起的是人，人就绑在一起了：sign a contract，签合同。
@@ -87,12 +88,11 @@ tract，拉；or，干这件事的东西。
 
 ## 收回一篇论文 [event]
 > 事件：《柳叶刀》撤稿声明 · 2010-02
-> 原文：Therefore we fully {retract} this paper from the published record.
+> 原文：{Retraction}
 > 来源：https://pubmed.ncbi.nlm.nih.gov/20137807/（Lancet 2010;375:445）
-> 来源：https://quackwatch.org/autism/news/lancet/（2010-05-29，全文引述声明）
 2010 年 2 月，医学期刊《柳叶刀》发了一份声明。
 对象是它 1998 年登过的一篇论文。
-最后一句话是：we fully {retract} this paper。
+公告标题开头这个词，{Retraction}，就是撤稿。
 登出去十二年的文章，被整篇拉了回来。
 
 ## 被拖在后面的 [scene: train]
@@ -116,7 +116,7 @@ trace，痕迹，是拖出来的一条线。
 tract 后面加 ion，变成拉的力。
 轮胎的抓地力，叫什么？
 答案是 {traction}。
-一个想法越来越拉得动人，英语也说它 gaining traction。
+The idea is gaining traction，这个想法越来越受关注。
 
 ## 一根绳子 [title]
 拖拉机在拉，火车被拉。
